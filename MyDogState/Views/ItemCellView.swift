@@ -11,6 +11,7 @@ struct ItemCellView: View {
     var image: UIImage?
     var title: String?
     var chipTitle: String?
+    var chipColor: Color?
     var firstLabel: String?
     var secondLabel: String?
     var parentViewType: ViewParentType
@@ -26,7 +27,7 @@ struct ItemCellView: View {
                 HStack(spacing: 0)
                 {
                     Text(title ?? "unknown")
-                    ChipView(title: chipTitle ?? "unknown")
+                    ChipView(title: chipTitle ?? "unknown", bgColor: chipColor ?? .blue)
                 }
                 if let firstLabel = firstLabel ?? "unknown", let secondLabel = secondLabel ?? "unknown"
                 {

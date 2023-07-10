@@ -9,27 +9,35 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var manageObjContext
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var dogs: FetchedResults<Dog>
+    @EnvironmentObject var viewModel: DogViewModel
     @State private var showingAddView = false
     var body: some View {
         NavigationView {
             VStack(alignment: .leading)
             {
                 List{
-                    ForEach(dogs)
+                    ForEach(viewModel.dogsList)
                     {
                         dog in
                         //Controlla questo if..
                         if let imageData = dog.image
                         {
-                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipTitle: dog.sex, firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipTitle: dog.sex,
+                                         chipColor: viewModel.getSexColor(dog.sex ?? ""), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
                                 .listRowInsets(EdgeInsets())
                         }
                         
                     }
-                    .onDelete(perform: deleteDog)
+                    .onDelete{
+                        indexSet in
+                        withAnimation {
+                            viewModel.deleteDog(offset: indexSet)
+                        }
+                    }
                 }.listStyle(PlainListStyle())
+                    .refreshable {
+                        viewModel.getAllDogs()
+                    }
             }
             .navigationTitle("My Dog List")
             .toolbar{
@@ -47,19 +55,19 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showingAddView)
             {
-                AddDogView()
+                AddDogView(viewModel: self.viewModel)
             }
         }
         .navigationViewStyle(.stack)
     }
     
-    private func deleteDog(offset: IndexSet)
+    /*private func deleteDog(offset: IndexSet)
     {
         withAnimation{
-            offset.map{dogs[$0]}.forEach(manageObjContext.delete)
+            offset.map{viewModel.dogsList[$0]}.forEach(manageObjContext.delete)
         DataController().save(context: manageObjContext)
         }
-    }
+    }*/
 }
 
 struct ContentView_Previews: PreviewProvider {
