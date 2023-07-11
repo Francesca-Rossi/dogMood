@@ -13,7 +13,7 @@ struct AddImageView: View {
     var body: some View {
         HStack {
             CircleImage(image: image)
-            ChipView(title: "Change photo", bgColor: .blue)
+            ChipView(chip:(title: "Change photo", bgColor: .blue))
                 .onTapGesture {
                     showSheet = true
                 }

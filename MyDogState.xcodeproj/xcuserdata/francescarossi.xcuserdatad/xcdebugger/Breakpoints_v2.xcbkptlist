@@ -14,8 +14,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
          </BreakpointContent>

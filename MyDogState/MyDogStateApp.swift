@@ -13,7 +13,7 @@ struct MyDogStateApp: App {
     @StateObject var viewModel = DogViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DogsListContentView()
                 .environmentObject(viewModel)
         }
     }

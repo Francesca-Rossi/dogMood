@@ -35,17 +35,7 @@ class DogViewModel: ObservableObject {
         }
     }
     
-    func getSexColor(_ sex: String)-> Color
-    {
-        switch sex
-        {
-        case sexType.Boy: return .blue
-        case sexType.Girl: return .pink
-        default:
-            return .blue
-        }
-        
-    }
+    
     
     func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: Data?, sex: String, breed: String?, hairColor: String?)
     {

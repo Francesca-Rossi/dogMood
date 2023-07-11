@@ -10,8 +10,7 @@ import SwiftUI
 struct ItemCellView: View {
     var image: UIImage?
     var title: String?
-    var chipTitle: String?
-    var chipColor: Color?
+    var chipFields: (title: String, bgColor: Color)
     var firstLabel: String?
     var secondLabel: String?
     var parentViewType: ViewParentType
@@ -27,7 +26,7 @@ struct ItemCellView: View {
                 HStack(spacing: 0)
                 {
                     Text(title ?? "unknown")
-                    ChipView(title: chipTitle ?? "unknown", bgColor: chipColor ?? .blue)
+                    ChipView(chip: chipFields)
                 }
                 if let firstLabel = firstLabel ?? "unknown", let secondLabel = secondLabel ?? "unknown"
                 {
@@ -47,7 +46,7 @@ struct ItemCellView: View {
 }
 
 struct ItemCellViewExample : View {
-    private var chipTitle = "Chip title"
+    private var chipFields = (title: "titolo chip", bgColor: Color.blue)
     private var title = "title"
     private var image = UIImage()
     private var firstLabel = "First"
@@ -55,7 +54,7 @@ struct ItemCellViewExample : View {
     private var parentViewType = ViewParentType.dogs
     
     var body: some View {
-        ItemCellView(image: image, title: title, chipTitle: chipTitle, firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
+        ItemCellView(image: image, title: title, chipFields: chipFields , firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
     }
 }
 
