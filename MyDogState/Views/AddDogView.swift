@@ -35,27 +35,35 @@ struct AddDogView: View {
                     Spacer()
                     Button("Add dog")
                     {
-                        if let data =  try? ImageUtilities(image: image).convertImageToData(error: &info)
-                        {
-                            viewModel.addNewDog(microchip: microchip, name: name, dateOfBirth: dateOfBirth, image: data, sex: sex, breed: breed, hairColor: hairColor)
-                            dismiss()
+                            Task
+                            {
+                                let info =  await viewModel.addNewDog(
+                                    microchip: microchip,
+                                    name: name,
+                                    dateOfBirth: dateOfBirth,
+                                    image: image,
+                                    sex: sex,
+                                    breed: breed,
+                                    hairColor: hairColor)
+                                if info.hasErrorInfo()
+                                {
+                                    //TODO controllare che funzioni
+                                    Alert(
+                                        title: Text("Error"),
+                                        message: Text(info.getErrorMessage()),
+                                        dismissButton: .default(Text("OK"))
+                                    )
+                                }
+                                dismiss()
+                            }
                         }
-                        else if info.hasErrorInfo()
-                        {
-                            //TODO controllare che funzioni
-                            Alert(
-                                title: Text("Error"),
-                                message: Text(info.getErrorMessage()),
-                                dismissButton: .default(Text("OK"))
-                            )
-                        }
+                        
                     }
                     .disabled(image.size.width == 0 || microchip.isEmpty || name.isEmpty)
                     Spacer()
                 }
             }
         }
-    }
 }
 
 /*struct AddDogView_Previews: PreviewProvider {

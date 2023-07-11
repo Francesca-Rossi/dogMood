@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3F74BBE52A5D60BE00A8BB42 /* DogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */; };
-		3F74BBE82A5D623E00A8BB42 /* Dog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBE62A5D623E00A8BB42 /* Dog+CoreDataClass.swift */; };
-		3F74BBE92A5D623E00A8BB42 /* Dog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBE72A5D623E00A8BB42 /* Dog+CoreDataProperties.swift */; };
+		3F74BBED2A5D6A9100A8BB42 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */; };
+		3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */; };
+		3F74BBF22A5D906900A8BB42 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBF02A5D906900A8BB42 /* DogEntity+CoreDataClass.swift */; };
+		3F74BBF32A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBF12A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift */; };
+		3F74BBF62A5D90AE00A8BB42 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBF52A5D90AE00A8BB42 /* Dog.swift */; };
 		3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E342A5BFC5400D37229 /* DogViewModel.swift */; };
 		3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E362A5BFC9300D37229 /* PersistenController.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
@@ -33,8 +36,11 @@
 
 /* Begin PBXFileReference section */
 		3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListView.swift; sourceTree = "<group>"; };
-		3F74BBE62A5D623E00A8BB42 /* Dog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F74BBE72A5D623E00A8BB42 /* Dog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
+		3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDao.swift; sourceTree = "<group>"; };
+		3F74BBF02A5D906900A8BB42 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3F74BBF12A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F74BBF52A5D90AE00A8BB42 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		3F778E342A5BFC5400D37229 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		3F778E362A5BFC9300D37229 /* PersistenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenController.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F74BBEB2A5D6A7D00A8BB42 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */,
+				3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		3F74BBF42A5D909D00A8BB42 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				3F74BBF52A5D90AE00A8BB42 /* Dog.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
 		3F778E332A5BFC2900D37229 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,8 @@
 		3FAE41D32A54388A002E541C /* MyDogState */ = {
 			isa = PBXGroup;
 			children = (
+				3F74BBF42A5D909D00A8BB42 /* Object */,
+				3F74BBEB2A5D6A7D00A8BB42 /* Dao */,
 				3FAE41D42A54388A002E541C /* MyDogStateApp.swift */,
 				3F778E332A5BFC2900D37229 /* ViewModels */,
 				3FAE41ED2A544B98002E541C /* Helpers */,
@@ -119,8 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				3FAE41E42A5439DD002E541C /* DogModel.xcdatamodeld */,
-				3F74BBE62A5D623E00A8BB42 /* Dog+CoreDataClass.swift */,
-				3F74BBE72A5D623E00A8BB42 /* Dog+CoreDataProperties.swift */,
+				3F74BBF02A5D906900A8BB42 /* DogEntity+CoreDataClass.swift */,
+				3F74BBF12A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift */,
 				3F778E362A5BFC9300D37229 /* PersistenController.swift */,
 			);
 			path = DataModel;
@@ -239,11 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F74BBF62A5D90AE00A8BB42 /* Dog.swift in Sources */,
 				3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */,
 				3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */,
 				3FAE41F72A5453C3002E541C /* SexView.swift in Sources */,
+				3F74BBF32A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift in Sources */,
 				3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */,
+				3F74BBF22A5D906900A8BB42 /* DogEntity+CoreDataClass.swift in Sources */,
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,
+				3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */,
 				3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */,
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,
@@ -251,14 +280,13 @@
 				3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */,
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
-				3F74BBE82A5D623E00A8BB42 /* Dog+CoreDataClass.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
 				3FF236242A56F71400C0AAD3 /* ItemCellView.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
-				3F74BBE92A5D623E00A8BB42 /* Dog+CoreDataProperties.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,
 				3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */,
 				3FAE41E62A5439DD002E541C /* DogModel.xcdatamodeld in Sources */,
+				3F74BBED2A5D6A9100A8BB42 /* Dao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct MyDogStateApp: App {
-    //@StateObject private var dataController = DataController()
+    
     @StateObject var viewModel = DogViewModel()
     var body: some Scene {
         WindowGroup {

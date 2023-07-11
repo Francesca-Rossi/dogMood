@@ -24,18 +24,20 @@ struct DogListView: View {
             }
             .onDelete{
                 indexSet in
-                withAnimation {
-                    viewModel.deleteDog(offset: indexSet)
-                }
+                    Task
+                    {
+                        await viewModel.deleteDog(offset: indexSet)
+                    }
             }
         }.listStyle(PlainListStyle())
             .refreshable {
-               viewModel.getAllDogs()
+                await viewModel.getAllDogs()
             }
     }
 }
 
 struct DogListViewExample: View {
+    let errorInfo = ErrorInfo()
     var viewModel = DogViewModel()
     var body: some View {
         DogListView(viewModel: viewModel)

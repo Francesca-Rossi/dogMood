@@ -31,4 +31,16 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    
+    public func saveContext() throws
+    {
+        if viewContext.hasChanges {
+            do{
+                try viewContext.save()
+            }catch
+            {
+                fatalError("Error: \(error.localizedDescription)")
+            }
+        }
+    }
 }

@@ -10,61 +10,82 @@ import SwiftUI
 import CoreData
 
 class DogViewModel: ObservableObject {
-    private let viewContext = PersistenceController.shared.viewContext
+    
     @Published var dogsList: [Dog] = []
     {
         willSet{
             objectWillChange.send()
         }
     }
+    var dao = DogDao()
+    var errorInfo = ErrorInfo()
     
-    init() {
+    init()
+    {
         getAllDogs()
     }
     
-    func getAllDogs()
+   func getAllDogs()
     {
-        //create NSFetchRequest
-        //TODO c'e' il modo di filtrare velocemente con le NSFetchRequest, cerca online
-        let request = NSFetchRequest<Dog>(entityName: "Dog")
-        
-        do {
-            dogsList = try viewContext.fetch(request)
-        }catch {
-            print("DEBUG: Some error occured while fetching")
+            do {
+                dogsList = try  dao.getAll(info: &errorInfo)
+            }
+            catch
+            {
+                //TODO: scrivi sul file di log
+                print(errorInfo.getErrorMessage())
+            }
+    }
+    
+    func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: UIImage, sex: String, breed: String?, hairColor: String?) async -> ErrorInfo
+    {
+        //TODO: fai tutti i controlli
+        do
+        {
+            if let data =  try? ImageUtilities(image: image).convertImageToData(error: &errorInfo)
+            {
+                let dog =  Dog(id: UUID(),
+                               name: name,
+                               microchip: microchip,
+                               dateOfBirth: dateOfBirth,
+                               image: data,
+                               breed: breed,
+                               sex: sex,
+                               hairColor: hairColor,
+                               date: Date())
+                
+                try await dao.create(obj: dog, info: &errorInfo)
+                self.getAllDogs()
+            }
         }
-    }
-    
-    
-    
-    func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: Data?, sex: String, breed: String?, hairColor: String?)
-    {
-        let dog = Dog(context: viewContext)
-        dog.id = UUID()
-        dog.microchip = microchip //TODO: controlla che non sia gia' presente un microchip uguale nel database
-        dog.name = name
-        dog.image = image
-        dog.dateOfBirth = dateOfBirth
-        dog.sex = sex
-        dog.breed = breed
-        dog.hairColor = hairColor
-        dog.date = Date() //first insert date
-        
-        save()
-        self.getAllDogs()
-    }
-    
-    public func deleteDog(offset: IndexSet)
-    {
-         offset.map{dogsList[$0]}.forEach(viewContext.delete)
-         save()
-    }
-    
-    func save() {
-        do {
-            try viewContext.save()
-        }catch {
-            print("Error saving")
+        catch
+        {
+            //TODO: scrivi sul file di log
+            print(errorInfo.getErrorMessage())
         }
+        return errorInfo
+    }
+    
+    public func deleteDog(offset: IndexSet) async
+    {
+         //offset.map{dogsList[$0]}.forEach(viewContext.delete)
+         //save()
+        do
+        {
+            for i in offset.makeIterator() {
+                let dog = dogsList[i]
+                if let id = dog.id
+                {
+                    try await dao.delete(id, info: &errorInfo)
+                }
+            }
+            getAllDogs()
+        }
+        catch
+        {
+            //TODO: scrivi sul file di log
+            print(errorInfo.getErrorMessage())
+        }
+        
     }
 }
