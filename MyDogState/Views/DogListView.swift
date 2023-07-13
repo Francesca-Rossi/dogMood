@@ -9,30 +9,39 @@ import SwiftUI
 
 struct DogListView: View {
     @StateObject var viewModel: DogViewModel
+    @State var selectedItem: Dog?
     var body: some View {
-        List{
-            ForEach(viewModel.dogsList)
-            {
-                dog in
-                //Controlla questo if..
-                if let imageData = dog.image
+        NavigationView {
+            List{
+                ForEach(viewModel.dogsList)
                 {
-                    ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: (title: dog.sex ?? "", bgColor: dog.getSexColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
-                    .listRowInsets(EdgeInsets())
+                    dog in
+                    //Controlla questo if..
+                    if let imageData = dog.image
+                    {
+                        ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: (title: dog.sex ?? "", bgColor: dog.getSexColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+                            .listRowInsets(EdgeInsets()).onTapGesture {
+                                self.selectedItem = dog
+                            }
+                    }
+                    
                 }
-                
-            }
-            .onDelete{
-                indexSet in
+                .onDelete{
+                    indexSet in
                     Task
                     {
                         await viewModel.deleteDog(offset: indexSet)
                     }
-            }
-        }.listStyle(PlainListStyle())
-            .refreshable {
-                await viewModel.getAllDogs()
-            }
+                }
+            }.listStyle(PlainListStyle())
+                .refreshable { viewModel.getAllDogs()
+                }
+        }
+        .fullScreenCover(item: $selectedItem)
+        {
+            item in
+            DogDetailView(dog: item)
+        }
     }
 }
 

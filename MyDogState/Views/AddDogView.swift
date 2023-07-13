@@ -20,50 +20,57 @@ struct AddDogView: View {
     @State private var breed = ""
     
     var body: some View {
-        var info = ErrorInfo()
         Form{
-            Section {
-                AddImageView(image: $image) //TODO: Devo passare l'immagine al database e fare in modo che apra la camera
-                TextField("Microchip number", text: $microchip).disableAutocorrection(true)
-                TextField("name", text: $name).disableAutocorrection(true)
-                DatePicker("Date of birth", selection: $dateOfBirth)
-                SexView(sex: $sex) //Controlla che funzioni, e che lo passi correttamente al DB
-                TextField("Breed", text: $breed).disableAutocorrection(true)
-                TextField("Hair Color", text: $hairColor).disableAutocorrection(true)
-                HStack
+                Section {
+                    AddImageView(image: $image) //TODO: Devo passare l'immagine al database e fare in modo che apra la camera)
+                } header: {
+                    Text("Profile image").textCase(nil)
+                }
+                Section {
+                    TextField("Microchip number", text: $microchip).disableAutocorrection(true)
+                    TextField("name", text: $name).disableAutocorrection(true)
+                    DatePicker("Date of birth", selection: $dateOfBirth).pickerStyle(.inline)
+                    SexView(sex: $sex)
+                }header: {
+                    Text("Main info").textCase(nil)
+                }
+                Section
                 {
-                    Spacer()
+                    TextField("Breed", text: $breed).disableAutocorrection(true)
+                    TextField("Hair Color", text: $hairColor).disableAutocorrection(true)
+                }header: {
+                    Text("Other info").textCase(nil)
+                }
+                Section
+                {
                     Button("Add dog")
                     {
-                            Task
+                        Task
+                        {
+                            let info =  await viewModel.addNewDog(
+                                microchip: microchip,
+                                name: name,
+                                dateOfBirth: dateOfBirth,
+                                image: image,
+                                sex: sex,
+                                breed: breed,
+                                hairColor: hairColor)
+                            if info.hasErrorInfo()
                             {
-                                let info =  await viewModel.addNewDog(
-                                    microchip: microchip,
-                                    name: name,
-                                    dateOfBirth: dateOfBirth,
-                                    image: image,
-                                    sex: sex,
-                                    breed: breed,
-                                    hairColor: hairColor)
-                                if info.hasErrorInfo()
-                                {
-                                    //TODO controllare che funzioni
-                                    Alert(
-                                        title: Text("Error"),
-                                        message: Text(info.getErrorMessage()),
-                                        dismissButton: .default(Text("OK"))
-                                    )
-                                }
-                                dismiss()
+                                //TODO controllare che funzioni
+                                Alert(
+                                    title: Text("Error"),
+                                    message: Text(info.getErrorMessage()),
+                                    dismissButton: .default(Text("OK"))
+                                )
                             }
+                            dismiss()
                         }
-                        
                     }
                     .disabled(image.size.width == 0 || microchip.isEmpty || name.isEmpty)
-                    Spacer()
                 }
             }
-        }
+    }
 }
 
 /*struct AddDogView_Previews: PreviewProvider {
