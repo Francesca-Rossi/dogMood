@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Dog: Codable, Equatable, Identifiable
+struct Dog: Codable, Equatable, Identifiable, Hashable
 {
     let id: UUID? //unique
     let name: String?

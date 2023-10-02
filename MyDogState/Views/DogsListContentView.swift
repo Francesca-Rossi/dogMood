@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct DogsListContentView: View {
-    @EnvironmentObject var viewModel: DogViewModel
+    @State var viewModel: DogViewModel
     @State private var showingAddView = false
     var body: some View {
         NavigationView {
@@ -39,6 +39,6 @@ struct DogsListContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DogsListContentView()
+        DogsListContentView(viewModel: DogViewModel())
     }
 }

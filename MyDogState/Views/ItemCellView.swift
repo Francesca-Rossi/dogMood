@@ -28,7 +28,7 @@ struct ItemCellView: View {
                     Text(title ?? "unknown")
                     ChipView(chip: chipFields)
                 }
-                if let firstLabel = firstLabel ?? "unknown", let secondLabel = secondLabel ?? "unknown"
+                if let firstLabel = firstLabel, let secondLabel = secondLabel
                 {
                     switch parentViewType
                     {

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct HomeContentView: View {
+    @EnvironmentObject var viewModel: DogViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        var item1 = menuItem(view: AnyView(DogsListContentView(viewModel: viewModel)), value: "doglist", imageName: "dog", tags: "dog_list")
+        
+        BottomMenuView(viewModel: _viewModel, selectedTab: "dog_list", items: [item1])
     }
 }
 

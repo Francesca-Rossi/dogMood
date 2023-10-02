@@ -13,7 +13,7 @@ struct DogProfileView: View
     var body: some View {
         HStack
         {
-            if let data = dog.image, let image = UIImage(data: data) ?? UIImage()
+            if let data = dog.image, let image = UIImage(data: data) 
             {
                 CircleImage(image: image)
             }
