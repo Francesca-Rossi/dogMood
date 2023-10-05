@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ItemCellView: View {
+struct DogCellView: View {
     var image: UIImage?
     var title: String?
     var chipFields: (title: String, bgColor: Color)
@@ -54,7 +54,7 @@ struct ItemCellViewExample : View {
     private var parentViewType = ViewParentType.dogs
     
     var body: some View {
-        ItemCellView(image: image, title: title, chipFields: chipFields , firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
+        DogCellView(image: image, title: title, chipFields: chipFields , firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
     }
 }
 
