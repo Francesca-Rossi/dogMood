@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimatedBlueButton: ButtonStyle {
+struct AnimatedCapsuleBlueButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
