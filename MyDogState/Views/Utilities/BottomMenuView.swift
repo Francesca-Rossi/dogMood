@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct BottomMenuView: View {
     @EnvironmentObject var viewModel: DogViewModel
     @State var selectedTab: String
@@ -40,4 +40,4 @@ struct menuItem: Identifiable
     var value: String
     var imageName: String
     var tags: String
-}
+}*/

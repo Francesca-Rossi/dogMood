@@ -13,9 +13,9 @@ struct MyDogStateApp: App {
     @StateObject var viewModel = DogViewModel()
     var body: some Scene {
         WindowGroup {
-            //DogsListContentView()
-                //.environmentObject(viewModel)
-            HomeContentView().environmentObject(viewModel)
+            DogsListContentView()
+                .environmentObject(viewModel)
+            //HomeContentView().environmentObject(viewModel)
         }
     }
 }

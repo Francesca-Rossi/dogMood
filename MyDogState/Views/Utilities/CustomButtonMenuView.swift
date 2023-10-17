@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct BottomMenuView: View {
+    @EnvironmentObject var viewModel: DogViewModel
+    @State var selectedTab: String
+}
+

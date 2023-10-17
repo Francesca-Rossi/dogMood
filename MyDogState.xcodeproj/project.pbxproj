@@ -29,7 +29,8 @@
 		3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F22A54507F002E541C /* ImagePicker.swift */; };
 		3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F42A5450B2002E541C /* AddImageView.swift */; };
 		3FAE41F72A5453C3002E541C /* SexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F62A5453C3002E541C /* SexView.swift */; };
-		3FD9C8DD2ACF0A9700162DFA /* AnimatedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */; };
+		3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */; };
+		3FD9C8DD2ACF0A9700162DFA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9C8DC2ACF0A9600162DFA /* Button.swift */; };
 		3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */; };
 		3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */; };
 		3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* DogCellView.swift */; };
@@ -64,7 +65,8 @@
 		3FAE41F22A54507F002E541C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3FAE41F42A5450B2002E541C /* AddImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		3FAE41F62A5453C3002E541C /* SexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexView.swift; sourceTree = "<group>"; };
-		3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBlueButton.swift; sourceTree = "<group>"; };
+		3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomMenuView.swift; sourceTree = "<group>"; };
+		3FD9C8DC2ACF0A9600162DFA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 		3FF236232A56F71400C0AAD3 /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		3FAE41EC2A544AAA002E541C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FB2E6CE2ADED6E100C4D0FD /* Style */,
 				3FB6077A2ACB2FBB0086F48A /* Utilities */,
 				3FF236412A57088900C0AAD3 /* ImageView */,
 				3FAE41D62A54388A002E541C /* DogsListContentView.swift */,
@@ -201,11 +204,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		3FB2E6CE2ADED6E100C4D0FD /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				3FD9C8DC2ACF0A9600162DFA /* Button.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		3FB6077A2ACB2FBB0086F48A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				3F2F94472AB0649900F74AAA /* BottomMenuView.swift */,
-				3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */,
+				3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -296,11 +307,12 @@
 				3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */,
 				3FAE41F72A5453C3002E541C /* SexView.swift in Sources */,
 				3F74BBF32A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift in Sources */,
-				3FD9C8DD2ACF0A9700162DFA /* AnimatedBlueButton.swift in Sources */,
+				3FD9C8DD2ACF0A9700162DFA /* Button.swift in Sources */,
 				3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */,
 				3F74BBF22A5D906900A8BB42 /* DogEntity+CoreDataClass.swift in Sources */,
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,
 				3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */,
+				3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */,
 				3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */,
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,

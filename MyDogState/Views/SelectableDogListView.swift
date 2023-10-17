@@ -44,7 +44,7 @@ struct SelectableDogListView: View {
                     Button("Press Me") {
                         print("Button pressed!")
                     }
-                    .buttonStyle(AnimatedBlueButton())
+                    .buttonStyle(AnimatedCapsuleBlueButton())
              }
         }
 

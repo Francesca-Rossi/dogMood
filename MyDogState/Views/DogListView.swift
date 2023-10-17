@@ -40,14 +40,15 @@ struct DogListView: View {
                     .refreshable { viewModel.getAllDogs()
                     }
                 //aggiungi il bottone
-                Button("CHECK STATE") {
+                /*Button("CHECK STATE") {
                     openCheckStateVC.toggle()
                 }
-                .buttonStyle(AnimatedBlueButton())
+                .buttonStyle(AnimatedCapsuleBlueButton())
                 .sheet(isPresented: $openCheckStateVC)
                 {
                     SelectableDogListView(viewModel: viewModel)
-                }
+                }*/
+                CustomBottomMenuView(viewModel: viewModel)
             }
         }
         .fullScreenCover(item: $selectedItem)

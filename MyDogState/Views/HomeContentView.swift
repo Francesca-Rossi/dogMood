@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeContentView: View {
+/*struct HomeContentView: View {
     @EnvironmentObject var viewModel: DogViewModel
     var body: some View {
         var item1 = menuItem(view: AnyView(DogsListContentView(viewModel: viewModel)), value: "doglist", imageName: "dog", tags: "dog_list")
@@ -21,4 +21,4 @@ struct HomeContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeContentView()
     }
-}
+}*/
