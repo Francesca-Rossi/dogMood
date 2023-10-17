@@ -19,6 +19,7 @@
 		3F74BBF62A5D90AE00A8BB42 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBF52A5D90AE00A8BB42 /* Dog.swift */; };
 		3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E342A5BFC5400D37229 /* DogViewModel.swift */; };
 		3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E362A5BFC9300D37229 /* PersistenController.swift */; };
+		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
 		3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D62A54388A002E541C /* DogsListContentView.swift */; };
 		3FAE41D92A54388C002E541C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAE41D82A54388C002E541C /* Assets.xcassets */; };
@@ -28,9 +29,10 @@
 		3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F22A54507F002E541C /* ImagePicker.swift */; };
 		3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F42A5450B2002E541C /* AddImageView.swift */; };
 		3FAE41F72A5453C3002E541C /* SexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F62A5453C3002E541C /* SexView.swift */; };
+		3FD9C8DD2ACF0A9700162DFA /* AnimatedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */; };
 		3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */; };
 		3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */; };
-		3FF236242A56F71400C0AAD3 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* ItemCellView.swift */; };
+		3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* DogCellView.swift */; };
 		3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236252A56F90B00C0AAD3 /* ChipView.swift */; };
 		3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236422A5708A300C0AAD3 /* CircleImage.swift */; };
 		3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */; };
@@ -51,6 +53,7 @@
 		3F74BBF52A5D90AE00A8BB42 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		3F778E342A5BFC5400D37229 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		3F778E362A5BFC9300D37229 /* PersistenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenController.swift; sourceTree = "<group>"; };
+		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAE41D42A54388A002E541C /* MyDogStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogStateApp.swift; sourceTree = "<group>"; };
 		3FAE41D62A54388A002E541C /* DogsListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListContentView.swift; sourceTree = "<group>"; };
@@ -61,9 +64,10 @@
 		3FAE41F22A54507F002E541C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3FAE41F42A5450B2002E541C /* AddImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		3FAE41F62A5453C3002E541C /* SexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexView.swift; sourceTree = "<group>"; };
+		3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBlueButton.swift; sourceTree = "<group>"; };
 		3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
-		3FF236232A56F71400C0AAD3 /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
+		3FF236232A56F71400C0AAD3 /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
 		3FF236252A56F90B00C0AAD3 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		3FF236422A5708A300C0AAD3 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectagleImage.swift; sourceTree = "<group>"; };
@@ -176,10 +180,11 @@
 				3F2F84C42A5FF98F00227024 /* DogDetailView.swift */,
 				3FAE41EE2A544C76002E541C /* AddDogView.swift */,
 				3FAE41F62A5453C3002E541C /* SexView.swift */,
-				3FF236232A56F71400C0AAD3 /* ItemCellView.swift */,
+				3FF236232A56F71400C0AAD3 /* DogCellView.swift */,
 				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
 				3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */,
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
+				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
 				3F2F94492AB0668A00F74AAA /* HomeContentView.swift */,
 			);
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2F94472AB0649900F74AAA /* BottomMenuView.swift */,
+				3FD9C8DC2ACF0A9600162DFA /* AnimatedBlueButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */,
 				3FAE41F72A5453C3002E541C /* SexView.swift in Sources */,
 				3F74BBF32A5D906900A8BB42 /* DogEntity+CoreDataProperties.swift in Sources */,
+				3FD9C8DD2ACF0A9700162DFA /* AnimatedBlueButton.swift in Sources */,
 				3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */,
 				3F74BBF22A5D906900A8BB42 /* DogEntity+CoreDataClass.swift in Sources */,
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,
@@ -303,8 +310,9 @@
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
+				3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */,
 				3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */,
-				3FF236242A56F71400C0AAD3 /* ItemCellView.swift in Sources */,
+				3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
 				3F2F94482AB0649900F74AAA /* BottomMenuView.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,

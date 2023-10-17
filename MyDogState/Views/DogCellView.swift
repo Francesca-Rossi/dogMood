@@ -14,9 +14,15 @@ struct DogCellView: View {
     var firstLabel: String?
     var secondLabel: String?
     var parentViewType: ViewParentType
+    var isSelected: Bool?
+    var isSelectable: Bool?
     var body: some View {
         HStack(spacing: 10)
         {
+            if isSelectable ?? false
+            {
+                Image(systemName: (isSelected ?? false) ? "checkmark.circle" : "circle").padding(.leading)
+            }
             if let image = image
             {
                 RoundedRectagleImage(image: image).padding(.leading)

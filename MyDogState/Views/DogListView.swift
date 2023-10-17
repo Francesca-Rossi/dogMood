@@ -10,32 +10,45 @@ import SwiftUI
 struct DogListView: View {
     @StateObject var viewModel: DogViewModel
     @State var selectedItem: Dog?
+    @State private var openCheckStateVC = false
     var body: some View {
         NavigationView {
-            List{
-                ForEach(viewModel.dogsList)
+            VStack
+            {
+                List{
+                    ForEach(viewModel.dogsList)
+                    {
+                        dog in
+                        //Controlla questo if..
+                        if let imageData = dog.image
+                        {
+                            DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: (title: dog.sex ?? "", bgColor: dog.getSexColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+                                .listRowInsets(EdgeInsets()).onTapGesture {
+                                    self.selectedItem = dog
+                                }
+                        }
+                        
+                    }
+                    .onDelete{
+                        indexSet in
+                        Task
+                        {
+                            await viewModel.deleteDog(offset: indexSet)
+                        }
+                    }
+                }.listStyle(PlainListStyle())
+                    .refreshable { viewModel.getAllDogs()
+                    }
+                //aggiungi il bottone
+                Button("CHECK STATE") {
+                    openCheckStateVC.toggle()
+                }
+                .buttonStyle(AnimatedBlueButton())
+                .sheet(isPresented: $openCheckStateVC)
                 {
-                    dog in
-                    //Controlla questo if..
-                    if let imageData = dog.image
-                    {
-                        ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: (title: dog.sex ?? "", bgColor: dog.getSexColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
-                            .listRowInsets(EdgeInsets()).onTapGesture {
-                                self.selectedItem = dog
-                            }
-                    }
-                    
+                    SelectableDogListView(viewModel: viewModel)
                 }
-                .onDelete{
-                    indexSet in
-                    Task
-                    {
-                        await viewModel.deleteDog(offset: indexSet)
-                    }
-                }
-            }.listStyle(PlainListStyle())
-                .refreshable { viewModel.getAllDogs()
-                }
+            }
         }
         .fullScreenCover(item: $selectedItem)
         {
