@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct SelectableRowDogCellView: View {
+    let dog: Dog?
+    @Binding var selectedItem: Dog?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack
+        {
+            if dog == selectedItem
+            {
+                Image(systemName:  "checkmark.circle").padding(.leading)
+            }
+            else
+            {
+                Image(systemName:  "circle").padding(.leading)
+            }
+            if let dog = dog, let imageData = dog.image
+            {
+                DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: (title: dog.sex ?? "", bgColor: dog.getSexColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+            }
+        }
     }
 }
 
-#Preview {
+/*#Preview {
     SelectableRowDogCellView()
-}
+}*/

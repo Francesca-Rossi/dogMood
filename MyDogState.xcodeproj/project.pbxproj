@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F2F84C32A5FF29F00227024 /* DogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C22A5FF29F00227024 /* DogProfileView.swift */; };
 		3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C42A5FF98F00227024 /* DogDetailView.swift */; };
+		3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */; };
 		3F74BBE52A5D60BE00A8BB42 /* DogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */; };
 		3F74BBED2A5D6A9100A8BB42 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */; };
 		3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		3F2F84C22A5FF29F00227024 /* DogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileView.swift; sourceTree = "<group>"; };
 		3F2F84C42A5FF98F00227024 /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
+		3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableRowDogCellView.swift; sourceTree = "<group>"; };
 		3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListView.swift; sourceTree = "<group>"; };
 		3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDao.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
 				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
+				3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,
+				3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */,
 				3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */,
 				3FAE41E62A5439DD002E541C /* DogModel.xcdatamodeld in Sources */,
 				3F74BBED2A5D6A9100A8BB42 /* Dao.swift in Sources */,
