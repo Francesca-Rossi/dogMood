@@ -9,7 +9,13 @@ import SwiftUI
 
 struct SelectableDogListView: View {
     @StateObject var viewModel: DogViewModel
+    @Binding var image: UIImage
     @State var selectedItem: Dog?
+    @State private var showActionSheet: Bool = false
+    @State private var shouldPresentImagePicker = false
+    @State private var shouldPresentActionSheet = false
+    @State private var shouldPresentCamera = false
+    @State private var showErrorMessage = false
     var isSelectable: Bool?
     var body: some View {
         NavigationView {
@@ -27,24 +33,29 @@ struct SelectableDogListView: View {
                     .refreshable { viewModel.getAllDogs()
                     }
                 //aggiungi il bottone
-                Button(action: {print("Button pressed!")})
+                Button(action: {self.showActionSheet.toggle()})
                 {
                     HStack
                     {
                         Image(systemName: "camera")
                         Text("Check emotional state")
                     }
-                }
-.buttonStyle(AnimatedCapsuleBlueButton())
-             }
+                }.buttonStyle(AnimatedCapsuleBlueButton())
+                    .actionSheet(isPresented: $showActionSheet, content: getActionSheet)
+                    .alert("Camera is not accessible", isPresented: $showErrorMessage) {
+                        Button("OK", role: .cancel) { }
+                    }
+            }.sheet(isPresented: $shouldPresentImagePicker)
+            {
+                ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
+            }
         }
-
     }
-}
-
-func checkState()
-{
     
+    func getActionSheet() -> ActionSheet
+    {
+        ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
+    }
 }
 
 struct SelectableDogListViewExample: View {

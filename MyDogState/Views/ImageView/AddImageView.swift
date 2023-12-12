@@ -27,24 +27,15 @@ struct AddImageView: View {
         {
             ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
         }
-        .actionSheet(isPresented: shouldPresentActionSheet) { () -> ActionSheet in
-            ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                if UIImagePickerController.isSourceTypeAvailable(.camera)
-                {
-                    self.shouldPresentImagePicker = true
-                    self.shouldPresentCamera = true
-                }
-                else
-                {
-                    self.showErrorMessage = true
-                }
-            }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                self.shouldPresentImagePicker = true
-                self.shouldPresentCamera = false
-            }), ActionSheet.Button.cancel()])
-        }.alert("Camera is not accessible", isPresented: $showErrorMessage) {
+        .actionSheet(isPresented: $shouldPresentActionSheet, content: getActionSheet )
+        .alert("Camera is not accessible", isPresented: $showErrorMessage) {
             Button("OK", role: .cancel) { }
         }
+    }
+    
+    func getActionSheet() -> ActionSheet
+    {
+        ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
     }
 }
 

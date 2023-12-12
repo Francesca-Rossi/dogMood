@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CustomBottomMenuView: View {
     @StateObject var viewModel: DogViewModel
-    //@State var selectedTab: String
     @State var tapDogList = false
     @State var tapStatusHistory = false
     @State var tapCheckStatus = false
@@ -27,7 +26,7 @@ struct CustomBottomMenuView: View {
                     .buttonStyle(AnimatedCircleBlueButton())
                     .fullScreenCover(isPresented: $tapCheckStatus )
                     {
-                        SelectableDogListView(viewModel: viewModel)
+                        SelectableDogListView(viewModel: viewModel, image: .constant(UIImage()))
                     }
                 }
                 HStack(spacing: 200)
