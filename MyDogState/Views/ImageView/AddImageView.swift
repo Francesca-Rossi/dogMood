@@ -9,25 +9,41 @@ import SwiftUI
 
 struct AddImageView: View {
     @Binding var image: UIImage
-    @State private var showSheet = false
+    @State private var shouldPresentImagePicker = false
+    @State private var shouldPresentActionSheet = false
+    @State private var shouldPresentCamera = false
+    @State private var showErrorMessage = false
+    
     var body: some View {
         HStack {
             CircleImage(image: image)
             ChipView(chip:(title: "Change photo", bgColor: .blue))
                 .onTapGesture {
-                    showSheet = true
+                    self.shouldPresentActionSheet = true
                 }
         }
         .padding(.horizontal, 20)
-        .sheet(isPresented: $showSheet) {
-            // Pick an image from the photo library:
-            ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
-            
-            //  If you wish to take a photo from camera instead:
-            if UIImagePickerController.isSourceTypeAvailable(.camera)
-            {
-                ImagePicker(sourceType: .camera, selectedImage: self.$image)
-            }
+        .sheet(isPresented: $shouldPresentImagePicker)
+        {
+            ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
+        }
+        .actionSheet(isPresented: shouldPresentActionSheet) { () -> ActionSheet in
+            ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                if UIImagePickerController.isSourceTypeAvailable(.camera)
+                {
+                    self.shouldPresentImagePicker = true
+                    self.shouldPresentCamera = true
+                }
+                else
+                {
+                    self.showErrorMessage = true
+                }
+            }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                self.shouldPresentImagePicker = true
+                self.shouldPresentCamera = false
+            }), ActionSheet.Button.cancel()])
+        }.alert("Camera is not accessible", isPresented: $showErrorMessage) {
+            Button("OK", role: .cancel) { }
         }
     }
 }
