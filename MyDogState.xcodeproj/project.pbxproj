@@ -182,10 +182,7 @@
 				3FAE41D62A54388A002E541C /* DogsListContentView.swift */,
 				3F2F84C42A5FF98F00227024 /* DogDetailView.swift */,
 				3FAE41EE2A544C76002E541C /* AddDogView.swift */,
-				3FAE41F62A5453C3002E541C /* SexView.swift */,
 				3FF236232A56F71400C0AAD3 /* DogCellView.swift */,
-				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
-				3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */,
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
 				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
@@ -197,7 +194,6 @@
 		3FAE41ED2A544B98002E541C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3FAE41F22A54507F002E541C /* ImagePicker.swift */,
 				3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */,
 				3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */,
 			);
@@ -215,8 +211,12 @@
 		3FB6077A2ACB2FBB0086F48A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3FAE41F22A54507F002E541C /* ImagePicker.swift */,
 				3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */,
 				3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */,
+				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
+				3FAE41F62A5453C3002E541C /* SexView.swift */,
+				3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
