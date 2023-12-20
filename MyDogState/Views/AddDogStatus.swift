@@ -31,7 +31,7 @@ struct AddDogStatus: View {
                     Image(systemName: "square.and.arrow.down")
                     Text("save in the history")
                 }
-            }.buttonStyle(AnimatedCapsuleBlueButton())
+            }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
         }
     }
 }

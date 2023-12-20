@@ -23,7 +23,7 @@ struct CustomBottomMenuView: View {
                         Image("dog_paw_filled").renderingMode(.template)
                             .foregroundColor(.white)
                     }
-                    .buttonStyle(AnimatedCircleBlueButton())
+                    .buttonStyle(AnimatedCircleBlueButtonStyle())
                     .fullScreenCover(isPresented: $tapCheckStatus )
                     {
                         SelectableDogListView(viewModel: viewModel, image: .constant(UIImage()))

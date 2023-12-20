@@ -40,7 +40,7 @@ struct SelectableDogListView: View {
                         Image(systemName: "camera")
                         Text("Check emotional state")
                     }
-                }.buttonStyle(AnimatedCapsuleBlueButton())
+                }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
                     .actionSheet(isPresented: $showActionSheet, content: getActionSheet)
                     .alert("Camera is not accessible", isPresented: $showErrorMessage) {
                         Button("OK", role: .cancel) { }
