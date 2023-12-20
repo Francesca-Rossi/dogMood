@@ -39,6 +39,7 @@
 		3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */; };
 		3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236462A570BC600C0AAD3 /* Enumeration.swift */; };
 		3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */; };
+		3FFD16B12B332DB0007341D0 /* AddDogStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectagleImage.swift; sourceTree = "<group>"; };
 		3FF236462A570BC600C0AAD3 /* Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
 		3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIcon.swift; sourceTree = "<group>"; };
+		3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				3FF236412A57088900C0AAD3 /* ImageView */,
 				3FAE41D62A54388A002E541C /* DogsListContentView.swift */,
 				3F2F84C42A5FF98F00227024 /* DogDetailView.swift */,
+				3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */,
 				3FAE41EE2A544C76002E541C /* AddDogView.swift */,
 				3FF236232A56F71400C0AAD3 /* DogCellView.swift */,
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
@@ -326,6 +329,7 @@
 				3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */,
 				3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
+				3FFD16B12B332DB0007341D0 /* AddDogStatus.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,
 				3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */,
 				3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */,
