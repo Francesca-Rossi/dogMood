@@ -14,13 +14,6 @@ struct ChoicePhotosSourceActionSheet
     @Binding var shouldPresentCamera: Bool
     @Binding var showErrorMessage: Bool
     
-    /*var body: some View {
-        Button("click me"){
-            showActionSheet.toggle()
-        }
-        .actionSheet(isPresented: $showActionSheet, content: getActionSheet )
-    }*/
-    
     func getActionSheet() -> ActionSheet
     {
         let cameraButton: ActionSheet.Button = .default(Text("Camera"), action: {openCamera()})

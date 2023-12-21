@@ -19,6 +19,7 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     let sex: String?
     let hairColor: String?
     let date: Date? //insert date
+    //TODO: rosfrc gestisci gli stati
     var isSelected = false
 
     func getSexColor()-> Color
