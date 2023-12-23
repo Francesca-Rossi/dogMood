@@ -122,8 +122,8 @@ public class DogDao: Dao
             dogEntity.name = obj.name
             dogEntity.microchip = obj.microchip
             dogEntity.image = obj.image
-            dogEntity.dateOfBirth = obj.date
-            dogEntity.date = obj.date
+            dogEntity.dateOfBirth = obj.dateOfBirth
+            dogEntity.date = obj.date //data di inserimento
             dogEntity.sex = obj.sex
             dogEntity.hairColor = obj.hairColor
             dogEntity.breed = obj.breed
