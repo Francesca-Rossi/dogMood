@@ -18,6 +18,7 @@ class DogViewModel: ObservableObject {
         }
     }
     var dao = DogDao()
+    var emotionalManager = EmotionalStateManagerBO()
     var errorInfo = ErrorInfo()
     
     init()
@@ -29,6 +30,10 @@ class DogViewModel: ObservableObject {
     {
             do {
                 dogsList = try  dao.getAll(info: &errorInfo)
+                for i in dogsList.indices
+                {
+                    dogsList[i].emotionalCheckList = try emotionalManager.getAllEmotionalCheckByDog(dog:dogsList[i])
+                }
             }
             catch
             {
@@ -52,7 +57,7 @@ class DogViewModel: ObservableObject {
                                breed: breed,
                                sex: sex,
                                hairColor: hairColor,
-                               date: Date())
+                               date: Date(), emotionalCheckList: nil) //all'inizio il cane non ha stati.
                 
                 try await dao.create(obj: dog, info: &errorInfo)
                 self.getAllDogs()

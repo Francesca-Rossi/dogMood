@@ -13,6 +13,60 @@ public class DogDao: Dao
     typealias T = Dog
     private let persistent = PersistenceController.shared
     
+    private func getEntityById(_ id: UUID)  throws  -> DogEntity?
+    {
+        let request = DogEntity.fetchRequest()
+        request.fetchLimit = 1
+        request.predicate = NSPredicate(
+            format: "id = %@", id.uuidString)
+        let dogEntity = try persistent.viewContext.fetch(request)[0]
+        return dogEntity
+    }
+    
+    func fromEntityToObject(entity: DogEntity?) throws -> Dog?
+    {
+        let result = try runBlocking
+        {
+            var info = ErrorInfo()
+            if let dogId = entity?.id
+            {
+                do
+                {
+                    return try await getById(dogId, info: &info)
+                }
+                catch
+                {
+                    info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+                    throw info
+                }
+            }
+            return nil
+        }
+        return result
+    }
+    func fromObjectToEntity(obj: Dog?) throws -> DogEntity?
+    {
+        let result = try runBlocking
+        {
+            var info = ErrorInfo()
+            if let dogID = obj?.id
+            {
+                do
+                {
+                    return try getEntityById(dogID)
+                }
+                catch
+                {
+                    info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+                    throw info
+                }
+            }
+            return nil
+        }
+        return result
+    }
+    // MARK: - DAO methods
+    
     func getAll(info: inout ErrorInfo) throws -> [Dog]
     {
         do
@@ -27,7 +81,7 @@ public class DogDao: Dao
                     breed: dogEntity.breed,
                     sex: dogEntity.sex,
                     hairColor: dogEntity.hairColor,
-                    date: dogEntity.date)
+                    date: dogEntity.date, emotionalCheckList: nil)
             })
         }
         catch
@@ -37,7 +91,7 @@ public class DogDao: Dao
         }
     }
     
-    func getById(_ id: UUID, info: inout ErrorInfo)  throws -> Dog?
+    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> Dog?
     {
         do
         {
@@ -50,7 +104,7 @@ public class DogDao: Dao
              breed: dogEntity.breed,
              sex: dogEntity.sex,
              hairColor: dogEntity.hairColor,
-             date: dogEntity.date)
+                       date: dogEntity.date, emotionalCheckList: nil)
         }
         catch
         {
@@ -87,7 +141,6 @@ public class DogDao: Dao
         do
         {
             let dogEntity = try getEntityById(id)!
-            dogEntity.id = obj.id
             dogEntity.name = obj.name
             dogEntity.microchip = obj.microchip
             dogEntity.image = obj.image
@@ -119,16 +172,4 @@ public class DogDao: Dao
             throw info
         }
     }
-    
-    private func getEntityById(_ id: UUID)  throws  -> DogEntity?
-    {
-        let request = DogEntity.fetchRequest()
-        request.fetchLimit = 1
-        request.predicate = NSPredicate(
-            format: "id = %@", id.uuidString)
-        let dogEntity = try persistent.viewContext.fetch(request)[0]
-        return dogEntity
-    }
-    
-   
 }

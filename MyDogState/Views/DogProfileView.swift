@@ -36,7 +36,7 @@ struct DogProfileView: View
 }
 
 struct DogProfileViewExample : View {
-    private var dog = Dog(id: UUID(), name: "pluto", microchip: "12234", dateOfBirth: Date(), image: nil, breed: "Pastore", sex: "Boy", hairColor: "Marrone", date: Date())
+    private var dog = Dog(id: UUID(), name: "pluto", microchip: "12234", dateOfBirth: Date(), image: nil, breed: "Pastore", sex: "Boy", hairColor: "Marrone", date: Date(), emotionalCheckList: nil)
     
     var body: some View {
         DogProfileView(dog: dog)

@@ -25,24 +25,6 @@ extension DogEntity {
     @NSManaged public var microchip: String?
     @NSManaged public var name: String?
     @NSManaged public var sex: String?
-    @NSManaged public var status: NSSet?
-
-}
-
-// MARK: Generated accessors for status
-extension DogEntity {
-
-    @objc(addStatusObject:)
-    @NSManaged public func addToStatus(_ value: DogStatusInfoEntity)
-
-    @objc(removeStatusObject:)
-    @NSManaged public func removeFromStatus(_ value: DogStatusInfoEntity)
-
-    @objc(addStatus:)
-    @NSManaged public func addToStatus(_ values: NSSet)
-
-    @objc(removeStatus:)
-    @NSManaged public func removeFromStatus(_ values: NSSet)
 
 }
 

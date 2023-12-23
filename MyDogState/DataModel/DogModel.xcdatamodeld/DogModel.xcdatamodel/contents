@@ -10,19 +10,17 @@
         <attribute name="microchip" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="sex" attributeType="String"/>
-        <relationship name="status" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DogStatusInfoEntity" inverseName="dog" inverseEntity="DogStatusInfoEntity"/>
     </entity>
-    <entity name="DogStatusInfoEntity" representedClassName="DogStatusInfoEntity" syncable="YES">
+    <entity name="EmotionalCheckInfoEntity" representedClassName="EmotionalCheckInfoEntity" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
-        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity" inverseName="status" inverseEntity="DogEntity"/>
-        <relationship name="status" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DogStatusResultEntity" inverseName="status_info" inverseEntity="DogStatusResultEntity"/>
+        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity"/>
     </entity>
-    <entity name="DogStatusResultEntity" representedClassName="DogStatusResultEntity" syncable="YES">
+    <entity name="EmotionalStateEntity" representedClassName="EmotionalStateEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="percentual" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="String"/>
-        <relationship name="status_info" maxCount="1" deletionRule="Nullify" destinationEntity="DogStatusInfoEntity" inverseName="status" inverseEntity="DogStatusInfoEntity"/>
+        <relationship name="status_info" maxCount="1" deletionRule="Nullify" destinationEntity="EmotionalCheckInfoEntity"/>
     </entity>
 </model>
