@@ -801,5 +801,146 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E673B29-39A5-4DC4-AC9D-A08791996E56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Utilities/Log.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "write(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E673B29-39A5-4DC4-AC9D-A08791996E56 - 51e77db6f9258283"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Log.write(Swift.String) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Log.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  uuid = "9E673B29-39A5-4DC4-AC9D-A08791996E56 - 51e77db6f9258283"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Log.write(Swift.String) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Log.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "583">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Utilities/Logger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "log(_:extra1:extra2:extra3:level:saveToFile:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - 82b2b8042af12276"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.debugPrint(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, saveToFile: Swift.Bool, plain: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1810">
+               </Location>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - 3334f7467d0199ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.debugPrint(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, level: __C.OSLogEntryLogLevel, saveToFile: Swift.Bool, plain: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1894">
+               </Location>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - 3334f7467d0199ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.debugPrint(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, level: __C.OSLogEntryLogLevel, saveToFile: Swift.Bool, plain: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1887">
+               </Location>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - 2ee0977c8403f9ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.debugPrint(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, level: MyDogState.LogLevel, saveToFile: Swift.Bool, plain: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1907">
+               </Location>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - 2ee0977c8403f9ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.debugPrint(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, level: MyDogState.LogLevel, saveToFile: Swift.Bool, plain: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1978">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

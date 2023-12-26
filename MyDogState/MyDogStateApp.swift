@@ -13,6 +13,7 @@ struct MyDogStateApp: App {
     @StateObject var viewModel = DogViewModel()
     var body: some Scene {
         WindowGroup {
+            let _ = Logger.shared.printDocumentsDirectory()
             DogsListContentView()
                 .environmentObject(viewModel)
             //HomeContentView().environmentObject(viewModel)

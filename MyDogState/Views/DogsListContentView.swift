@@ -15,6 +15,7 @@ struct DogsListContentView: View {
         NavigationView {
             VStack(alignment: .leading)
             {
+                let _ = Logger.shared.log("Open dog list view", level: LogLevel.Trace , saveToFile: true)
                 DogListView(viewModel: self.viewModel)
             }
             .navigationTitle("My Dog List")
@@ -30,6 +31,7 @@ struct DogsListContentView: View {
             }
             .sheet(isPresented: $showingAddView)
             {
+                let _ = Logger.shared.log("Open add new dog view", level: LogLevel.Trace , saveToFile: true)
                 AddDogView(viewModel: self.viewModel)
             }
         }

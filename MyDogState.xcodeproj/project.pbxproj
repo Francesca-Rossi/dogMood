@@ -16,6 +16,9 @@
 		3F12AEA92B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA32B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift */; };
 		3F12AEAA2B3497D0009B7300 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA42B3497D0009B7300 /* DogEntity+CoreDataClass.swift */; };
 		3F12AEAB2B3497D0009B7300 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA52B3497D0009B7300 /* DogEntity+CoreDataProperties.swift */; };
+		3F1A177F2B3AA45300044CA9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A177E2B3AA45300044CA9 /* Logger.swift */; };
+		3F1A17812B3AA53B00044CA9 /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A17802B3AA53B00044CA9 /* StringUtilities.swift */; };
+		3F1A17832B3AAB0600044CA9 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A17822B3AAB0600044CA9 /* LogLevel.swift */; };
 		3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */; };
 		3F2F84C32A5FF29F00227024 /* DogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C22A5FF29F00227024 /* DogProfileView.swift */; };
 		3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C42A5FF98F00227024 /* DogDetailView.swift */; };
@@ -61,6 +64,9 @@
 		3F12AEA32B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmotionalStateEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F12AEA42B3497D0009B7300 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F12AEA52B3497D0009B7300 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F1A177E2B3AA45300044CA9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		3F1A17802B3AA53B00044CA9 /* StringUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
+		3F1A17822B3AAB0600044CA9 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePhotosSourceActionSheet.swift; sourceTree = "<group>"; };
 		3F2F84C22A5FF29F00227024 /* DogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileView.swift; sourceTree = "<group>"; };
 		3F2F84C42A5FF98F00227024 /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
@@ -195,9 +201,13 @@
 		3FAE41E92A5440A2002E541C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */,
+				3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */,
 				3FF236462A570BC600C0AAD3 /* Enumeration.swift */,
-				3F7286DE2B3575B50013AE4D /* EmotionalStateManagerBO.swift */,
 				3F7286E12B35A4F80013AE4D /* RunBloking.swift */,
+				3F1A177E2B3AA45300044CA9 /* Logger.swift */,
+				3F1A17822B3AAB0600044CA9 /* LogLevel.swift */,
+				3F1A17802B3AA53B00044CA9 /* StringUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -224,8 +234,7 @@
 		3FAE41ED2A544B98002E541C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */,
-				3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */,
+				3F7286DE2B3575B50013AE4D /* EmotionalStateManagerBO.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,
 				3F12AEA82B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift in Sources */,
+				3F1A17812B3AA53B00044CA9 /* StringUtilities.swift in Sources */,
 				3F74BBE52A5D60BE00A8BB42 /* DogListView.swift in Sources */,
 				3F2F84C32A5FF29F00227024 /* DogProfileView.swift in Sources */,
 				3F12AE912B347679009B7300 /* Status.swift in Sources */,
@@ -355,6 +365,8 @@
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
+				3F1A17832B3AAB0600044CA9 /* LogLevel.swift in Sources */,
+				3F1A177F2B3AA45300044CA9 /* Logger.swift in Sources */,
 				3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */,
 				3F12AEA62B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift in Sources */,
 				3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */,
