@@ -31,3 +31,11 @@ extension DogEntity {
 extension DogEntity : Identifiable {
 
 }
+
+extension DogEntity
+{
+    public func toString() -> String
+    {
+        "{id: \(self.id), name: \(self.name), microchip: \(self.microchip), sex: \(self.sex) dateOfBirth: \(self.dateOfBirth), date: \(self.date), breed: \(self.breed), hairColor: \(String(describing: self.hairColor)), imageSize: \(self.image?.count)}"
+    }
+}

@@ -30,11 +30,13 @@ public class EmotionalStateDao: Dao
             request.predicate = NSPredicate(
                 format: "id = %@", id.uuidString)
             let resultEntity = try persistent.viewContext.fetch(request)[0]
+            Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             return resultEntity
         }
         catch
         {
-            errorInfo.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw errorInfo
         }
     }
@@ -54,7 +56,8 @@ public class EmotionalStateDao: Dao
         }
         catch
         {
-            info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -70,12 +73,14 @@ public class EmotionalStateDao: Dao
                     state: resultEntity.status,
                     percentual: resultEntity.percentual,
                     statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
+                Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             }
             return nil
         }
         catch
         {
-            info.setErrorMessage(value: "DOG GET BY ID ERROR:\(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -92,18 +97,21 @@ public class EmotionalStateDao: Dao
                 statusResultEntity.status = obj.state
                 statusResultEntity.percentual = obj.percentual ?? Double()
                 statusResultEntity.status_info = statusInfo
+                Logger.shared.log(statusResultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
             }
             else
             {
                 //Genero un errore dicendo che manca lo status info a database
-                info.setErrorMessage(value: "[DATABASE ERROR] hai provato ad aggiungere degli stati senza aver salvato le informazioni di quando questo check è avvenuto")
+                info.setErrorMessage(value:  "Error - try to add new state without check info")
+                Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw info
             }
         }
         catch
         {
-            info.setErrorMessage(value: "[DATABASE ERROR] \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -120,18 +128,21 @@ public class EmotionalStateDao: Dao
                 stateEntity.percentual = percentual
                 stateEntity.status = obj.state
                 stateEntity.status_info = statusInfo
+                Logger.shared.log(stateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
             }
             else
             {
                 //Genero un errore dicendo che manca lo l'emotional info check a database
-                info.setErrorMessage(value: "[DATABASE ERROR] hai provato a aggiornare degli stati senza aver salvato le informazioni di quando questo check è avvenuto")
+                info.setErrorMessage(value:  "Error - try to update the state without check info")
+                Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw info
             }
         }
         catch
         {
-            info.setErrorMessage(value: "DOG UPDATE ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -142,11 +153,13 @@ public class EmotionalStateDao: Dao
         {
             let emotionalStateEntity = try  getEntityById(id, errorInfo: &info)!
             persistent.viewContext.delete(emotionalStateEntity)
+            Logger.shared.log(emotionalStateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             try persistent.saveContext()
         }
         catch{
             persistent.viewContext.rollback()
-            info.setErrorMessage(value: "DOG DELETE ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }

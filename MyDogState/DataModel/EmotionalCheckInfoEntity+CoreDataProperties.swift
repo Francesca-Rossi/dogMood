@@ -26,3 +26,11 @@ extension EmotionalCheckInfoEntity {
 extension EmotionalCheckInfoEntity : Identifiable {
 
 }
+
+extension EmotionalCheckInfoEntity
+{
+    public func toString() -> String
+    {
+        "{id: \(self.id), date: \(self.date), note: \(self.note), dogID: \(self.dog?.id), dogName: \(self.dog?.name)}"
+    }
+}

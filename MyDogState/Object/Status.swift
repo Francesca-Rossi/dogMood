@@ -15,6 +15,11 @@ struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
     var dog: Dog?
     var statusList: [EmotionalState]?
     
+    func toString() -> String
+    {
+        "{id: \(self.id), date: \(self.date), note: \(self.note), dogID: \(self.dog?.id), dogName: \(self.dog?.name), statusList: \(self.statusList?.count)}"
+    }
+    
 }
 
 struct EmotionalState: Codable, Equatable, Identifiable, Hashable

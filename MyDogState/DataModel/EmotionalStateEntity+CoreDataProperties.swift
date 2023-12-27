@@ -26,3 +26,11 @@ extension EmotionalStateEntity {
 extension EmotionalStateEntity : Identifiable {
 
 }
+
+extension EmotionalStateEntity
+{
+    public func toString() -> String
+    {
+        "{id: \(self.id), status: \(self.status), checkID: \(self.status_info?.id), percentual: \(self.percentual)}"
+    }
+}

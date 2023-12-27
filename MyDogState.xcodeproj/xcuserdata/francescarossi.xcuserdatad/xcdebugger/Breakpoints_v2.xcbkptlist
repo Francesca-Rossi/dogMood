@@ -276,8 +276,8 @@
             filePath = "MyDogState/Dao/DogDao.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "create(obj:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -292,8 +292,8 @@
             filePath = "MyDogState/Dao/DogDao.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "create(obj:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -308,8 +308,8 @@
             filePath = "MyDogState/Dao/DogDao.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "create(obj:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -715,8 +715,8 @@
             filePath = "MyDogState/Dao/DogDao.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "create(obj:info:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -939,7 +939,38 @@
                   endingLineNumber = "38"
                   offsetFromSymbolStart = "1978">
                </Location>
+               <Location
+                  uuid = "F11CB369-E58C-49C4-A87D-803B89E8E1F1 - ecc698dba2dc1828"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.Logger.log(_: Any, extra1: Swift.String, extra2: Swift.String, extra3: Swift.Int, level: MyDogState.LogLevel, saveToFile: Swift.Bool) -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Logger.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1806">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A355FE8-389B-47B4-9677-8AEDA6E2C70F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Dao/DogDao.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getEntityById(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -20,6 +20,7 @@ public class DogDao: Dao
         request.predicate = NSPredicate(
             format: "id = %@", id.uuidString)
         let dogEntity = try persistent.viewContext.fetch(request)[0]
+        Logger.shared.log(dogEntity.toString(), level: LogLevel.Debug , saveToFile: true)
         return dogEntity
     }
     
@@ -36,7 +37,8 @@ public class DogDao: Dao
                 }
                 catch
                 {
-                    info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+                    info.setErrorMessage(value:  "\(error.localizedDescription)")
+                    Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                     throw info
                 }
             }
@@ -57,7 +59,8 @@ public class DogDao: Dao
                 }
                 catch
                 {
-                    info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+                    info.setErrorMessage(value:  "\(error.localizedDescription)")
+                    Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                     throw info
                 }
             }
@@ -86,7 +89,8 @@ public class DogDao: Dao
         }
         catch
         {
-            info.setErrorMessage(value: "DOG GET ALL ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -96,6 +100,7 @@ public class DogDao: Dao
         do
         {
             let dogEntity = try getEntityById(id)!
+            Logger.shared.log(dogEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             return Dog(id: dogEntity.id,
              name: dogEntity.name,
              microchip: dogEntity.microchip,
@@ -108,7 +113,8 @@ public class DogDao: Dao
         }
         catch
         {
-            info.setErrorMessage(value: "DOG GET BY ID ERROR:\(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -127,11 +133,13 @@ public class DogDao: Dao
             dogEntity.sex = obj.sex
             dogEntity.hairColor = obj.hairColor
             dogEntity.breed = obj.breed
+            Logger.shared.log(dogEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             try persistent.saveContext()
         }
         catch
         {
-            info.setErrorMessage(value: "DOG CREATE ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -149,11 +157,13 @@ public class DogDao: Dao
             dogEntity.sex = obj.sex
             dogEntity.hairColor = obj.hairColor
             dogEntity.breed = obj.breed
+            Logger.shared.log(dogEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             try persistent.saveContext()
         }
         catch
         {
-            info.setErrorMessage(value: "DOG UPDATE ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }
@@ -163,12 +173,14 @@ public class DogDao: Dao
         do
         {
             let dogEntity = try  getEntityById(id)!
+            Logger.shared.log(dogEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             persistent.viewContext.delete(dogEntity)
             try persistent.saveContext()
         }
         catch{
             persistent.viewContext.rollback()
-            info.setErrorMessage(value: "DOG DELETE ERROR: \(error.localizedDescription)")
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }
     }

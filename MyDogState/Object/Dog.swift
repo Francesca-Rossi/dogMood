@@ -33,4 +33,9 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         }
         
     }
+    
+    func toString() -> String
+    {
+        "{id: \(self.id), name: \(self.name), microchip: \(self.microchip), sex: \(self.sex) dateOfBirth: \(self.dateOfBirth), date: \(self.date), breed: \(self.breed), hairColor: \(self.hairColor), imageSize: \(self.image?.count), emotionalCheckListSize: \(self.emotionalCheckList?.count)}"
+    }
 }
