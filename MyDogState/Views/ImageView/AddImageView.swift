@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddImageView: View {
-    @Binding var image: UIImage
+    @Binding var image: UIImage?
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentActionSheet = false
     @State private var shouldPresentCamera = false
@@ -16,11 +16,13 @@ struct AddImageView: View {
     
     var body: some View {
         HStack {
+           
             CircleImage(image: image)
             ChipView(chip:(title: "Change photo", bgColor: .blue))
                 .onTapGesture {
                     self.shouldPresentActionSheet = true
                 }
+    
         }
         .padding(.horizontal, 20)
         .sheet(isPresented: $shouldPresentImagePicker)

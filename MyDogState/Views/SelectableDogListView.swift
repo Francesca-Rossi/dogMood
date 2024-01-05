@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectableDogListView: View {
     @StateObject var viewModel: DogViewModel
-    @Binding var image: UIImage
+    @Binding var image: UIImage?
     @State var selectedItem: Dog?
     @State private var showActionSheet: Bool = false
     @State private var shouldPresentImagePicker = false
@@ -41,21 +41,25 @@ struct SelectableDogListView: View {
                         Text("Check emotional state")
                     }
                 }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                    .actionSheet(isPresented: $showActionSheet, content: getActionSheet)
+                    .fullScreenCover(isPresented: $showActionSheet)
+                    {
+                        CheckEmotionalDogStateContentView()
+                    }
+                    //.actionSheet(isPresented: $showActionSheet, content: getActionSheet)
                     .alert("Camera is not accessible", isPresented: $showErrorMessage) {
                         Button("OK", role: .cancel) { }
                     }
-            }.sheet(isPresented: $shouldPresentImagePicker)
+            }/*.sheet(isPresented: $shouldPresentImagePicker)
             {
                 ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
-            }
+            }*/
         }
     }
     
-    func getActionSheet() -> ActionSheet
+    /*func getActionSheet() -> ActionSheet
     {
-        ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
-    }
+        //ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
+    }*/
 }
 
 struct SelectableDogListViewExample: View {

@@ -13,7 +13,7 @@ struct AddDogView: View {
     
     @State private var microchip = "" //must to have
     @State private var name = "" //must to have
-    @State private var image = UIImage() //must to have
+    @State private var image: UIImage?
     @State private var sex = sexType.Boy
     @State private var dateOfBirth = Date()
     @State private var hairColor = ""
@@ -73,22 +73,25 @@ struct AddDogView: View {
     {
         Task
         {
-            let info =  await viewModel.addNewDog(
-                microchip: microchip,
-                name: name,
-                dateOfBirth: dateOfBirth,
-                image: image,
-                sex: sex,
-                breed: breed,
-                hairColor: hairColor)
-            if info.hasErrorInfo()
+            if let image = image
             {
-                //TODO controllare che funzioni
-                Alert(
-                    title: Text("Error"),
-                    message: Text(info.getErrorMessage()),
-                    dismissButton: .default(Text("OK"))
-                )
+                let info =  await viewModel.addNewDog(
+                    microchip: microchip,
+                    name: name,
+                    dateOfBirth: dateOfBirth,
+                    image: image,
+                    sex: sex,
+                    breed: breed,
+                    hairColor: hairColor)
+                if info.hasErrorInfo()
+                {
+                    //TODO controllare che funzioni
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(info.getErrorMessage()),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
             }
             dismiss()
         }
@@ -96,7 +99,11 @@ struct AddDogView: View {
     
     func buttonIsDisabled()-> Bool
     {
-        return image.size.width == 0 || microchip.isEmpty || name.isEmpty
+        if let image = image
+        {
+            return image.size.width == 0 || microchip.isEmpty || name.isEmpty
+        }
+        return false
     }
 }
 
