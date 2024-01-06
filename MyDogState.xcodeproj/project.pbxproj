@@ -32,6 +32,7 @@
 		3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E342A5BFC5400D37229 /* DogViewModel.swift */; };
 		3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E362A5BFC9300D37229 /* PersistenController.swift */; };
 		3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */; };
+		3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */; };
 		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
 		3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D62A54388A002E541C /* DogsListContentView.swift */; };
@@ -85,6 +86,7 @@
 		3F778E342A5BFC5400D37229 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		3F778E362A5BFC9300D37229 /* PersistenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenController.swift; sourceTree = "<group>"; };
 		3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictResult.swift; sourceTree = "<group>"; };
+		3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalResultDialogView.swift; sourceTree = "<group>"; };
 		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAE41D42A54388A002E541C /* MyDogStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogStateApp.swift; sourceTree = "<group>"; };
@@ -152,6 +154,15 @@
 				3FC3321F2B47E56300349AC5 /* CheckEmotionalDogStateContentViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3F79B9EF2B495E4500EB8542 /* CheckEmotionalStateViews */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3321D2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift */,
+				3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */,
+			);
+			name = CheckEmotionalStateViews;
 			sourceTree = "<group>";
 		};
 		3FAE41C82A54388A002E541C = {
@@ -228,6 +239,7 @@
 		3FAE41EC2A544AAA002E541C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F79B9EF2B495E4500EB8542 /* CheckEmotionalStateViews */,
 				3FB2E6CE2ADED6E100C4D0FD /* Style */,
 				3FB6077A2ACB2FBB0086F48A /* Utilities */,
 				3FF236412A57088900C0AAD3 /* ImageView */,
@@ -239,7 +251,6 @@
 				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
 				3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */,
-				3FC3321D2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +381,7 @@
 				3F12AE952B34773F009B7300 /* EmotionalInfoCheckDao.swift in Sources */,
 				3FAE41F72A5453C3002E541C /* SexView.swift in Sources */,
 				3F12AEAB2B3497D0009B7300 /* DogEntity+CoreDataProperties.swift in Sources */,
+				3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */,
 				3FD9C8DD2ACF0A9700162DFA /* Button.swift in Sources */,
 				3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */,
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,

@@ -31,7 +31,6 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         default:
             return .blue
         }
-        
     }
     
     func toString() -> String

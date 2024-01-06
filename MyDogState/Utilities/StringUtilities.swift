@@ -13,4 +13,17 @@ public class StringUtilities
     {
         return ""
     }
+    
+    static func equals(str1: String?, str2: String?)-> Bool
+    {
+            return str1 == str2
+    }
+}
+
+extension String
+{
+    func isEqual(other: String) -> Bool
+    {
+        return self == other
+    }
 }

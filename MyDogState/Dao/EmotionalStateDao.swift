@@ -51,7 +51,7 @@ public class EmotionalStateDao: Dao
             let request = EmotionalStateEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ resultEntity in
                 
-                EmotionalState(id: resultEntity.id , state: resultEntity.status, percentual: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
+                EmotionalState(id: resultEntity.id , mood: resultEntity.status, percentual: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
             })
         }
         catch
@@ -70,7 +70,7 @@ public class EmotionalStateDao: Dao
             {
                 return EmotionalState(
                     id: resultEntity.id,
-                    state: resultEntity.status,
+                    mood: resultEntity.status,
                     percentual: resultEntity.percentual,
                     statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
                 Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
@@ -94,7 +94,7 @@ public class EmotionalStateDao: Dao
                 //ATTENZIONE: non possiamo creare i risultati del check se non abbiamo salvato prima l'emotional info check in database
                 let statusResultEntity = EmotionalStateEntity(context: persistent.viewContext)
                 statusResultEntity.id = obj.id
-                statusResultEntity.status = obj.state
+                statusResultEntity.status = obj.mood
                 statusResultEntity.percentual = obj.percentual ?? Double()
                 statusResultEntity.status_info = statusInfo
                 Logger.shared.log(statusResultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
@@ -126,7 +126,7 @@ public class EmotionalStateDao: Dao
             {
                 let stateEntity = try getEntityById(id, errorInfo: &info)!
                 stateEntity.percentual = percentual
-                stateEntity.status = obj.state
+                stateEntity.status = obj.mood
                 stateEntity.status_info = statusInfo
                 Logger.shared.log(stateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()

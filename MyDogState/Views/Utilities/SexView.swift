@@ -14,8 +14,8 @@ struct SexView: View {
         {
             Text("Sex")
             Picker(selection: $sex, label: Text("Sex:")) {
-                Text("Girl").tag(sexType.Girl)
-                Text("Boy").tag(sexType.Boy)
+                Text(sexType.Girl).tag(sexType.Girl)
+                Text(sexType.Boy).tag(sexType.Boy)
             }.pickerStyle(.segmented)
         }
     }

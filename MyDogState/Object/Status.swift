@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
 {
@@ -25,8 +26,20 @@ struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
 struct EmotionalState: Codable, Equatable, Identifiable, Hashable
 {
     let id: UUID? //unique
-    let state: String?
-    let percentual: Double?
+    let mood: String?
+    let percentual: Double? //TODO: rename with confidence
     let statusInfo: EmotionalInfoCheck?
+    
+    func getMoodColor()-> Color
+    {
+        switch MoodResult.fromString(value: mood)
+        {
+            case .happy: return .green
+            case .relaxed: return .blue
+            case .sad: return .orange
+            case .angry: return .red
+            default: return .black
+        }
+    }
 }
 
