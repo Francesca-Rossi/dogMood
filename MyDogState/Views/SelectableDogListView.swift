@@ -22,9 +22,9 @@ struct SelectableDogListView: View {
                     {
                         dog in
                         SelectableRowDogCellView(dog: dog, selectedItem: $selectedItem)
-                                .listRowInsets(EdgeInsets()).onTapGesture {
-                                    self.selectedItem = dog
-                                }
+                            .listRowInsets(EdgeInsets()).onTapGesture {
+                                self.selectedItem = dog
+                            }
                     }
                 }.listStyle(PlainListStyle())
                     .refreshable { viewModel.getAllDogs()
@@ -39,23 +39,25 @@ struct SelectableDogListView: View {
                     }
                 }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
                     .fullScreenCover(isPresented: $showActionSheet)
+                {
+                    if let dog = selectedItem
                     {
-                        if let dog = selectedItem
-                        {
-                            CheckEmotionalDogStateContentView(selectedDog: dog)
-                        }
+                        CheckEmotionalDogStateContentView(selectedDog: dog)
                     }
-                    //.actionSheet(isPresented: $showActionSheet, content: getActionSheet)
-                    //.alert("Camera is not accessible", isPresented: $showErrorMessage) {
-                   //     Button("OK", role: .cancel) { }
-                   // }
-            }/*.sheet(isPresented: $shouldPresentImagePicker)
-            {
-                ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
-            }*/
+                }
+                .disabled(buttonIsDisabled())
+            }
         }
     }
     
+    func buttonIsDisabled()-> Bool
+    {
+        if selectedItem == nil
+        {
+            return true
+        }
+        return false
+    }
     
 }
 
