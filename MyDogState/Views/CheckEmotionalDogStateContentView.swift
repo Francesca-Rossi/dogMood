@@ -10,6 +10,10 @@ struct CheckEmotionalDogStateContentView: View {
     @State var selectedDog: Dog
     @StateObject var classificationServiceViewModel = ClassificationsViewModel()
     
+    @State private var shouldPresentImagePicker = false
+    @State private var shouldPresentCamera = false
+    @State private var showErrorMessage = false
+    
     var body: some View {
         NavigationView {
             if let image = classificationServiceViewModel.importedImage {
@@ -73,10 +77,20 @@ struct CheckEmotionalDogStateContentView: View {
             }
         }
         .onChange(of: classificationServiceViewModel.importedImage) { _ in classificationServiceViewModel.onChangeImage() }
-        .sheet(isPresented: $classificationServiceViewModel.displayImagePicker) {
-            ImagePicker(sourceType: .photoLibrary, selectedImage: $classificationServiceViewModel.importedImage)
+        .actionSheet(isPresented: $classificationServiceViewModel.displayImagePicker, content: getActionSheet)
+        .alert("Camera is not accessible", isPresented: $showErrorMessage) {
+            Button("OK", role: .cancel) { }
+        }
+        .sheet(isPresented: $shouldPresentImagePicker)
+        {
+            ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: $classificationServiceViewModel.importedImage)
         }
     }
+    
+    func getActionSheet() -> ActionSheet
+     {
+     ChoicePhotosSourceActionSheet(showActionSheet: $classificationServiceViewModel.displayImagePicker,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
+     }
 }
 
 #if DEBUG

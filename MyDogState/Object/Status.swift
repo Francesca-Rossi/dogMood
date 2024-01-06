@@ -15,6 +15,7 @@ struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
     var note: String?
     var dog: Dog?
     var statusList: [MoodDetail]?
+    //TODO: 07/01 MANCA LA FOTOOOO!!!
     
     func toString() -> String
     {

@@ -12,10 +12,7 @@ struct SelectableDogListView: View {
     @Binding var image: UIImage?
     @State var selectedItem: Dog?
     @State private var showActionSheet: Bool = false
-    @State private var shouldPresentImagePicker = false
-    @State private var shouldPresentActionSheet = false
-    @State private var shouldPresentCamera = false
-    @State private var showErrorMessage = false
+
     var isSelectable: Bool?
     var body: some View {
         NavigationView {
@@ -49,9 +46,9 @@ struct SelectableDogListView: View {
                         }
                     }
                     //.actionSheet(isPresented: $showActionSheet, content: getActionSheet)
-                    .alert("Camera is not accessible", isPresented: $showErrorMessage) {
-                        Button("OK", role: .cancel) { }
-                    }
+                    //.alert("Camera is not accessible", isPresented: $showErrorMessage) {
+                   //     Button("OK", role: .cancel) { }
+                   // }
             }/*.sheet(isPresented: $shouldPresentImagePicker)
             {
                 ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: self.$image)
@@ -59,10 +56,7 @@ struct SelectableDogListView: View {
         }
     }
     
-    /*func getActionSheet() -> ActionSheet
-    {
-        //ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
-    }*/
+    
 }
 
 struct SelectableDogListViewExample: View {
