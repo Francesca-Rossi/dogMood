@@ -20,7 +20,7 @@ public class EmotionalStateManagerBO
     }
 
     // MARK: - Method to return all the status of ONE EMOTIONAL CHECK
-    func getAllStatusByCheck(_ check: EmotionalInfoCheck?) throws -> [EmotionalState]?
+    func getAllStatusByCheck(_ check: EmotionalInfoCheck?) throws -> [EmotionalInfo]?
     {
         /* Ritorna la lista degli (stati, percentuale) presenti in un controllo
          */

@@ -11,7 +11,7 @@ import os.lock
 
 public class EmotionalStateDao: Dao
 {
-    typealias T = EmotionalState
+    typealias T = EmotionalInfo
     private let persistent = PersistenceController.shared
     private var infoDao: EmotionalInfoCheckDao?
     //static var lock = OSAllocatedUnfairLock ()
@@ -44,14 +44,14 @@ public class EmotionalStateDao: Dao
     
     
     // MARK: - DAO methods
-    func getAll(info: inout ErrorInfo) async throws -> [EmotionalState]
+    func getAll(info: inout ErrorInfo) async throws -> [EmotionalInfo]
     {
         do
         {
             let request = EmotionalStateEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ resultEntity in
                 
-                EmotionalState(id: resultEntity.id , mood: resultEntity.status, percentual: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
+                EmotionalInfo(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.status), percentual: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
             })
         }
         catch
@@ -62,15 +62,15 @@ public class EmotionalStateDao: Dao
         }
     }
 
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> EmotionalState? 
+    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> EmotionalInfo? 
     {
         do
         {
             if let resultEntity = try getEntityById(id, errorInfo: &info)
             {
-                return EmotionalState(
+                return EmotionalInfo(
                     id: resultEntity.id,
-                    mood: resultEntity.status,
+                    mood: MoodResult.fromString(value: resultEntity.status),
                     percentual: resultEntity.percentual,
                     statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
                 Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
@@ -85,7 +85,7 @@ public class EmotionalStateDao: Dao
         }
     }
     
-    func create(obj: EmotionalState, info: inout ErrorInfo) async throws 
+    func create(obj: EmotionalInfo, info: inout ErrorInfo) async throws 
     {
         do
         {
@@ -94,7 +94,7 @@ public class EmotionalStateDao: Dao
                 //ATTENZIONE: non possiamo creare i risultati del check se non abbiamo salvato prima l'emotional info check in database
                 let statusResultEntity = EmotionalStateEntity(context: persistent.viewContext)
                 statusResultEntity.id = obj.id
-                statusResultEntity.status = obj.mood
+                statusResultEntity.status = MoodResult.toString(mood: obj.mood)
                 statusResultEntity.percentual = obj.percentual ?? Double()
                 statusResultEntity.status_info = statusInfo
                 Logger.shared.log(statusResultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
@@ -116,7 +116,7 @@ public class EmotionalStateDao: Dao
         }
     }
     
-    func update(id: UUID, obj: EmotionalState, info: inout ErrorInfo) async throws 
+    func update(id: UUID, obj: EmotionalInfo, info: inout ErrorInfo) async throws 
     {
         do
         {
@@ -126,7 +126,7 @@ public class EmotionalStateDao: Dao
             {
                 let stateEntity = try getEntityById(id, errorInfo: &info)!
                 stateEntity.percentual = percentual
-                stateEntity.status = obj.mood
+                stateEntity.status = MoodResult.toString(mood: obj.mood)
                 stateEntity.status_info = statusInfo
                 Logger.shared.log(stateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
@@ -141,7 +141,7 @@ public class EmotionalStateDao: Dao
         }
         catch
         {
-            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            info.setErrorMessage(value: "\(error.localizedDescription)")
             Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             throw info
         }

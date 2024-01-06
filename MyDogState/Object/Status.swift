@@ -14,7 +14,7 @@ struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
     var date: Date?
     var note: String?
     var dog: Dog?
-    var statusList: [EmotionalState]?
+    var statusList: [EmotionalInfo]?
     
     func toString() -> String
     {
@@ -23,16 +23,27 @@ struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
     
 }
 
-struct EmotionalState: Codable, Equatable, Identifiable, Hashable
+struct EmotionalInfo: Codable, Equatable, Identifiable, Hashable
 {
     let id: UUID? //unique
-    let mood: String?
+    let mood: MoodResult.Mood
     let percentual: Double? //TODO: rename with confidence
     let statusInfo: EmotionalInfoCheck?
     
-    func getMoodColor()-> Color
+    func getMoodForegroundColor()-> Color
     {
-        switch MoodResult.fromString(value: mood)
+        switch mood
+        {
+            case .happy, .relaxed, .sad, .angry:
+                return .white
+            default:
+                return .black
+        }
+    }
+    
+    func getMoodBackgroundColor()-> Color
+    {
+        switch mood
         {
             case .happy: return .green
             case .relaxed: return .blue

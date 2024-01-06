@@ -21,14 +21,7 @@ struct CheckEmotionalDogStateContentView: View {
                     
                     ScrollView {
                         var _ = print(classificationServiceViewModel.classifications)
-                        List(classificationServiceViewModel.classifications)
-                        {
-                            Text($0.toString())
-                            .bold()
-                            .padding()
-                        }.frame(minHeight: CGFloat(300.0))
-                        //Text(classificationServiceViewModel.classifications)
-                            
+                        EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
                     }
                 }
             } else {

@@ -21,6 +21,7 @@ struct Chip
     var title: String
     var titleColor: Color
     var bgColor: Color
+    
 }
 
 enum ViewParentType
@@ -28,6 +29,11 @@ enum ViewParentType
     case dogs, states
 }
 
+/***
+ MoodResult class
+  - Implemented to better interpretation the result
+  - Managed also the uppercased and lowercased
+ ***/
 public class MoodResult
 {
     private static var HAPPY_MOOD = "happy"
@@ -36,9 +42,9 @@ public class MoodResult
     private static var ANGRY_MOOD = "angry"
     private static var UNKNOWN_MOOD = "unknown"
     
-    public enum Mood
+    public enum Mood: Codable
     {
-        case happy 
+        case happy
         case relaxed
         case sad
         case angry

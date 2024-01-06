@@ -18,6 +18,14 @@ public class StringUtilities
     {
             return str1 == str2
     }
+    
+    static func convertToPercentual(float: Float) -> String
+    {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        guard let number =  numberFormatter.string(from: NSNumber(value: float)) else { fatalError("Can not get number") }
+        return number
+    }
 }
 
 extension String
