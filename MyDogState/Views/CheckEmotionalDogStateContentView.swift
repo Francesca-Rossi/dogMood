@@ -23,6 +23,33 @@ struct CheckEmotionalDogStateContentView: View {
                         var _ = print(classificationServiceViewModel.classifications)
                         EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
                     }
+                    Button(action: {print("continua")})
+                    {
+                        //TODO: 07/01
+                        HStack
+                        {
+                            Image(systemName: "continue")
+                            Text("Continue")
+                        }
+                    }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                    Button(action: {classificationServiceViewModel.importedImage = nil })
+                    {
+                        HStack
+                        {
+                            Image(systemName: "camera")
+                            Text("Check again")
+                        }
+                    }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                    Button(action: {print("home")})
+                    {
+                        //TODO: 07/01
+                        HStack
+                        {
+                            Image(systemName: "home")
+                            Text("Back home")
+                        }
+                    }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                    
                 }
             } else {
                 VStack {
