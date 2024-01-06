@@ -9,10 +9,12 @@ import SwiftUI
 
 struct RoundedRectagleImage: View {
     var image: UIImage
+    var width = CGFloat(125.0)
+    var height = CGFloat(125.0)
     var body: some View {
         Image(uiImage: self.image)
             .resizable()
-            .frame(width: 125, height: 125)
+            .frame(width: width, height: height)
             .background(Color.black.opacity(0.2))
             .aspectRatio(contentMode: .fill)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 30.0, height: 30.0)))

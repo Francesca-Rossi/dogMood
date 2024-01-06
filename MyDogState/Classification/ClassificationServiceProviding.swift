@@ -10,6 +10,6 @@ import UIKit
 
 protocol ClassificationServiceProviding 
 {
-    var classificationsResultPub: Published<String>.Publisher { get }
+    var classificationsResultPub: Published<[PredictionResult]>.Publisher { get }
     func updateClassifications(for image: UIImage)
 }

@@ -85,7 +85,7 @@ struct CustomBottomMenuView: View {
 }
 
 
-#Preview {
+/*#Preview {
     
     CustomBottomMenuView(viewModel: DogViewModel())
-}
+}*/

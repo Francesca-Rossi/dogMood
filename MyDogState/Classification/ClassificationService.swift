@@ -11,8 +11,10 @@ import UIKit
 
 final class ClassificationService: ClassificationServiceProviding {
     
-    @Published private var classifications: String = ""
-    var classificationsResultPub: Published<String>.Publisher { $classifications }
+    //@Published private var classifications: String = ""
+    @Published private var classifications: [PredictionResult] = [PredictionResult]()
+    
+    var classificationsResultPub: Published<[PredictionResult]>.Publisher { $classifications }
     
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -38,7 +40,7 @@ final class ClassificationService: ClassificationServiceProviding {
         guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
         
         /// Clear old classifications
-        self.classifications = ""
+        self.classifications = [PredictionResult]()
         
         DispatchQueue.global(qos: .userInitiated).async {
             let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
@@ -59,6 +61,7 @@ final class ClassificationService: ClassificationServiceProviding {
                 return
             }
             // The `results` will always be `VNClassificationObservation`s, as specified by the Core ML model in this project.
+            //let predictionResultList: [PredictionResult]
             let classifications = results as! [VNClassificationObservation]
             
             if classifications.isEmpty {
@@ -66,17 +69,20 @@ final class ClassificationService: ClassificationServiceProviding {
             } else {
                 // Display top classifications ranked by confidence in the UI.
                 let topClassifications = classifications.prefix(5)
-                let descriptions = topClassifications.map { classification in
+                for item in topClassifications
+                {
+                    self.classifications.append(PredictionResult(confidence: item.confidence, identifier: item.identifier))
+                }
+                /*let descriptions = topClassifications.map { classification in
                     // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
                     return String(format: "(%.2f) %@\n", classification.confidence, classification.identifier)
-                }
+                }*/
                 
-                self.classifications = descriptions.joined(separator: " ")
+                //self.classifications = descriptions.joined(separator: " ")
             }
         }
     }
 }
-
 
 extension CGImagePropertyOrientation {
     /**

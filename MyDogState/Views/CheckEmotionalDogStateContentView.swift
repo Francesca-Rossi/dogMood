@@ -6,29 +6,29 @@
 //
 
 import SwiftUI
-
-
-
 struct CheckEmotionalDogStateContentView: View {
-    @StateObject var viewModel = CheckEmotionalDogStateContentViewModel()
+    @StateObject var dogViewModel: DogViewModel
+    @StateObject var classificationServiceViewModel = CheckEmotionalDogStateContentViewModel()
     
     var body: some View {
         NavigationView {
-            if let image = viewModel.importedImage {
+            if let image = classificationServiceViewModel.importedImage {
                 VStack(alignment: .leading) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        .padding()
+                    RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
                         .onTapGesture {
-                            viewModel.displayImagePicker.toggle()
+                            classificationServiceViewModel.displayImagePicker.toggle()
                         }
                     
                     ScrollView {
-                        Text(viewModel.classifications)
+                        var _ = print(classificationServiceViewModel.classifications)
+                        List(classificationServiceViewModel.classifications)
+                        {
+                            Text($0.toString())
                             .bold()
                             .padding()
+                        }.frame(minHeight: CGFloat(300.0))
+                        //Text(classificationServiceViewModel.classifications)
+                            
                     }
                 }
             } else {
@@ -38,7 +38,7 @@ struct CheckEmotionalDogStateContentView: View {
                         .foregroundColor(.accentColor)
                     
                     Button {
-                        viewModel.displayImagePicker.toggle()
+                        classificationServiceViewModel.displayImagePicker.toggle()
                     } label: {
                         Text("Pick an image")
                             .bold()
@@ -52,9 +52,9 @@ struct CheckEmotionalDogStateContentView: View {
                 .padding()
             }
         }
-        .onChange(of: viewModel.importedImage) { _ in viewModel.onChangeImage() }
-        .sheet(isPresented: $viewModel.displayImagePicker) {
-            ImagePicker(sourceType: .photoLibrary, selectedImage: $viewModel.importedImage)
+        .onChange(of: classificationServiceViewModel.importedImage) { _ in classificationServiceViewModel.onChangeImage() }
+        .sheet(isPresented: $classificationServiceViewModel.displayImagePicker) {
+            ImagePicker(sourceType: .photoLibrary, selectedImage: $classificationServiceViewModel.importedImage)
         }
     }
 }
@@ -62,7 +62,7 @@ struct CheckEmotionalDogStateContentView: View {
 #if DEBUG
 struct CheckEmotionalDogStateContentView_example: PreviewProvider {
     static var previews: some View {
-        CheckEmotionalDogStateContentView()
+        CheckEmotionalDogStateContentView(dogViewModel: DogViewModel())
     }
 }
 #endif

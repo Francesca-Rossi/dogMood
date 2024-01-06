@@ -31,6 +31,7 @@
 		3F74BBF62A5D90AE00A8BB42 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74BBF52A5D90AE00A8BB42 /* Dog.swift */; };
 		3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E342A5BFC5400D37229 /* DogViewModel.swift */; };
 		3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E362A5BFC9300D37229 /* PersistenController.swift */; };
+		3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */; };
 		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
 		3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D62A54388A002E541C /* DogsListContentView.swift */; };
@@ -56,7 +57,6 @@
 		3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */; };
 		3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236462A570BC600C0AAD3 /* Enumeration.swift */; };
 		3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */; };
-		3FFD16B12B332DB0007341D0 /* AddDogStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +84,7 @@
 		3F74BBF52A5D90AE00A8BB42 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		3F778E342A5BFC5400D37229 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		3F778E362A5BFC9300D37229 /* PersistenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenController.swift; sourceTree = "<group>"; };
+		3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictResult.swift; sourceTree = "<group>"; };
 		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAE41D42A54388A002E541C /* MyDogStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogStateApp.swift; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectagleImage.swift; sourceTree = "<group>"; };
 		3FF236462A570BC600C0AAD3 /* Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
 		3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIcon.swift; sourceTree = "<group>"; };
-		3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDogStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +140,7 @@
 			children = (
 				3F74BBF52A5D90AE00A8BB42 /* Dog.swift */,
 				3F12AE902B347679009B7300 /* Status.swift */,
+				3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -232,7 +233,6 @@
 				3FF236412A57088900C0AAD3 /* ImageView */,
 				3FAE41D62A54388A002E541C /* DogsListContentView.swift */,
 				3F2F84C42A5FF98F00227024 /* DogDetailView.swift */,
-				3FFD16B02B332DB0007341D0 /* AddDogStatus.swift */,
 				3FAE41EE2A544C76002E541C /* AddDogView.swift */,
 				3FF236232A56F71400C0AAD3 /* DogCellView.swift */,
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
@@ -387,6 +387,7 @@
 				3F12AE912B347679009B7300 /* Status.swift in Sources */,
 				3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */,
 				3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */,
+				3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */,
 				3F12AE972B347846009B7300 /* EmotionalStateDao.swift in Sources */,
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
@@ -404,7 +405,6 @@
 				3F7286E22B35A4F80013AE4D /* RunBloking.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
 				3F12AEA92B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift in Sources */,
-				3FFD16B12B332DB0007341D0 /* AddDogStatus.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,
 				3F12AEAA2B3497D0009B7300 /* DogEntity+CoreDataClass.swift in Sources */,
 				3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */,

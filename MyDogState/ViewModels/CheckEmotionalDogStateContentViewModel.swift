@@ -14,7 +14,7 @@ final class CheckEmotionalDogStateContentViewModel: ObservableObject {
     
     @Published var importedImage: UIImage? = nil
     
-    @Published var classifications: String = ""
+    @Published var classifications: [PredictionResult] = [PredictionResult]()
     
     let service: ClassificationServiceProviding
     
