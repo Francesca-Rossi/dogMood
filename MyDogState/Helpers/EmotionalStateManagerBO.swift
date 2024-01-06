@@ -20,7 +20,7 @@ public class EmotionalStateManagerBO
     }
 
     // MARK: - Method to return all the status of ONE EMOTIONAL CHECK
-    func getAllStatusByCheck(_ check: EmotionalInfoCheck?) throws -> [EmotionalInfo]?
+    func getAllMoodByCheck(_ check: EmotionalInfoCheck?) throws -> [MoodDetail]?
     {
         /* Ritorna la lista degli (stati, percentuale) presenti in un controllo
          */
@@ -35,12 +35,43 @@ public class EmotionalStateManagerBO
             }
             catch
             {
-                errorInfo.setErrorMessage(value: "[DATABASE ERROR] \(error.localizedDescription)")
+                errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+                Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw errorInfo
             }
             return nil
         }
         return result
+    }
+    
+    func createEmotionalCheck(check: EmotionalInfoCheck, errorInfo: inout ErrorInfo) async throws
+    {
+        do
+        {
+            try await checkDao?.create(obj: check, info: &errorInfo)
+        }
+        catch
+        {
+            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw errorInfo
+        }
+        
+    }
+    
+    func createMoodDetail(mood: MoodDetail, errorInfo: inout ErrorInfo) async throws
+    {
+        do
+        {
+            try await stateDao?.create(obj: mood, info: &errorInfo)
+        }
+        catch
+        {
+            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw errorInfo
+        }
+        
     }
     
     
@@ -72,24 +103,25 @@ public class EmotionalStateManagerBO
         //Dammi la storia di tutti i check, con anche gli stati e il cane
         let result = try runBlocking {
             //var checkList:[EmotionalInfoCheck]?
-            var error = ErrorInfo()
+            var errorInfo = ErrorInfo()
             do
             {
                 //ritorno tutti i check emozionali
-                if var checkList = try await self.checkDao?.getAll(info: &error)
+                if var checkList = try await self.checkDao?.getAll(info: &errorInfo)
                 {
                     //per ogni check carico i suoi stati e li vado a settare
                     for i in checkList.indices
                     {
-                        checkList[i].statusList = try getAllStatusByCheck(checkList[i])
+                        checkList[i].statusList = try getAllMoodByCheck(checkList[i])
                     }
                     return checkList
                 }
             }
             catch
             {
-                //TODO: scrivi sul file di log
-                print(error.localizedDescription)
+                errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+                Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+                throw errorInfo
             }
             return [EmotionalInfoCheck]() //se non ci sono stati a database
         }
@@ -102,11 +134,11 @@ public class EmotionalStateManagerBO
         //Dammi la storia di tutti i check di uno specifico cane, con anche gli stati e il cane
         let result = try runBlocking {
             //var checkList:[EmotionalInfoCheck]?
-            var error = ErrorInfo()
+            var errorInfo = ErrorInfo()
             do
             {
                 //ritorno tutti i check emozionali
-                if var checkList = try await self.checkDao?.getAll(info: &error)
+                if var checkList = try await self.checkDao?.getAll(info: &errorInfo)
                 {
                     //filtro solo i check del cane in questione
                     checkList = checkList.filter{$0.dog?.id == dog.id}
@@ -114,15 +146,16 @@ public class EmotionalStateManagerBO
                     //per ogni check carico i suoi stati e li vado a settare
                     for i in checkList.indices
                     {
-                        checkList[i].statusList = try getAllStatusByCheck(checkList[i])
+                        checkList[i].statusList = try getAllMoodByCheck(checkList[i])
                     }
                     return checkList
                 }
             }
             catch
             {
-                //TODO: scrivi sul file di log
-                print(error.localizedDescription)
+                errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+                Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+                throw errorInfo
             }
             return [EmotionalInfoCheck]() //se non ci sono stati a database
         }

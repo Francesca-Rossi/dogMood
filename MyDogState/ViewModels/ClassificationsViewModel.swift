@@ -9,7 +9,7 @@ import Combine
 import UIKit
 
 @MainActor
-final class CheckEmotionalDogStateContentViewModel: ObservableObject {
+final class ClassificationsViewModel: ObservableObject {
     @Published var displayImagePicker: Bool = false
     
     @Published var importedImage: UIImage? = nil
@@ -44,5 +44,6 @@ final class CheckEmotionalDogStateContentViewModel: ObservableObject {
         guard let image = importedImage else { return }
         service.updateClassifications(for: image)
     }
+    
 }
 

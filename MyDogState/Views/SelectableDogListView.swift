@@ -43,7 +43,10 @@ struct SelectableDogListView: View {
                 }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
                     .fullScreenCover(isPresented: $showActionSheet)
                     {
-                        CheckEmotionalDogStateContentView(dogViewModel: viewModel)
+                        if let dog = selectedItem
+                        {
+                            CheckEmotionalDogStateContentView(selectedDog: dog)
+                        }
                     }
                     //.actionSheet(isPresented: $showActionSheet, content: getActionSheet)
                     .alert("Camera is not accessible", isPresented: $showErrorMessage) {

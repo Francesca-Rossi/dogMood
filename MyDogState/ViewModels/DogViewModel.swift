@@ -93,4 +93,9 @@ class DogViewModel: ObservableObject {
         }
         
     }
+    
+    public func addNewEmotionalCheck(date: Date?,  note: String?,  dog: Dog?, statusList: [MoodDetail]?)
+    {
+        
+    }
 }

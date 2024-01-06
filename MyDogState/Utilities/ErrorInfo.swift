@@ -28,4 +28,9 @@ public class ErrorInfo: Error
         }
         return false
     }
+    
+    public func isAllOK() -> Bool
+    {
+        hasErrorInfo() == false
+    }
 }

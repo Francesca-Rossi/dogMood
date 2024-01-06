@@ -11,7 +11,7 @@ import os.lock
 
 public class EmotionalStateDao: Dao
 {
-    typealias T = EmotionalInfo
+    typealias T = MoodDetail
     private let persistent = PersistenceController.shared
     private var infoDao: EmotionalInfoCheckDao?
     //static var lock = OSAllocatedUnfairLock ()
@@ -44,14 +44,14 @@ public class EmotionalStateDao: Dao
     
     
     // MARK: - DAO methods
-    func getAll(info: inout ErrorInfo) async throws -> [EmotionalInfo]
+    func getAll(info: inout ErrorInfo) async throws -> [MoodDetail]
     {
         do
         {
             let request = EmotionalStateEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ resultEntity in
                 
-                EmotionalInfo(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.status), percentual: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
+                MoodDetail(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.status), confidence: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
             })
         }
         catch
@@ -62,16 +62,16 @@ public class EmotionalStateDao: Dao
         }
     }
 
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> EmotionalInfo? 
+    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> MoodDetail? 
     {
         do
         {
             if let resultEntity = try getEntityById(id, errorInfo: &info)
             {
-                return EmotionalInfo(
+                return MoodDetail(
                     id: resultEntity.id,
                     mood: MoodResult.fromString(value: resultEntity.status),
-                    percentual: resultEntity.percentual,
+                    confidence: resultEntity.percentual,
                     statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
                 Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             }
@@ -85,7 +85,7 @@ public class EmotionalStateDao: Dao
         }
     }
     
-    func create(obj: EmotionalInfo, info: inout ErrorInfo) async throws 
+    func create(obj: MoodDetail, info: inout ErrorInfo) async throws 
     {
         do
         {
@@ -95,7 +95,7 @@ public class EmotionalStateDao: Dao
                 let statusResultEntity = EmotionalStateEntity(context: persistent.viewContext)
                 statusResultEntity.id = obj.id
                 statusResultEntity.status = MoodResult.toString(mood: obj.mood)
-                statusResultEntity.percentual = obj.percentual ?? Double()
+                statusResultEntity.percentual = obj.confidence ?? Double()
                 statusResultEntity.status_info = statusInfo
                 Logger.shared.log(statusResultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
@@ -116,12 +116,12 @@ public class EmotionalStateDao: Dao
         }
     }
     
-    func update(id: UUID, obj: EmotionalInfo, info: inout ErrorInfo) async throws 
+    func update(id: UUID, obj: MoodDetail, info: inout ErrorInfo) async throws 
     {
         do
         {
             //TODO: questi controlli vano fatti qui o a BO? (Dubbio)
-            if let statusInfo = try infoDao?.fromObjectToEntity(obj: obj.statusInfo), let percentual =  obj.percentual
+            if let statusInfo = try infoDao?.fromObjectToEntity(obj: obj.statusInfo), let percentual =  obj.confidence
             //controllo che esista l'emotional check associato
             {
                 let stateEntity = try getEntityById(id, errorInfo: &info)!

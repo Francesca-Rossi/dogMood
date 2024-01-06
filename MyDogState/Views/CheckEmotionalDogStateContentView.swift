@@ -7,8 +7,8 @@
 
 import SwiftUI
 struct CheckEmotionalDogStateContentView: View {
-    @StateObject var dogViewModel: DogViewModel
-    @StateObject var classificationServiceViewModel = CheckEmotionalDogStateContentViewModel()
+    @State var selectedDog: Dog
+    @StateObject var classificationServiceViewModel = ClassificationsViewModel()
     
     var body: some View {
         NavigationView {
@@ -53,10 +53,10 @@ struct CheckEmotionalDogStateContentView: View {
 }
 
 #if DEBUG
-struct CheckEmotionalDogStateContentView_example: PreviewProvider {
-    static var previews: some View {
-        CheckEmotionalDogStateContentView(dogViewModel: DogViewModel())
-    }
-}
+//struct CheckEmotionalDogStateContentView_example: PreviewProvider {
+//    static var previews: some View {
+        //CheckEmotionalDogStateContentView(selectedDog: Dog())
+//    }
+//}
 #endif
 

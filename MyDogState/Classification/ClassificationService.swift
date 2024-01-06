@@ -73,12 +73,6 @@ final class ClassificationService: ClassificationServiceProviding {
                 {
                     self.classifications.append(PredictionResult(confidence: item.confidence, identifier: item.identifier))
                 }
-                /*let descriptions = topClassifications.map { classification in
-                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                    return String(format: "(%.2f) %@\n", classification.confidence, classification.identifier)
-                }*/
-                
-                //self.classifications = descriptions.joined(separator: " ")
             }
         }
     }
