@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct AddImageView: View {
+struct AddImageView: View
+{
+    private let CHANGE_PHOTO_LABEL = "Change photo"
+    
     @Binding var image: UIImage?
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentActionSheet = false
@@ -18,7 +21,7 @@ struct AddImageView: View {
         HStack {
            
             CircleImage(image: image)
-            ChipView(chip:(title: "Change photo", bgColor: .blue))
+            ChipView(chip: Chip(title: CHANGE_PHOTO_LABEL, titleColor: .white, bgColor: .blue)) //TODO: change to primary and secondary color
                 .onTapGesture {
                     self.shouldPresentActionSheet = true
                 }

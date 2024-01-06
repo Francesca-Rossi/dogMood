@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 
-struct sexType
+enum sexType
 {
     //TODO: fix like MoodResult
-    public static var Boy = "Boy"
-    public static var Girl = "Girl"
+    static let Boy = "Boy"
+    static let Girl = "Girl"
 }
 
-struct chip
+struct Chip
 {
     var title: String
     var titleColor: Color
@@ -38,7 +38,7 @@ public class MoodResult
     
     public enum Mood
     {
-        case happy
+        case happy 
         case relaxed
         case sad
         case angry

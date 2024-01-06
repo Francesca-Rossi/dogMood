@@ -21,13 +21,13 @@ struct DogProfileView: View
             {
                 HStack
                 {
-                    Text(dog.name ?? "").font(.system(size: 36)).bold()
-                    ChipView(chip: (dog.sex ?? "", dog.getSexColor()))
+                    Text(dog.name ?? StringUtilities.emptyString).font(.system(size: 36)).bold()
+                    ChipView(chip: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()))
                 }
-                TextWithIcon(iconName: "pencil", caption: dog.dateOfBirth?.formatted(date: .abbreviated, time: .omitted) ?? "")
-                TextWithIcon(iconName: "pencil", caption: dog.microchip ?? "")
-                TextWithIcon(iconName: "pencil", caption: dog.hairColor ?? "")
-                TextWithIcon(iconName: "pencil", caption: dog.breed ?? "")
+                TextWithIcon(iconName: "pencil", caption: dog.dateOfBirth?.formatted(date: .abbreviated, time: .omitted) ?? StringUtilities.emptyString)
+                TextWithIcon(iconName: "pencil", caption: dog.microchip ?? StringUtilities.emptyString)
+                TextWithIcon(iconName: "pencil", caption: dog.hairColor ?? StringUtilities.emptyString)
+                TextWithIcon(iconName: "pencil", caption: dog.breed ?? StringUtilities.emptyString)
                 
             }
             

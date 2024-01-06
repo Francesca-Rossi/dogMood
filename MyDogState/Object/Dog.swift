@@ -22,7 +22,7 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     var emotionalCheckList: [EmotionalInfoCheck]?
     var isSelected = false
 
-    func getSexColor()-> Color
+    func getSexBackgroundColor()-> Color
     {
         switch sex
         {
@@ -30,6 +30,16 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         case sexType.Girl: return .pink
         default:
             return .blue
+        }
+    }
+    
+    func getSexForegroundColor()-> Color
+    {
+        switch sex
+        {
+        case sexType.Boy, sexType.Girl : return .white
+        default:
+            return .white
         }
     }
     
