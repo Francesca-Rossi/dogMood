@@ -10,8 +10,8 @@ import SwiftUI
 struct CustomBottomMenuView: View {
     @StateObject var viewModel: DogViewModel
     @State var tapDogList = false
-    @State var tapStatusHistory = false
-    @State var tapCheckStatus = false
+    @State var tapMoodCheckHistory = false
+    @State var tapMooCheckStatus = false
     var body: some View {
             VStack(alignment: .center, spacing: -20)
             {
@@ -24,10 +24,11 @@ struct CustomBottomMenuView: View {
                             .foregroundColor(.white)
                     }
                     .buttonStyle(AnimatedCircleBlueButtonStyle())
-                    .fullScreenCover(isPresented: $tapCheckStatus )
+                    .fullScreenCover(isPresented: $tapMooCheckStatus )
                     {
                         SelectableDogListView(viewModel: viewModel, image: .constant(UIImage()))
                     }
+                    .disabled(!viewModel.checkDogStatus)
                 }
                 HStack(spacing: 200)
                 {
@@ -39,8 +40,8 @@ struct CustomBottomMenuView: View {
                             Image(systemName: "star")
                             Text("History")
                         }
-                    }.foregroundStyle(tapStatusHistory ? .blue : .black)
-                    .fullScreenCover(isPresented: $tapStatusHistory)  
+                    }.foregroundStyle(tapMoodCheckHistory ? .blue : .black)
+                    .fullScreenCover(isPresented: $tapMoodCheckHistory)  
                     {
                         //TODO: change with history list
                         DogListView(viewModel: self.viewModel)
@@ -62,25 +63,27 @@ struct CustomBottomMenuView: View {
             }
     }
     
+    
+    
     func dogListTapped()
     {
         tapDogList = true
-        tapStatusHistory = false
-        tapCheckStatus = false
+        tapMoodCheckHistory = false
+        tapMooCheckStatus = false
     }
     
     func historyListTapped()
     {
         tapDogList = false
-        tapStatusHistory = true
-        tapCheckStatus = false
+        tapMoodCheckHistory = true
+        tapMooCheckStatus = false
     }
     
     func checkStatusTapped()
     {
         tapDogList = false
-        tapStatusHistory = false
-        tapCheckStatus = true
+        tapMoodCheckHistory = false
+        tapMooCheckStatus = true
     }
 }
 

@@ -17,6 +17,10 @@ class DogViewModel: ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    @Published var checkDogStatus: Bool = false
+    
+    
     var dao = DogDao()
     var emotionalManager = EmotionalStateManagerBO()
     var errorInfo = ErrorInfo()
@@ -26,6 +30,7 @@ class DogViewModel: ObservableObject {
         getAllDogs()
     }
     
+    
    func getAllDogs()
     {
             do {
@@ -34,6 +39,7 @@ class DogViewModel: ObservableObject {
                 {
                     dogsList[i].emotionalCheckList = try emotionalManager.getAllEmotionalCheckByDog(dog:dogsList[i])
                 }
+                checkDogStatus = !dogsList.isEmpty
             }
             catch
             {
@@ -98,4 +104,5 @@ class DogViewModel: ObservableObject {
     {
         
     }
+
 }
