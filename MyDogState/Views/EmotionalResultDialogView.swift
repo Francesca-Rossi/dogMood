@@ -35,7 +35,7 @@ struct EmotionalResultDialogView: View {
         //TODO: remove this, lo dara' la BL
         let info = MoodDetail(id: UUID(),
                                  mood: MoodResult.fromString(value: prediction.identifier),
-                              confidence: Double(prediction.confidence),
+                              confidence: prediction.confidence,
                                  statusInfo: nil) //TODO: passare lo statusInfo
         return Chip(title:  MoodResult.toString(mood: info.mood),                       titleColor: info.getMoodForegroundColor(),
                     bgColor: info.getMoodBackgroundColor())

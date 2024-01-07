@@ -9,18 +9,18 @@ import Foundation
 
 public class EmotionalStateManagerBO
 {
-    var checkDao: EmotionalInfoCheckDao?
-    var stateDao: EmotionalStateDao?
+    var moodCheckDao: MoodCheckDao?
+    var moodDetailDao: MoodDetailDao?
     
     public init()
     {
         //Inizializzo solo qui i DAO
-        checkDao = EmotionalInfoCheckDao()
-        stateDao = EmotionalStateDao(owner: checkDao)
+        moodCheckDao = MoodCheckDao()
+        moodDetailDao = MoodDetailDao(owner: moodCheckDao)
     }
 
     // MARK: - Method to return all the status of ONE EMOTIONAL CHECK
-    func getAllMoodByCheck(_ check: EmotionalInfoCheck?) throws -> [MoodDetail]?
+    func getAllMoodByCheck(_ check: MoodCheckInfo?) throws -> [MoodDetail]?
     {
         /* Ritorna la lista degli (stati, percentuale) presenti in un controllo
          */
@@ -30,7 +30,7 @@ public class EmotionalStateManagerBO
             {
                 if let infoCheck = check
                 {
-                    return try await stateDao?.getAll(info: &errorInfo).filter({status in status.statusInfo?.id == infoCheck.id })
+                    return try await moodDetailDao?.getAll(info: &errorInfo).filter({status in status.statusInfo?.id == infoCheck.id })
                 }
             }
             catch
@@ -44,11 +44,11 @@ public class EmotionalStateManagerBO
         return result
     }
     
-    func createEmotionalCheck(check: EmotionalInfoCheck, errorInfo: inout ErrorInfo) async throws
+    func createEmotionalCheck(check: MoodCheckInfo, errorInfo: inout ErrorInfo) async throws
     {
         do
         {
-            try await checkDao?.create(obj: check, info: &errorInfo)
+            try await moodCheckDao?.create(obj: check, info: &errorInfo)
         }
         catch
         {
@@ -63,7 +63,7 @@ public class EmotionalStateManagerBO
     {
         do
         {
-            try await stateDao?.create(obj: mood, info: &errorInfo)
+            try await moodDetailDao?.create(obj: mood, info: &errorInfo)
         }
         catch
         {
@@ -98,7 +98,7 @@ public class EmotionalStateManagerBO
     }*/
     
     // MARK: - Method to return all the emotional check in the DB
-    func getAllEmotionalCheck() throws -> [EmotionalInfoCheck]
+    func getAllEmotionalCheck() throws -> [MoodCheckInfo]
     {
         //Dammi la storia di tutti i check, con anche gli stati e il cane
         let result = try runBlocking {
@@ -107,7 +107,7 @@ public class EmotionalStateManagerBO
             do
             {
                 //ritorno tutti i check emozionali
-                if var checkList = try await self.checkDao?.getAll(info: &errorInfo)
+                if var checkList = try await self.moodCheckDao?.getAll(info: &errorInfo)
                 {
                     //per ogni check carico i suoi stati e li vado a settare
                     for i in checkList.indices
@@ -123,13 +123,13 @@ public class EmotionalStateManagerBO
                 Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw errorInfo
             }
-            return [EmotionalInfoCheck]() //se non ci sono stati a database
+            return [MoodCheckInfo]() //se non ci sono stati a database
         }
         return result
     }
     
     // MARK: - Method to return all the emotional check from ONE DOG
-    func getAllEmotionalCheckByDog(dog: Dog) throws -> [EmotionalInfoCheck]
+    func getAllEmotionalCheckByDog(dog: Dog) throws -> [MoodCheckInfo]
     {
         //Dammi la storia di tutti i check di uno specifico cane, con anche gli stati e il cane
         let result = try runBlocking {
@@ -138,7 +138,7 @@ public class EmotionalStateManagerBO
             do
             {
                 //ritorno tutti i check emozionali
-                if var checkList = try await self.checkDao?.getAll(info: &errorInfo)
+                if var checkList = try await self.moodCheckDao?.getAll(info: &errorInfo)
                 {
                     //filtro solo i check del cane in questione
                     checkList = checkList.filter{$0.dog?.id == dog.id}
@@ -157,7 +157,7 @@ public class EmotionalStateManagerBO
                 Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw errorInfo
             }
-            return [EmotionalInfoCheck]() //se non ci sono stati a database
+            return [MoodCheckInfo]() //se non ci sono stati a database
         }
         return result
     }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct EmotionalInfoCheck: Codable, Equatable, Identifiable, Hashable
+struct MoodCheckInfo: Codable, Equatable, Identifiable, Hashable
 {
     var id: UUID? //unique
     var date: Date?
@@ -28,8 +28,8 @@ struct MoodDetail: Codable, Equatable, Identifiable, Hashable
 {
     let id: UUID? //unique
     let mood: MoodResult.Mood
-    let confidence: Double? //TODO: rename with confidence
-    let statusInfo: EmotionalInfoCheck?
+    let confidence: Float? //TODO: rename with confidence
+    let statusInfo: MoodCheckInfo?
     
     func getMoodForegroundColor()-> Color
     {

@@ -8,10 +8,10 @@
 import Foundation
 import CoreData
 
-public class EmotionalInfoCheckDao: Dao
+public class MoodCheckDao: Dao
 {
     
-    typealias T = EmotionalInfoCheck
+    typealias T = MoodCheckInfo
     private let persistent = PersistenceController.shared
     private let dogDao: DogDao?
     
@@ -20,11 +20,11 @@ public class EmotionalInfoCheckDao: Dao
         dogDao = DogDao()
     }
     
-    private func getEntityById(_ id: UUID, errorInfo: inout ErrorInfo)  throws  -> EmotionalCheckInfoEntity?
+    private func getEntityById(_ id: UUID, errorInfo: inout ErrorInfo)  throws  -> MoodCheckEntity?
     {
         do
         {
-            let request = EmotionalCheckInfoEntity.fetchRequest()
+            let request = MoodCheckEntity.fetchRequest()
             request.fetchLimit = 1
             request.predicate = NSPredicate(
                 format: "id = %@", id.uuidString)
@@ -40,7 +40,7 @@ public class EmotionalInfoCheckDao: Dao
         }
     }
     
-    func fromObjectToEntity(obj: EmotionalInfoCheck?) throws -> EmotionalCheckInfoEntity?
+    func fromObjectToEntity(obj: MoodCheckInfo?) throws -> MoodCheckEntity?
     {
         //ATTENZIONE: non ha senso creare l'oggetto a DB tutte le volte, in quanto uno statusInfo puo' avere piu' risultati. Quindi prima andrebbero creato lo statusInfo e poi inseriti gli stati.
         let result = try runBlocking
@@ -65,7 +65,7 @@ public class EmotionalInfoCheckDao: Dao
         return result
     }
     
-    func fromEntityToObject(entity: EmotionalCheckInfoEntity?) throws -> EmotionalInfoCheck?
+    func fromEntityToObject(entity: MoodCheckEntity?) throws -> MoodCheckInfo?
     {
         let result = try runBlocking
         {
@@ -92,16 +92,16 @@ public class EmotionalInfoCheckDao: Dao
     
     // MARK: - DAO methods
     
-    func getAll(info: inout ErrorInfo) async throws -> [EmotionalInfoCheck]
+    func getAll(info: inout ErrorInfo) async throws -> [MoodCheckInfo]
     {
         do
         {
             
-            let request = EmotionalCheckInfoEntity.fetchRequest()
+            let request = MoodCheckEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ infoEntity in
                 
                 let infoCheck = try fromEntityToObject(entity: infoEntity)
-                return EmotionalInfoCheck(
+                return MoodCheckInfo(
                     id: infoEntity.id,
                     date: infoEntity.date,
                     note: infoEntity.note,
@@ -118,13 +118,13 @@ public class EmotionalInfoCheckDao: Dao
         }
     }
     
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> EmotionalInfoCheck? 
+    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> MoodCheckInfo? 
     {
         do
         {
             let checkEntity = try getEntityById(id, errorInfo: &info)!
             Logger.shared.log(checkEntity.toString(), level: LogLevel.Debug , saveToFile: true)
-            return EmotionalInfoCheck(id: checkEntity.id,
+            return MoodCheckInfo(id: checkEntity.id,
                                       date: checkEntity.date,
                                       note: checkEntity.note,
                                       dog: try dogDao?.fromEntityToObject(entity: checkEntity.dog), statusList: nil /*vengono aggiunti dopo dal BO*/)
@@ -137,14 +137,14 @@ public class EmotionalInfoCheckDao: Dao
         }
     }
     
-    func create(obj: EmotionalInfoCheck, info: inout ErrorInfo) async throws 
+    func create(obj: MoodCheckInfo, info: inout ErrorInfo) async throws 
     {
         do
         {
             if let dog = try dogDao?.fromObjectToEntity(obj: obj.dog)
             {
                 //ATTENZIONE: non possiamo creare il check se non esiste il cane a DB
-                let infoCheckEntity = EmotionalCheckInfoEntity(context: persistent.viewContext)
+                let infoCheckEntity = MoodCheckEntity(context: persistent.viewContext)
                 infoCheckEntity.id = obj.id
                 infoCheckEntity.date = obj.date
                 infoCheckEntity.note = obj.note
@@ -169,7 +169,7 @@ public class EmotionalInfoCheckDao: Dao
         }
     }
     
-    func update(id: UUID, obj: EmotionalInfoCheck, info: inout ErrorInfo) async throws 
+    func update(id: UUID, obj: MoodCheckInfo, info: inout ErrorInfo) async throws 
     {
         do
         {

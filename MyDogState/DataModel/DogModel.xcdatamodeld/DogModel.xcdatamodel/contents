@@ -11,16 +11,17 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="sex" attributeType="String"/>
     </entity>
-    <entity name="EmotionalCheckInfoEntity" representedClassName="EmotionalCheckInfoEntity" syncable="YES">
+    <entity name="MoodCheckEntity" representedClassName="MoodCheckEntity" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="note" optional="YES" attributeType="String"/>
         <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity"/>
     </entity>
-    <entity name="EmotionalStateEntity" representedClassName="EmotionalStateEntity" syncable="YES">
+    <entity name="MoodDetailEntity" representedClassName="MoodDetailEntity" syncable="YES">
+        <attribute name="confidence" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="percentual" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="status" optional="YES" attributeType="String"/>
-        <relationship name="status_info" maxCount="1" deletionRule="Nullify" destinationEntity="EmotionalCheckInfoEntity"/>
+        <attribute name="mood" optional="YES" attributeType="String"/>
+        <relationship name="status_info" maxCount="1" deletionRule="Nullify" destinationEntity="MoodCheckEntity"/>
     </entity>
 </model>

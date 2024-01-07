@@ -9,23 +9,23 @@ import Foundation
 import CoreData
 import os.lock
 
-public class EmotionalStateDao: Dao
+public class MoodDetailDao: Dao
 {
     typealias T = MoodDetail
     private let persistent = PersistenceController.shared
-    private var infoDao: EmotionalInfoCheckDao?
+    private var infoDao: MoodCheckDao?
     //static var lock = OSAllocatedUnfairLock ()
     
-    public init(owner: EmotionalInfoCheckDao?)
+    public init(owner: MoodCheckDao?)
     {
         infoDao = owner 
     }
     
-    private func getEntityById(_ id: UUID, errorInfo: inout ErrorInfo)  throws  -> EmotionalStateEntity?
+    private func getEntityById(_ id: UUID, errorInfo: inout ErrorInfo)  throws  -> MoodDetailEntity?
     {
         do
         {
-            let request = EmotionalStateEntity.fetchRequest()
+            let request = MoodDetailEntity.fetchRequest()
             request.fetchLimit = 1
             request.predicate = NSPredicate(
                 format: "id = %@", id.uuidString)
@@ -48,10 +48,10 @@ public class EmotionalStateDao: Dao
     {
         do
         {
-            let request = EmotionalStateEntity.fetchRequest()
+            let request = MoodDetailEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ resultEntity in
                 
-                MoodDetail(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.status), confidence: resultEntity.percentual, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
+                MoodDetail(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.mood), confidence: resultEntity.confidence, statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
             })
         }
         catch
@@ -70,8 +70,8 @@ public class EmotionalStateDao: Dao
             {
                 return MoodDetail(
                     id: resultEntity.id,
-                    mood: MoodResult.fromString(value: resultEntity.status),
-                    confidence: resultEntity.percentual,
+                    mood: MoodResult.fromString(value: resultEntity.mood),
+                    confidence: resultEntity.confidence,
                     statusInfo: try infoDao?.fromEntityToObject(entity: resultEntity.status_info))
                 Logger.shared.log(resultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             }
@@ -92,10 +92,10 @@ public class EmotionalStateDao: Dao
             if let statusInfo = try infoDao?.fromObjectToEntity(obj: obj.statusInfo)
             {
                 //ATTENZIONE: non possiamo creare i risultati del check se non abbiamo salvato prima l'emotional info check in database
-                let statusResultEntity = EmotionalStateEntity(context: persistent.viewContext)
+                let statusResultEntity = MoodDetailEntity(context: persistent.viewContext)
                 statusResultEntity.id = obj.id
-                statusResultEntity.status = MoodResult.toString(mood: obj.mood)
-                statusResultEntity.percentual = obj.confidence ?? Double()
+                statusResultEntity.mood = MoodResult.toString(mood: obj.mood)
+                statusResultEntity.confidence = obj.confidence ?? 0.0
                 statusResultEntity.status_info = statusInfo
                 Logger.shared.log(statusResultEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
@@ -121,12 +121,12 @@ public class EmotionalStateDao: Dao
         do
         {
             //TODO: questi controlli vano fatti qui o a BO? (Dubbio)
-            if let statusInfo = try infoDao?.fromObjectToEntity(obj: obj.statusInfo), let percentual =  obj.confidence
+            if let statusInfo = try infoDao?.fromObjectToEntity(obj: obj.statusInfo), let confidence =  obj.confidence
             //controllo che esista l'emotional check associato
             {
                 let stateEntity = try getEntityById(id, errorInfo: &info)!
-                stateEntity.percentual = percentual
-                stateEntity.status = MoodResult.toString(mood: obj.mood)
+                stateEntity.confidence = confidence
+                stateEntity.mood = MoodResult.toString(mood: obj.mood)
                 stateEntity.status_info = statusInfo
                 Logger.shared.log(stateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
@@ -151,9 +151,9 @@ public class EmotionalStateDao: Dao
     {
         do
         {
-            let emotionalStateEntity = try  getEntityById(id, errorInfo: &info)!
-            persistent.viewContext.delete(emotionalStateEntity)
-            Logger.shared.log(emotionalStateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
+            let MoodDetailEntity = try  getEntityById(id, errorInfo: &info)!
+            persistent.viewContext.delete(MoodDetailEntity)
+            Logger.shared.log(MoodDetailEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             try persistent.saveContext()
         }
         catch{

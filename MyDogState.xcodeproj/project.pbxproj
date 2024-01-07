@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F12AE912B347679009B7300 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE902B347679009B7300 /* Status.swift */; };
-		3F12AE952B34773F009B7300 /* EmotionalInfoCheckDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE942B34773F009B7300 /* EmotionalInfoCheckDao.swift */; };
-		3F12AE972B347846009B7300 /* EmotionalStateDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE962B347846009B7300 /* EmotionalStateDao.swift */; };
-		3F12AEA62B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA02B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift */; };
-		3F12AEA72B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA12B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataProperties.swift */; };
-		3F12AEA82B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA22B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift */; };
-		3F12AEA92B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA32B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift */; };
+		3F12AE952B34773F009B7300 /* MoodCheckDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE942B34773F009B7300 /* MoodCheckDao.swift */; };
+		3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE962B347846009B7300 /* MoodDetailDao.swift */; };
 		3F12AEAA2B3497D0009B7300 /* DogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA42B3497D0009B7300 /* DogEntity+CoreDataClass.swift */; };
 		3F12AEAB2B3497D0009B7300 /* DogEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AEA52B3497D0009B7300 /* DogEntity+CoreDataProperties.swift */; };
 		3F1A177F2B3AA45300044CA9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A177E2B3AA45300044CA9 /* Logger.swift */; };
@@ -45,6 +41,10 @@
 		3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F42A5450B2002E541C /* AddImageView.swift */; };
 		3FAE41F72A5453C3002E541C /* SexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F62A5453C3002E541C /* SexView.swift */; };
 		3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */; };
+		3FC099152B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099112B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift */; };
+		3FC099162B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099122B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift */; };
+		3FC099172B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099132B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift */; };
+		3FC099182B4AA5E400A577BF /* MoodCheckEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099142B4AA5E400A577BF /* MoodCheckEntity+CoreDataProperties.swift */; };
 		3FC3321E2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3321D2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift */; };
 		3FC332202B47E56300349AC5 /* ClassificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3321F2B47E56300349AC5 /* ClassificationsViewModel.swift */; };
 		3FC332232B47E62300349AC5 /* ClassificationServiceProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC332222B47E62300349AC5 /* ClassificationServiceProviding.swift */; };
@@ -63,12 +63,8 @@
 
 /* Begin PBXFileReference section */
 		3F12AE902B347679009B7300 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		3F12AE942B34773F009B7300 /* EmotionalInfoCheckDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalInfoCheckDao.swift; sourceTree = "<group>"; };
-		3F12AE962B347846009B7300 /* EmotionalStateDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalStateDao.swift; sourceTree = "<group>"; };
-		3F12AEA02B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmotionalCheckInfoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F12AEA12B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmotionalCheckInfoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3F12AEA22B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmotionalStateEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3F12AEA32B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmotionalStateEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F12AE942B34773F009B7300 /* MoodCheckDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCheckDao.swift; sourceTree = "<group>"; };
+		3F12AE962B347846009B7300 /* MoodDetailDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDetailDao.swift; sourceTree = "<group>"; };
 		3F12AEA42B3497D0009B7300 /* DogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3F12AEA52B3497D0009B7300 /* DogEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3F1A177E2B3AA45300044CA9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -101,6 +97,10 @@
 		3FAE41F42A5450B2002E541C /* AddImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		3FAE41F62A5453C3002E541C /* SexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexView.swift; sourceTree = "<group>"; };
 		3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomMenuView.swift; sourceTree = "<group>"; };
+		3FC099112B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodDetailEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3FC099122B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodDetailEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FC099132B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodCheckEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3FC099142B4AA5E400A577BF /* MoodCheckEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodCheckEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FC3321D2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmotionalDogStateContentView.swift; sourceTree = "<group>"; };
 		3FC3321F2B47E56300349AC5 /* ClassificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationsViewModel.swift; sourceTree = "<group>"; };
 		3FC332222B47E62300349AC5 /* ClassificationServiceProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationServiceProviding.swift; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 			children = (
 				3F74BBEC2A5D6A9100A8BB42 /* Dao.swift */,
 				3F74BBEE2A5D8B1600A8BB42 /* DogDao.swift */,
-				3F12AE942B34773F009B7300 /* EmotionalInfoCheckDao.swift */,
-				3F12AE962B347846009B7300 /* EmotionalStateDao.swift */,
+				3F12AE942B34773F009B7300 /* MoodCheckDao.swift */,
+				3F12AE962B347846009B7300 /* MoodDetailDao.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -213,10 +213,10 @@
 		3FAE41E32A5439A6002E541C /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				3F12AEA02B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift */,
-				3F12AEA12B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataProperties.swift */,
-				3F12AEA22B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift */,
-				3F12AEA32B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift */,
+				3FC099112B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift */,
+				3FC099122B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift */,
+				3FC099132B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift */,
+				3FC099142B4AA5E400A577BF /* MoodCheckEntity+CoreDataProperties.swift */,
 				3F12AEA42B3497D0009B7300 /* DogEntity+CoreDataClass.swift */,
 				3F12AEA52B3497D0009B7300 /* DogEntity+CoreDataProperties.swift */,
 				3FAE41E42A5439DD002E541C /* DogModel.xcdatamodeld */,
@@ -379,9 +379,10 @@
 			files = (
 				3F74BBF62A5D90AE00A8BB42 /* Dog.swift in Sources */,
 				3FC332272B47E70200349AC5 /* DogEmotionImageClassification.mlmodel in Sources */,
+				3FC099182B4AA5E400A577BF /* MoodCheckEntity+CoreDataProperties.swift in Sources */,
 				3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */,
 				3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */,
-				3F12AE952B34773F009B7300 /* EmotionalInfoCheckDao.swift in Sources */,
+				3F12AE952B34773F009B7300 /* MoodCheckDao.swift in Sources */,
 				3FAE41F72A5453C3002E541C /* SexView.swift in Sources */,
 				3F12AEAB2B3497D0009B7300 /* DogEntity+CoreDataProperties.swift in Sources */,
 				3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */,
@@ -395,7 +396,7 @@
 				3FC332202B47E56300349AC5 /* ClassificationsViewModel.swift in Sources */,
 				3F79B9F72B49A20F00EB8542 /* CheckMoodViewModel.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,
-				3F12AEA82B3497D0009B7300 /* EmotionalStateEntity+CoreDataClass.swift in Sources */,
+				3FC099162B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift in Sources */,
 				3F1A17812B3AA53B00044CA9 /* StringUtilities.swift in Sources */,
 				3F74BBE52A5D60BE00A8BB42 /* DogListView.swift in Sources */,
 				3FC3321E2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift in Sources */,
@@ -404,7 +405,7 @@
 				3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */,
 				3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */,
 				3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */,
-				3F12AE972B347846009B7300 /* EmotionalStateDao.swift in Sources */,
+				3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */,
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
@@ -413,14 +414,13 @@
 				3F1A177F2B3AA45300044CA9 /* Logger.swift in Sources */,
 				3FC332252B47E66200349AC5 /* ClassificationService.swift in Sources */,
 				3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */,
-				3F12AEA62B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataClass.swift in Sources */,
 				3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */,
 				3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */,
-				3F12AEA72B3497D0009B7300 /* EmotionalCheckInfoEntity+CoreDataProperties.swift in Sources */,
+				3FC099172B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift in Sources */,
 				3F7286DF2B3575B50013AE4D /* EmotionalStateManagerBO.swift in Sources */,
 				3F7286E22B35A4F80013AE4D /* RunBloking.swift in Sources */,
 				3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */,
-				3F12AEA92B3497D0009B7300 /* EmotionalStateEntity+CoreDataProperties.swift in Sources */,
+				3FC099152B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift in Sources */,
 				3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */,
 				3F12AEAA2B3497D0009B7300 /* DogEntity+CoreDataClass.swift in Sources */,
 				3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */,

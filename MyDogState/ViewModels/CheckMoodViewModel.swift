@@ -9,7 +9,7 @@ import Foundation
 
 class CheckMoodViewModel: ObservableObject {
     
-    @Published var emotionalInfoCheckList: [EmotionalInfoCheck] = []
+    @Published var emotionalInfoCheckList: [MoodCheckInfo] = []
     {
         willSet{
             objectWillChange.send()
@@ -41,14 +41,14 @@ class CheckMoodViewModel: ObservableObject {
     {
         do
         {
-            var checkInfo = EmotionalInfoCheck(id: UUID(), date: Date(), dog: dog, statusList: nil)
+            var checkInfo = MoodCheckInfo(id: UUID(), date: Date(), dog: dog, statusList: nil)
             try await emotionalManager.createEmotionalCheck(check: checkInfo, errorInfo: &errorInfo)
             
             if errorInfo.isAllOK()
             {
                 for result in predictionList
                 {
-                    var moodDetail = MoodDetail(id: UUID(), mood: MoodResult.fromString(value: result.identifier), confidence: Double(result.confidence), statusInfo: checkInfo)
+                    var moodDetail = MoodDetail(id: UUID(), mood: MoodResult.fromString(value: result.identifier), confidence: result.confidence, statusInfo: checkInfo)
                     try await emotionalManager.createMoodDetail(mood: moodDetail, errorInfo: &errorInfo)
                 }
             }

@@ -19,7 +19,7 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     let sex: String?
     let hairColor: String?
     let date: Date? //insert date
-    var emotionalCheckList: [EmotionalInfoCheck]?
+    var emotionalCheckList: [MoodCheckInfo]?
     var isSelected = false
 
     func getSexBackgroundColor()-> Color
