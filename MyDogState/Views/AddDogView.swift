@@ -103,7 +103,7 @@ struct AddDogView: View {
         {
             return image.size.width == 0 || microchip.isEmpty || name.isEmpty
         }
-        return false
+        return true 
     }
 }
 

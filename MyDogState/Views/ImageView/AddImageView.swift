@@ -32,6 +32,10 @@ struct AddImageView: View
         .alert("Camera is not accessible", isPresented: $showErrorMessage) {
             Button("OK", role: .cancel) { }
         }
+        .sheet(isPresented: $shouldPresentImagePicker)
+        {
+            ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: $image)
+        }
     }
     
     func getActionSheet() -> ActionSheet
