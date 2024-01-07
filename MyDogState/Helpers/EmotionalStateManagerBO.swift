@@ -112,7 +112,7 @@ public class EmotionalStateManagerBO
                     //per ogni check carico i suoi stati e li vado a settare
                     for i in checkList.indices
                     {
-                        checkList[i].statusList = try getAllMoodByCheck(checkList[i])
+                        checkList[i].moodDetailList = try getAllMoodByCheck(checkList[i])
                     }
                     return checkList
                 }
@@ -146,7 +146,7 @@ public class EmotionalStateManagerBO
                     //per ogni check carico i suoi stati e li vado a settare
                     for i in checkList.indices
                     {
-                        checkList[i].statusList = try getAllMoodByCheck(checkList[i])
+                        checkList[i].moodDetailList = try getAllMoodByCheck(checkList[i])
                     }
                     return checkList
                 }

@@ -46,11 +46,11 @@ public class MoodCheckDao: Dao
         let result = try runBlocking
         {
             var info = ErrorInfo()
-            if let statusinfoID = obj?.id
+            if let moodCheckID = obj?.id
             {
                 do
                 {
-                    return try getEntityById(statusinfoID, errorInfo: &info)
+                    return try getEntityById(moodCheckID, errorInfo: &info)
                 }
                 catch
                 {
@@ -70,11 +70,11 @@ public class MoodCheckDao: Dao
         let result = try runBlocking
         {
             var info = ErrorInfo()
-            if let statusinfoID = entity?.id
+            if let mooodCheckID = entity?.id
             {
                 do
                 {
-                    return try await getById(statusinfoID, info: &info)
+                    return try await getById(mooodCheckID, info: &info)
                 }
                 catch
                 {
@@ -100,13 +100,13 @@ public class MoodCheckDao: Dao
             let request = MoodCheckEntity.fetchRequest()
             return try persistent.viewContext.fetch(request).map({ infoEntity in
                 
-                let infoCheck = try fromEntityToObject(entity: infoEntity)
                 return MoodCheckInfo(
                     id: infoEntity.id,
                     date: infoEntity.date,
                     note: infoEntity.note,
                     dog: try dogDao?.fromEntityToObject(entity: infoEntity.dog),
-                    statusList:  nil //try stateDao?.getAllStatusByCheck(infoCheck) Questo verra' aggiunto in un secondo momento dal BO
+                    moodDetailList:  nil,
+                    image: infoEntity.image
                 )
             })
         }
@@ -125,9 +125,11 @@ public class MoodCheckDao: Dao
             let checkEntity = try getEntityById(id, errorInfo: &info)!
             Logger.shared.log(checkEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             return MoodCheckInfo(id: checkEntity.id,
-                                      date: checkEntity.date,
-                                      note: checkEntity.note,
-                                      dog: try dogDao?.fromEntityToObject(entity: checkEntity.dog), statusList: nil /*vengono aggiunti dopo dal BO*/)
+                                 date: checkEntity.date,
+                                 note: checkEntity.note,
+                                 dog: try dogDao?.fromEntityToObject(entity: checkEntity.dog),
+                                 moodDetailList: nil,
+                                 image: checkEntity.image)
         }
         catch
         {
@@ -149,13 +151,13 @@ public class MoodCheckDao: Dao
                 infoCheckEntity.date = obj.date
                 infoCheckEntity.note = obj.note
                 infoCheckEntity.dog = dog
+                infoCheckEntity.image = obj.image
                 Logger.shared.log(infoCheckEntity.toString(), level: LogLevel.Debug , saveToFile: true)
-                //TODO: Ricordarsi a BO di creare anche gli stati associati a questo check
+                //TODO: Ricordarsi a BO di creare anche i dettagli del mood associati a questo check
                 try persistent.saveContext()
             }
             else
             {
-                //Genero un errore dicendo che manca lo status info a database
                 info.setErrorMessage(value:  "Error - try to add new check without dog info")
                 Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw info
@@ -177,11 +179,12 @@ public class MoodCheckDao: Dao
             if let dog = try dogDao?.fromObjectToEntity(obj: obj.dog)
             //controllo che esista l'emotional check associato
             {
-                let stateEntity = try getEntityById(id, errorInfo: &info)!
-                stateEntity.date = obj.date
-                stateEntity.note = obj.note
-                stateEntity.dog = dog
-                Logger.shared.log(stateEntity.toString(), level: LogLevel.Debug , saveToFile: true)
+                let checkEntity = try getEntityById(id, errorInfo: &info)!
+                checkEntity.date = obj.date
+                checkEntity.note = obj.note
+                checkEntity.dog = dog
+                checkEntity.image = obj.image
+                Logger.shared.log(checkEntity.toString(), level: LogLevel.Debug , saveToFile: true)
                 try persistent.saveContext()
             }
             else

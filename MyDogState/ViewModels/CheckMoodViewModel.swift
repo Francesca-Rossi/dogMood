@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class CheckMoodViewModel: ObservableObject {
     
@@ -37,19 +38,22 @@ class CheckMoodViewModel: ObservableObject {
         }
     }
 
-    public func addNewEmotionalCheck(note: String?,  dog: Dog?, predictionList: [PredictionResult]) async
+    public func addNewEmotionalCheck(note: String,  dog: Dog, image: UIImage, predictionList: [PredictionResult]) async
     {
         do
         {
-            var checkInfo = MoodCheckInfo(id: UUID(), date: Date(), dog: dog, statusList: nil)
-            try await emotionalManager.createEmotionalCheck(check: checkInfo, errorInfo: &errorInfo)
-            
-            if errorInfo.isAllOK()
+            if let data =  try? ImageUtilities(image: image).convertImageToData(error: &errorInfo)
             {
-                for result in predictionList
+                var checkInfo = MoodCheckInfo(id: UUID(), date: Date(), note: note, dog: dog, moodDetailList: nil, image: data)
+                try await emotionalManager.createEmotionalCheck(check: checkInfo, errorInfo: &errorInfo)
+                
+                if errorInfo.isAllOK()
                 {
-                    var moodDetail = MoodDetail(id: UUID(), mood: MoodResult.fromString(value: result.identifier), confidence: result.confidence, statusInfo: checkInfo)
-                    try await emotionalManager.createMoodDetail(mood: moodDetail, errorInfo: &errorInfo)
+                    for result in predictionList
+                    {
+                        var moodDetail = MoodDetail(id: UUID(), mood: MoodResult.fromString(value: result.identifier), confidence: result.confidence, statusInfo: checkInfo)
+                        try await emotionalManager.createMoodDetail(mood: moodDetail, errorInfo: &errorInfo)
+                    }
                 }
             }
         }

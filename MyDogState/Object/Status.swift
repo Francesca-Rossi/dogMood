@@ -10,16 +10,16 @@ import SwiftUI
 
 struct MoodCheckInfo: Codable, Equatable, Identifiable, Hashable
 {
-    var id: UUID? //unique
-    var date: Date?
-    var note: String?
-    var dog: Dog?
-    var statusList: [MoodDetail]?
-    //TODO: 07/01 MANCA LA FOTOOOO!!!
+    let id: UUID? //unique
+    let date: Date?
+    let note: String?
+    let dog: Dog?
+    var moodDetailList: [MoodDetail]?
+    let image: Data?
     
     func toString() -> String
     {
-        "{id: \(self.id), date: \(self.date), note: \(self.note), dogID: \(self.dog?.id), dogName: \(self.dog?.name), statusList: \(self.statusList?.count)}"
+        "{id: \(self.id), date: \(self.date), note: \(self.note), dogID: \(self.dog?.id), dogName: \(self.dog?.name), statusList: \(self.moodDetailList?.count)}"
     }
     
 }
