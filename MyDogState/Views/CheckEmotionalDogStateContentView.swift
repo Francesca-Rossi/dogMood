@@ -13,21 +13,22 @@ struct CheckEmotionalDogStateContentView: View {
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentCamera = false
     @State private var showErrorMessage = false
+    @State private var onContinueTap = false
+    
     
     var body: some View {
         NavigationView {
             if let image = classificationServiceViewModel.importedImage {
-                VStack(alignment: .leading) {
+                VStack(alignment: .center) {
                     RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
                         .onTapGesture {
                             classificationServiceViewModel.displayImagePicker.toggle()
                         }
                     
                     ScrollView {
-                        var _ = print(classificationServiceViewModel.classifications)
                         EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
                     }
-                    Button(action: {print("continua")})
+                    Button(action: { onContinueTap = true})
                     {
                         //TODO: 07/01
                         HStack
@@ -36,6 +37,13 @@ struct CheckEmotionalDogStateContentView: View {
                             Text("Continue")
                         }
                     }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                        .fullScreenCover(isPresented: $onContinueTap, content:
+                        {
+                            if let importedImage = classificationServiceViewModel.importedImage
+                            {
+                                ResultDogMoodContentView(viewModel: CheckMoodViewModel(), dog: selectedDog, image: image, resultList: classificationServiceViewModel.classifications)
+                            }
+                        })
                     Button(action: {classificationServiceViewModel.importedImage = nil })
                     {
                         HStack

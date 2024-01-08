@@ -12,7 +12,9 @@ struct EmotionalResultDialogView: View {
     let MOOD_RESULT_LABEL = "Dog mood"
     let MAX_FONT_SIZE = 40
     
-    var predictionResult: [PredictionResult] //TODO: al posto di questo ci sarà un viewModel
+    //TODO: controlla se al posto di questo ci sarà un viewModel
+    var predictionResult: [PredictionResult]
+    
     var body: some View {
     
             List(predictionResult)

@@ -24,8 +24,9 @@ struct CustomBottomMenuView: View {
                             .foregroundColor(.white)
                     }
                     .buttonStyle(AnimatedCircleBlueButtonStyle())
-                    .fullScreenCover(isPresented: $tapMooCheckStatus )
+                    .sheet(isPresented: $tapMooCheckStatus )
                     {
+                        //TODO: check image here
                         SelectableDogListView(viewModel: viewModel, image: .constant(UIImage()))
                     }
                     .disabled(!viewModel.checkDogStatus)
@@ -41,7 +42,7 @@ struct CustomBottomMenuView: View {
                             Text("History")
                         }
                     }.foregroundStyle(tapMoodCheckHistory ? .blue : .black)
-                    .fullScreenCover(isPresented: $tapMoodCheckHistory)  
+                        .fullScreenCover(isPresented: $tapMoodCheckHistory)
                     {
                         //TODO: change with history list
                         DogListView(viewModel: self.viewModel)
@@ -57,7 +58,7 @@ struct CustomBottomMenuView: View {
                     }.foregroundStyle(tapDogList ? .blue : .black)
                         .fullScreenCover(isPresented: $tapDogList)  
                     {
-                            DogListView(viewModel: self.viewModel)
+                        DogListView(viewModel: self.viewModel)
                     }
                 }
             }

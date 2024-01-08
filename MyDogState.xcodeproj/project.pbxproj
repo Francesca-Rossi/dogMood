@@ -51,6 +51,7 @@
 		3FC332252B47E66200349AC5 /* ClassificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC332242B47E66200349AC5 /* ClassificationService.swift */; };
 		3FC332272B47E70200349AC5 /* DogEmotionImageClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3FC332262B47E70200349AC5 /* DogEmotionImageClassification.mlmodel */; };
 		3FD9C8DD2ACF0A9700162DFA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9C8DC2ACF0A9600162DFA /* Button.swift */; };
+		3FDAF1642B4C41C900B0AFDB /* ResultDogMoodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAF1632B4C41C900B0AFDB /* ResultDogMoodContentView.swift */; };
 		3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */; };
 		3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */; };
 		3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* DogCellView.swift */; };
@@ -107,6 +108,7 @@
 		3FC332242B47E66200349AC5 /* ClassificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationService.swift; sourceTree = "<group>"; };
 		3FC332262B47E70200349AC5 /* DogEmotionImageClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DogEmotionImageClassification.mlmodel; sourceTree = "<group>"; };
 		3FD9C8DC2ACF0A9600162DFA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3FDAF1632B4C41C900B0AFDB /* ResultDogMoodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDogMoodContentView.swift; sourceTree = "<group>"; };
 		3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 		3FF236232A56F71400C0AAD3 /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				3FC3321D2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift */,
 				3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */,
+				3FDAF1632B4C41C900B0AFDB /* ResultDogMoodContentView.swift */,
 			);
 			name = CheckEmotionalStateViews;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */,
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,
 				3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */,
+				3FDAF1642B4C41C900B0AFDB /* ResultDogMoodContentView.swift in Sources */,
 				3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */,
 				3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */,
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,

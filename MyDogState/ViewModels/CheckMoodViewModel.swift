@@ -38,7 +38,7 @@ class CheckMoodViewModel: ObservableObject {
         }
     }
 
-    public func addNewEmotionalCheck(note: String,  dog: Dog, image: UIImage, predictionList: [PredictionResult]) async
+    public func addNewEmotionalCheck(note: String,  dog: Dog, image: UIImage, predictionList: [PredictionResult]) async -> ErrorInfo
     {
         do
         {
@@ -61,5 +61,6 @@ class CheckMoodViewModel: ObservableObject {
         {
             
         }
+        return errorInfo
     }
 }
