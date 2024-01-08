@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TextWithIcon: View {
-    var iconName: String
+    var icon: String
     var caption: String
     var body: some View {
        HStack
         {
-            Image(systemName: iconName)
+            Image(systemName: icon)
             Text(caption)
         }
     }

@@ -34,4 +34,9 @@ extension String
     {
         return self == other
     }
+    
+    var isEmpty: Bool
+    {
+        self == StringUtilities.emptyString
+    }
 }

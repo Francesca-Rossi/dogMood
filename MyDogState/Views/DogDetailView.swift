@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogDetailView: View {
-    var dog: Dog
+    var dog: Dog //TODO: gli passeremo il viewModel
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationView {

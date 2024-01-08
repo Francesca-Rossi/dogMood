@@ -80,8 +80,8 @@ struct ItemCellDescriptionViewWithIcon: View
     {
         VStack(alignment: .leading, spacing: 0)
         {
-            TextWithIcon(iconName: firstIcon, caption: firstLabel)
-            TextWithIcon(iconName: secondIcon, caption: secondLabel)
+            TextWithIcon(icon: firstIcon, caption: firstLabel)
+            TextWithIcon(icon: secondIcon, caption: secondLabel)
         }
         
     }
@@ -97,8 +97,8 @@ struct ItemCellDescriptionViewWithIconExample: View
     {
         VStack(alignment: .leading)
         {
-            TextWithIcon(iconName: firstIcon, caption: firstLabel)
-            TextWithIcon(iconName: secondIcon, caption: secondLabel)
+            TextWithIcon(icon: firstIcon, caption: firstLabel)
+            TextWithIcon(icon: secondIcon, caption: secondLabel)
         }
     }
 }
