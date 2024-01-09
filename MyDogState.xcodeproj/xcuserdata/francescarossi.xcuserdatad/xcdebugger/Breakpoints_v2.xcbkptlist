@@ -929,51 +929,52 @@
             endingLineNumber = "23"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51285AB9-7CEB-414A-AA27-F48612683B35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Dao/MoodDetailDao.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "create(obj:info:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E79F7514-9666-4C7B-A4BA-CF2BF9216B70 - d8b0432232cabbb7"
+                  uuid = "51285AB9-7CEB-414A-AA27-F48612683B35 - aaa5ac36b89c9359"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MyDogState.MoodDetail) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Text&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.NavigationViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for MyDogState.MoodDetailDao.create(obj: MyDogState.MoodDetail, info: inout MyDogState.ErrorInfo) async throws -&gt; ()"
                   moduleName = "MyDogState"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Dao/MoodDetailDao.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "61">
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "3298">
                </Location>
                <Location
-                  uuid = "E79F7514-9666-4C7B-A4BA-CF2BF9216B70 - 52fde410185bcc2e"
+                  uuid = "51285AB9-7CEB-414A-AA27-F48612683B35 - aaa5ac36b89c9359"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MyDogState.MoodDetail) -&gt; SwiftUI.Text in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.NavigationViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for MyDogState.MoodDetailDao.create(obj: MyDogState.MoodDetail, info: inout MyDogState.ErrorInfo) async throws -&gt; ()"
                   moduleName = "MyDogState"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Dao/MoodDetailDao.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "61">
-               </Location>
-               <Location
-                  uuid = "E79F7514-9666-4C7B-A4BA-CF2BF9216B70 - d0a4b3130c8305e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MyDogState.MoodDetail) -&gt; SwiftUI.Text in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.NavigationViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "61">
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "2750">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -981,95 +982,330 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16688638-2D38-42C0-8AC6-28EBCFF5DAB1"
+            uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyDogState/ViewModels/CheckMoodViewModel.swift"
+            filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "getBestMoodList(dog:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getAllMoodByCheck(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - d9c3e88f98f9c482"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "413">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 5efefc1587750884"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 36c02cdff3a50b1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MyDogState.MoodDetail) -&gt; Swift.Bool in closure #1 @Sendable () async throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "278">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 5cd81d9821df5602"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "373">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 851b03832a723cd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 7c486d17d4221200"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 6df3856f7d1cb007"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "337">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68E56F1A-2B5D-46BB-A945-0A52355999C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Dao/MoodDetailDao.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getAll(info:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68E56F1A-2B5D-46BB-A945-0A52355999C3 - 6d58d0b6572320eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MyDogState.MoodDetailDao.getAll(info: inout MyDogState.ErrorInfo) async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Dao/MoodDetailDao.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "265">
+               </Location>
+               <Location
+                  uuid = "68E56F1A-2B5D-46BB-A945-0A52355999C3 - 9e6b77b58022697b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MyDogState.MoodDetailEntity) throws -&gt; MyDogState.MoodDetail in MyDogState.MoodDetailDao.getAll(info: inout MyDogState.ErrorInfo) async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Dao/MoodDetailDao.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B345CDB-B72E-44B8-8EC8-B272FC52B618"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Dao/MoodDetailDao.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getAll(info:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4063F41E-1267-4501-B4CE-6316A01A85BD"
+            uuid = "B751D154-26BF-4902-80AD-3E2E515B1206"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyDogState/ViewModels/CheckMoodViewModel.swift"
+            filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "getBestMoodList(dog:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getAllMoodByCheck(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B751D154-26BF-4902-80AD-3E2E515B1206 - 5cd81d9821df56c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "B751D154-26BF-4902-80AD-3E2E515B1206 - 7c486d17d42212c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "136C11D8-DF32-49A5-A96C-38D7D30EA426"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDogState/ViewModels/CheckMoodViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "getBestMoodList(dog:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7736E7F1-2F62-49EB-ACFF-12AC33620882"
+            uuid = "3A29FD1E-CF3F-43E5-9905-6561ED0CC261"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "getTheBestConfidenceMood(check:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getAllMoodByCheck(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7736E7F1-2F62-49EB-ACFF-12AC33620882 - 2fa785d366255df9"
+                  uuid = "3A29FD1E-CF3F-43E5-9905-6561ED0CC261 - 5cd81d9821df5744"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MyDogState.EmotionalStateManagerBO.getTheBestConfidenceMood(check: MyDogState.MoodCheckInfo) -&gt; Swift.Optional&lt;MyDogState.MoodDetail&gt;"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
                   moduleName = "MyDogState"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "171"
-                  endingLineNumber = "171"
-                  offsetFromSymbolStart = "205">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2080">
                </Location>
                <Location
-                  uuid = "7736E7F1-2F62-49EB-ACFF-12AC33620882 - 986dc7386a51d76"
+                  uuid = "3A29FD1E-CF3F-43E5-9905-6561ED0CC261 - 7c486d17d4221346"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MyDogState.MoodDetail, MyDogState.MoodDetail) -&gt; Swift.Bool in MyDogState.EmotionalStateManagerBO.getTheBestConfidenceMood(check: MyDogState.MoodCheckInfo) -&gt; Swift.Optional&lt;MyDogState.MoodDetail&gt;"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
                   moduleName = "MyDogState"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1632">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4799910F-490B-4530-8FF3-058B29C23AED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getAllMoodByCheck(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4799910F-490B-4530-8FF3-058B29C23AED - 5cd81d9821df5686"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "972">
+               </Location>
+               <Location
+                  uuid = "4799910F-490B-4530-8FF3-058B29C23AED - 7c486d17d4221284"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; Swift.Array&lt;MyDogState.MoodDetail&gt; in MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "554">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -26,11 +26,21 @@ public class EmotionalStateManagerBO
          */
         let result = try runBlocking {
             var errorInfo = ErrorInfo()
+            var updateMoodList = [MoodDetail]()
             do
             {
                 if let infoCheck = check
                 {
-                    return try await moodDetailDao?.getAll(info: &errorInfo).filter({status in status.statusInfo?.id == infoCheck.id })
+                    if let moodList = try await  moodDetailDao?.getAll(info: &errorInfo)
+                    {
+                        for mood in moodList
+                        {
+                            if mood.statusInfo?.id == infoCheck.id
+                            {
+                                updateMoodList.append(mood)
+                            }
+                        }
+                    }
                 }
             }
             catch
@@ -39,7 +49,7 @@ public class EmotionalStateManagerBO
                 Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 throw errorInfo
             }
-            return nil
+            return updateMoodList
         }
         return result
     }
@@ -128,8 +138,28 @@ public class EmotionalStateManagerBO
         return result
     }
     
+    func getAllMoodCheckByDogComplete(dog: Dog, info: inout ErrorInfo) throws -> [MoodCheckInfo]
+    {
+        var moodCheckList = [MoodCheckInfo]()
+        do
+        {
+            moodCheckList = try getAllEmotionalCheckByDogPartial(dog: dog)
+            //per ogni check carico i suoi stati e li vado a settare
+            for i in moodCheckList.indices
+            {
+                moodCheckList[i].moodDetailList = try getAllMoodByCheck(moodCheckList[i])
+            } //per ogni check carico i suoi stati e li vado a settare
+        }
+        catch
+        {
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw info
+        }
+        return moodCheckList
+    }
     // MARK: - Method to return all the emotional check from ONE DOG
-    func getAllEmotionalCheckByDog(dog: Dog) throws -> [MoodCheckInfo]
+    func getAllEmotionalCheckByDogPartial(dog: Dog) throws -> [MoodCheckInfo]
     {
         //Dammi la storia di tutti i check di uno specifico cane, con anche gli stati e il cane
         let result = try runBlocking {
@@ -143,11 +173,6 @@ public class EmotionalStateManagerBO
                     //filtro solo i check del cane in questione
                     checkList = checkList.filter{$0.dog?.id == dog.id}
                     
-                    //per ogni check carico i suoi stati e li vado a settare
-                    for i in checkList.indices
-                    {
-                        checkList[i].moodDetailList = try getAllMoodByCheck(checkList[i])
-                    }
                     return checkList
                 }
             }
@@ -162,14 +187,5 @@ public class EmotionalStateManagerBO
         return result
     }
     
-    func getTheBestConfidenceMood(check: MoodCheckInfo) -> MoodDetail?
-    {
-        if let moodList = check.moodDetailList
-        {
-            return moodList.max {
-                ($0.confidence) ?? 0 < ($1.confidence) ?? 0
-            }
-        }
-        return  nil
-    }
+    
 }

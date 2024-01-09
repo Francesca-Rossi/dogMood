@@ -38,32 +38,7 @@ class CheckMoodViewModel: ObservableObject {
         }
     }
     
-    public func getBestMoodList(dog: Dog) -> [MoodDetail]
-    {
-        var allDogCheck = [MoodCheckInfo]()
-        var bestMoodList = [MoodDetail]()
-        do
-        {
-            //getAllCheckBydog
-            //for check get mood list
-            allDogCheck = try emotionalManager.getAllEmotionalCheckByDog(dog: dog)
-            //take only the best confidence
-            //put the result in the list
-            for check in allDogCheck
-            {
-               if let mood = emotionalManager.getTheBestConfidenceMood(check: check)
-                {
-                   bestMoodList.append(mood)
-                }
-            }
-        }
-        catch
-        {
-            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
-            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
-        }
-        return bestMoodList
-    }
+    
 
     public func addNewEmotionalCheck(note: String,  dog: Dog, image: UIImage, predictionList: [PredictionResult]) async -> ErrorInfo
     {

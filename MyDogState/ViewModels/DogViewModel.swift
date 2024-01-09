@@ -37,7 +37,7 @@ class DogViewModel: ObservableObject {
                 dogsList = try  dao.getAll(info: &errorInfo)
                 for i in dogsList.indices
                 {
-                    dogsList[i].emotionalCheckList = try emotionalManager.getAllEmotionalCheckByDog(dog:dogsList[i])
+                    dogsList[i].emotionalCheckList = try emotionalManager.getAllMoodCheckByDogComplete(dog:dogsList[i], info: &errorInfo)
                 }
                 checkDogStatus = !dogsList.isEmpty
             }
@@ -100,9 +100,6 @@ class DogViewModel: ObservableObject {
         
     }
     
-    public func addNewEmotionalCheck(date: Date?,  note: String?,  dog: Dog?, statusList: [MoodDetail]?)
-    {
-        
-    }
+    
 
 }

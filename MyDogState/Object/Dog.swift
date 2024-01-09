@@ -47,4 +47,35 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     {
         "{id: \(self.id), name: \(self.name), microchip: \(self.microchip), sex: \(self.sex) dateOfBirth: \(self.dateOfBirth), date: \(self.date), breed: \(self.breed), hairColor: \(self.hairColor), imageSize: \(self.image?.count), emotionalCheckListSize: \(self.emotionalCheckList?.count)}"
     }
+    
+    func getTheBestConfidenceMood(check: MoodCheckInfo) -> MoodDetail?
+    {
+        if let moodList = check.moodDetailList
+        {
+            return moodList.max {
+                ($0.confidence) ?? 0 < ($1.confidence) ?? 0
+            }
+        }
+        return  nil
+    }
+    
+    public func getBestMoodList() -> [MoodDetail]
+    {
+        var bestMoodList = [MoodDetail]()
+            //getAllCheckBydog
+            //for check get mood list
+            if let allDogCheck = self.emotionalCheckList
+            {
+                //take only the best confidence
+                //put the result in the list
+                for check in allDogCheck
+                {
+                    if let mood = self.getTheBestConfidenceMood(check: check)
+                    {
+                        bestMoodList.append(mood)
+                    }
+                }
+            }
+            return bestMoodList
+    }
 }

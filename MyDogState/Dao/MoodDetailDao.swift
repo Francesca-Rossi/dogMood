@@ -61,6 +61,7 @@ public class MoodDetailDao: Dao
             throw info
         }
     }
+    
 
     func getById(_ id: UUID, info: inout ErrorInfo) async throws -> MoodDetail? 
     {

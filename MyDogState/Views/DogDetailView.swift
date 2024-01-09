@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DogDetailView: View {
-    @StateObject var viewModel: CheckMoodViewModel
     var dog: Dog
     @Environment(\.dismiss) var dismiss
     var list = ["First Row", "First Row", "First Row"]
@@ -18,7 +17,8 @@ struct DogDetailView: View {
             {
                 DogProfileView(dog: dog)
   
-                List(viewModel.getBestMoodList(dog: dog))
+                
+                List(dog.getBestMoodList())
                 {
                     //Text(MoodResult.toString(mood: $0.mood))
                     DogDetailCard(bestMood: $0)
