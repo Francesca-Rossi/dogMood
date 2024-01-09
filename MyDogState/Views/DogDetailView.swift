@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct DogDetailView: View {
-    var dog: Dog //TODO: gli passeremo il viewModel
+    @StateObject var viewModel: CheckMoodViewModel
+    var dog: Dog
     @Environment(\.dismiss) var dismiss
+    var list = ["First Row", "First Row", "First Row"]
     var body: some View {
         NavigationView {
-            DogProfileView(dog: dog)
+            VStack
+            {
+                DogProfileView(dog: dog)
+  
+                List(viewModel.getBestMoodList(dog: dog))
+                {
+                    //Text(MoodResult.toString(mood: $0.mood))
+                    DogDetailCard(bestMood: $0)
+                }.frame(minHeight: CGFloat(300.0))
+                    .listStyle(PlainListStyle())
+                    // 2
+                    //LazyHStack {
+                    
+                    //}
+                    //}
+
+                
+                
                 .navigationTitle("Dog details")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
@@ -24,8 +43,9 @@ struct DogDetailView: View {
                         }
                     }
                 }
+            }
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
     }
 }
 

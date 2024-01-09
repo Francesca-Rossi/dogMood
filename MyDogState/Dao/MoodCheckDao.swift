@@ -86,7 +86,7 @@ public class MoodCheckDao: Dao
             }
             return nil
         }
-        Logger.shared.log(result?.toString(), level: LogLevel.Debug , saveToFile: true)
+        //Logger.shared.log(result?.toString(), level: LogLevel.Debug , saveToFile: true)
        return result
     }
     

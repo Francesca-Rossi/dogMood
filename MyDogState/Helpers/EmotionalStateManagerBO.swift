@@ -161,4 +161,15 @@ public class EmotionalStateManagerBO
         }
         return result
     }
+    
+    func getTheBestConfidenceMood(check: MoodCheckInfo) -> MoodDetail?
+    {
+        if let moodList = check.moodDetailList
+        {
+            return moodList.max {
+                ($0.confidence) ?? 0 < ($1.confidence) ?? 0
+            }
+        }
+        return  nil
+    }
 }

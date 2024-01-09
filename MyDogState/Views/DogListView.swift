@@ -46,7 +46,7 @@ struct DogListView: View {
         .fullScreenCover(item: $selectedItem)
         {
             item in
-            DogDetailView(dog: item)
+            DogDetailView(viewModel: CheckMoodViewModel(), dog: item)
         }
     }
 }

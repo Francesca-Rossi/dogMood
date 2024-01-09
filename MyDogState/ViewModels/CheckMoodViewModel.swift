@@ -22,7 +22,7 @@ class CheckMoodViewModel: ObservableObject {
     
     init()
     {
-        getAllCheckMood()
+        //getAllCheckMood()
     }
     
     public func getAllCheckMood()
@@ -36,6 +36,33 @@ class CheckMoodViewModel: ObservableObject {
         {
             Logger.shared.log(error.localizedDescription, level: LogLevel.Error , saveToFile: true)
         }
+    }
+    
+    public func getBestMoodList(dog: Dog) -> [MoodDetail]
+    {
+        var allDogCheck = [MoodCheckInfo]()
+        var bestMoodList = [MoodDetail]()
+        do
+        {
+            //getAllCheckBydog
+            //for check get mood list
+            allDogCheck = try emotionalManager.getAllEmotionalCheckByDog(dog: dog)
+            //take only the best confidence
+            //put the result in the list
+            for check in allDogCheck
+            {
+               if let mood = emotionalManager.getTheBestConfidenceMood(check: check)
+                {
+                   bestMoodList.append(mood)
+                }
+            }
+        }
+        catch
+        {
+            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+        }
+        return bestMoodList
     }
 
     public func addNewEmotionalCheck(note: String,  dog: Dog, image: UIImage, predictionList: [PredictionResult]) async -> ErrorInfo
@@ -59,7 +86,8 @@ class CheckMoodViewModel: ObservableObject {
         }
         catch
         {
-            
+            errorInfo.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(errorInfo.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
         }
         return errorInfo
     }

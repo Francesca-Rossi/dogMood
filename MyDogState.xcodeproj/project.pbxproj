@@ -52,6 +52,7 @@
 		3FC332272B47E70200349AC5 /* DogEmotionImageClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3FC332262B47E70200349AC5 /* DogEmotionImageClassification.mlmodel */; };
 		3FD9C8DD2ACF0A9700162DFA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD9C8DC2ACF0A9600162DFA /* Button.swift */; };
 		3FDAF1642B4C41C900B0AFDB /* ResultDogMoodContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAF1632B4C41C900B0AFDB /* ResultDogMoodContentView.swift */; };
+		3FDAF1662B4C936A00B0AFDB /* DogDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAF1652B4C936A00B0AFDB /* DogDetailCard.swift */; };
 		3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */; };
 		3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */; };
 		3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* DogCellView.swift */; };
@@ -109,6 +110,7 @@
 		3FC332262B47E70200349AC5 /* DogEmotionImageClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DogEmotionImageClassification.mlmodel; sourceTree = "<group>"; };
 		3FD9C8DC2ACF0A9600162DFA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3FDAF1632B4C41C900B0AFDB /* ResultDogMoodContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDogMoodContentView.swift; sourceTree = "<group>"; };
+		3FDAF1652B4C936A00B0AFDB /* DogDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailCard.swift; sourceTree = "<group>"; };
 		3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 		3FF236232A56F71400C0AAD3 /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
 				3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */,
+				3FDAF1652B4C936A00B0AFDB /* DogDetailCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */,
 				3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */,
 				3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */,
+				3FDAF1662B4C936A00B0AFDB /* DogDetailCard.swift in Sources */,
 				3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */,
 				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
