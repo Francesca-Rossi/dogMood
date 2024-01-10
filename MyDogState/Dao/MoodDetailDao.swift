@@ -62,8 +62,26 @@ public class MoodDetailDao: Dao
         }
     }
     
+    func getAllNotAsync(info: inout ErrorInfo) throws -> [MoodDetail]
+    {
+        do
+        {
+            let request = MoodDetailEntity.fetchRequest()
+            return try persistent.viewContext.fetch(request).map({ resultEntity in
+                
+                MoodDetail(id: resultEntity.id , mood: MoodResult.fromString(value: resultEntity.mood), confidence: resultEntity.confidence, statusInfo: try checkDAO?.fromEntityToObject(entity: resultEntity.status_info))
+            })
+        }
+        catch
+        {
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw info
+        }
+    }
+    
 
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> MoodDetail? 
+    func getById(_ id: UUID, info: inout ErrorInfo) throws -> MoodDetail? 
     {
         do
         {

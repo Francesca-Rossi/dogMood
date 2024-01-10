@@ -67,14 +67,12 @@ public class MoodCheckDao: Dao
     
     func fromEntityToObject(entity: MoodCheckEntity?) throws -> MoodCheckInfo?
     {
-        let result = try runBlocking
-        {
             var info = ErrorInfo()
             if let mooodCheckID = entity?.id
             {
                 do
                 {
-                    return try await getById(mooodCheckID, info: &info)
+                    return try getById(mooodCheckID, info: &info)
                 }
                 catch
                 {
@@ -85,9 +83,6 @@ public class MoodCheckDao: Dao
                 
             }
             return nil
-        }
-        //Logger.shared.log(result?.toString(), level: LogLevel.Debug , saveToFile: true)
-       return result
     }
     
     // MARK: - DAO methods
@@ -118,7 +113,33 @@ public class MoodCheckDao: Dao
         }
     }
     
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> MoodCheckInfo? 
+    func getAllNotAsync(info: inout ErrorInfo) throws -> [MoodCheckInfo]
+    {
+        do
+        {
+            
+            let request = MoodCheckEntity.fetchRequest()
+            return try persistent.viewContext.fetch(request).map({ infoEntity in
+                
+                return MoodCheckInfo(
+                    id: infoEntity.id,
+                    date: infoEntity.date,
+                    note: infoEntity.note,
+                    dog: try dogDao?.fromEntityToObject(entity: infoEntity.dog),
+                    moodDetailList:  nil,
+                    image: infoEntity.image
+                )
+            })
+        }
+        catch
+        {
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw info
+        }
+    }
+    
+    func getById(_ id: UUID, info: inout ErrorInfo) throws -> MoodCheckInfo? 
     {
         do
         {

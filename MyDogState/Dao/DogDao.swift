@@ -26,14 +26,12 @@ public class DogDao: Dao
     
     func fromEntityToObject(entity: DogEntity?) throws -> Dog?
     {
-        let result = try runBlocking
-        {
             var info = ErrorInfo()
             if let dogId = entity?.id
             {
                 do
                 {
-                    return try await getById(dogId, info: &info)
+                    return try getById(dogId, info: &info)
                 }
                 catch
                 {
@@ -43,13 +41,9 @@ public class DogDao: Dao
                 }
             }
             return nil
-        }
-        return result
     }
     func fromObjectToEntity(obj: Dog?) throws -> DogEntity?
     {
-        let result = try runBlocking
-        {
             var info = ErrorInfo()
             if let dogID = obj?.id
             {
@@ -65,8 +59,7 @@ public class DogDao: Dao
                 }
             }
             return nil
-        }
-        return result
+
     }
     // MARK: - DAO methods
     
@@ -95,7 +88,7 @@ public class DogDao: Dao
         }
     }
     
-    func getById(_ id: UUID, info: inout ErrorInfo) async throws -> Dog?
+    func getById(_ id: UUID, info: inout ErrorInfo) throws -> Dog?
     {
         do
         {
