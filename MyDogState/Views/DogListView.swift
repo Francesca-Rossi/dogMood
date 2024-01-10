@@ -10,7 +10,6 @@ import SwiftUI
 struct DogListView: View {
     @StateObject var viewModel: DogViewModel
     @State var selectedItem: Dog?
-    @State private var openCheckStateVC = false
     var body: some View {
         NavigationView {
             VStack
@@ -40,7 +39,7 @@ struct DogListView: View {
                     .refreshable { viewModel.getAllDogs()
                     }
                 //MARK: - Main bottom menu
-                CustomBottomMenuView(viewModel: viewModel)
+                CustomBottomMenuView(viewModel: viewModel, checkViewModel: CheckMoodViewModel())
             }
         }
         .fullScreenCover(item: $selectedItem)

@@ -10,7 +10,7 @@ import SwiftUI
 struct DogCellView: View {
     var image: UIImage?
     var title: String?
-    var chipFields: Chip
+    var chipFields: Chip?
     var firstLabel: String?
     var secondLabel: String?
     var parentViewType: ViewParentType
@@ -26,7 +26,10 @@ struct DogCellView: View {
                 HStack(spacing: 0)
                 {
                     Text(title ?? "unknown")
-                    ChipView(chip: chipFields)
+                    if let chipFields = chipFields
+                    {
+                        ChipView(chip: chipFields)
+                    }
                 }
                 if let firstLabel = firstLabel, let secondLabel = secondLabel
                 {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomBottomMenuView: View {
     @StateObject var viewModel: DogViewModel
+    @StateObject var checkViewModel: CheckMoodViewModel
     @State var tapDogList = false
     @State var tapMoodCheckHistory = false
     @State var tapMooCheckStatus = false
@@ -44,8 +45,7 @@ struct CustomBottomMenuView: View {
                     }.foregroundStyle(tapMoodCheckHistory ? .blue : .black)
                         .fullScreenCover(isPresented: $tapMoodCheckHistory)
                     {
-                        //TODO: change with history list
-                        DogListView(viewModel: self.viewModel)
+                        CheckListView(viewModel: CheckMoodViewModel())
                     }
                     //MARK: - My dogs list button
                     Button(action: dogListTapped)

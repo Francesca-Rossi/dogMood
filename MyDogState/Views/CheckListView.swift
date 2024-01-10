@@ -1,0 +1,73 @@
+//
+//  CheckListView.swift
+//  MyDogState
+//
+//  Created by Francesca Rossi on 10/01/24.
+//
+
+import SwiftUI
+
+struct CheckListView: View {
+    @StateObject var viewModel: CheckMoodViewModel
+    @State var selectedItem: MoodCheckInfo?
+    var body: some View {
+        NavigationView {
+            VStack
+            {
+                List{
+                    ForEach(viewModel.emotionalInfoCheckList)
+                    {
+                        check in
+                        //Controlla questo if..
+                        if let imageData = check.image
+                        {
+                            DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: check.dog?.name, chipFields: createChip(check: check), firstLabel: formatedDate(check: check), secondLabel: check.note, parentViewType: .states)
+                                .listRowInsets(EdgeInsets()).onTapGesture {
+                                    self.selectedItem = check
+                                }
+                        }
+                        
+                    }
+                    //TODO: abilita onDelete
+                    /*.onDelete{
+                        indexSet in
+                        Task
+                        {
+                            await viewModel.deleteDog(offset: indexSet)
+                        }
+                    }*/
+                }.listStyle(PlainListStyle())
+                    .refreshable { viewModel.getAllCheckMood()
+                    }
+                //MARK: - Main bottom menu
+                //TODO: rivedi navigazione
+                //CustomBottomMenuView(viewModel: viewModel)
+            }
+        }
+        .fullScreenCover(item: $selectedItem)
+        {
+            item in
+            //TODO: qui apriremo il check
+            //DogDetailView( dog: item)
+        }
+    }
+    func formatedDate(check: MoodCheckInfo) -> String
+    {
+        return check.date?.formatted(date: .long, time: .standard) ?? StringUtilities.emptyString
+    }
+    func createChip(check: MoodCheckInfo) -> Chip?
+    {
+        if let moodDetail = check.dog?.getTheBestConfidenceMood(check: check)
+        {
+            return Chip(
+                title: MoodResult.toString(mood: moodDetail.mood),
+                titleColor: moodDetail.getMoodForegroundColor(),
+                bgColor: moodDetail.getMoodBackgroundColor())
+        }
+        return nil
+    }
+}
+
+/*#Preview {
+    CheckListView()
+}*/

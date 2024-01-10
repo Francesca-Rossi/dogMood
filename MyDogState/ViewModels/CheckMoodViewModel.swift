@@ -22,7 +22,7 @@ class CheckMoodViewModel: ObservableObject {
     
     init()
     {
-        //getAllCheckMood()
+        getAllCheckMood()
     }
     
     public func getAllCheckMood()
