@@ -21,7 +21,7 @@ struct CheckListView: View {
                         //Controlla questo if..
                         if let imageData = check.image
                         {
-                            DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: check.dog?.name, chipFields: createChip(check: check), firstLabel: formatedDate(check: check), secondLabel: check.note, parentViewType: .states)
+                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: check.dog?.name, chipFields: createChip(check: check), subtitle: formatedDate(check: check), description: check.note, parentViewType: .states)
                                 .listRowInsets(EdgeInsets()).onTapGesture {
                                     self.selectedItem = check
                                 }
@@ -40,8 +40,8 @@ struct CheckListView: View {
                     .refreshable { viewModel.getAllCheckMood()
                     }
                 //MARK: - Main bottom menu
-                //TODO: rivedi navigazione
-                //CustomBottomMenuView(viewModel: viewModel)
+                
+                CustomBottomMenuView()
             }
         }
         .fullScreenCover(item: $selectedItem)

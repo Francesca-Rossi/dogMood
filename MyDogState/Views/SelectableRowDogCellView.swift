@@ -23,7 +23,7 @@ struct SelectableRowDogCellView: View {
             }
             if let dog = dog, let imageData = dog.image
             {
-                DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+                ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()), subtitle: dog.microchip, description: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
             }
         }
     }

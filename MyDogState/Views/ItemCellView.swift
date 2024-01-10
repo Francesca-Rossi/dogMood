@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct DogCellView: View {
+struct ItemCellView: View {
     var image: UIImage?
     var title: String?
     var chipFields: Chip?
-    var firstLabel: String?
-    var secondLabel: String?
+    var subtitle: String?
+    var description: String?
     var parentViewType: ViewParentType
     var body: some View {
         HStack(spacing: 10)
@@ -31,7 +31,7 @@ struct DogCellView: View {
                         ChipView(chip: chipFields)
                     }
                 }
-                if let firstLabel = firstLabel, let secondLabel = secondLabel
+                if let firstLabel = subtitle, let secondLabel = description
                 {
                     switch parentViewType
                     {
@@ -57,7 +57,7 @@ struct ItemCellViewExample : View {
     private var parentViewType = ViewParentType.dogs
     
     var body: some View {
-        DogCellView(image: image, title: title, chipFields: chipFields , firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
+        ItemCellView(image: image, title: title, chipFields: chipFields , subtitle: firstLabel, description: secondLabel, parentViewType: parentViewType)
     }
 }
 
@@ -126,7 +126,7 @@ struct ItemCellDescriptionView: View
         VStack(alignment: .leading)
         {
             Text(firstLabel)
-            Text(secondLabel)
+            Text(secondLabel).font(.footnote)
         }
     }
 }

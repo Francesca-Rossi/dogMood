@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CustomBottomMenuView: View {
-    @StateObject var viewModel: DogViewModel
-    @StateObject var checkViewModel: CheckMoodViewModel
+    @StateObject var viewModel: DogViewModel = DogViewModel()
+    @StateObject var checkViewModel: CheckMoodViewModel = CheckMoodViewModel()
     @State var tapDogList = false
     @State var tapMoodCheckHistory = false
     @State var tapMooCheckStatus = false
@@ -28,7 +28,7 @@ struct CustomBottomMenuView: View {
                     .sheet(isPresented: $tapMooCheckStatus )
                     {
                         //TODO: check image here
-                        SelectableDogListView(viewModel: viewModel, image: .constant(UIImage()))
+                        SelectableDogListView(viewModel: DogViewModel(), image: .constant(UIImage()))
                     }
                     .disabled(!viewModel.checkDogStatus)
                 }
@@ -45,7 +45,7 @@ struct CustomBottomMenuView: View {
                     }.foregroundStyle(tapMoodCheckHistory ? .blue : .black)
                         .fullScreenCover(isPresented: $tapMoodCheckHistory)
                     {
-                        CheckListView(viewModel: CheckMoodViewModel())
+                        CheckListContentView().environmentObject(checkViewModel)
                     }
                     //MARK: - My dogs list button
                     Button(action: dogListTapped)
@@ -58,7 +58,7 @@ struct CustomBottomMenuView: View {
                     }.foregroundStyle(tapDogList ? .blue : .black)
                         .fullScreenCover(isPresented: $tapDogList)  
                     {
-                        DogListView(viewModel: self.viewModel)
+                        DogsListContentView().environmentObject(viewModel)
                     }
                 }
             }

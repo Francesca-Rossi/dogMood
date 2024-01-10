@@ -918,22 +918,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E79F7514-9666-4C7B-A4BA-CF2BF9216B70"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDogState/Views/DogDetailView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "51285AB9-7CEB-414A-AA27-F48612683B35"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -976,6 +960,21 @@
                   endingLineNumber = "114"
                   offsetFromSymbolStart = "2750">
                </Location>
+               <Location
+                  uuid = "51285AB9-7CEB-414A-AA27-F48612683B35 - aaa5ac36b89c908b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MyDogState.MoodDetailDao.create(obj: MyDogState.MoodDetail, info: inout MyDogState.ErrorInfo) async throws -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Dao/MoodDetailDao.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "2750">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -983,7 +982,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
@@ -1099,6 +1098,21 @@
                   endingLineNumber = "34"
                   offsetFromSymbolStart = "337">
                </Location>
+               <Location
+                  uuid = "71FC6BF8-FDE3-4867-AAAC-05194F123704 - 3616070c7d43a00b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "745">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1170,7 +1184,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B751D154-26BF-4902-80AD-3E2E515B1206"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
@@ -1210,6 +1224,21 @@
                   startingLineNumber = "36"
                   endingLineNumber = "36"
                   offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "B751D154-26BF-4902-80AD-3E2E515B1206 - 3616070c7d43a045"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1013">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1266,7 +1295,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4799910F-490B-4530-8FF3-058B29C23AED"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
@@ -1307,6 +1336,21 @@
                   endingLineNumber = "38"
                   offsetFromSymbolStart = "554">
                </Location>
+               <Location
+                  uuid = "4799910F-490B-4530-8FF3-058B29C23AED - 3616070c7d43a087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1227">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1314,7 +1358,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "44C100B4-0EF3-4B53-B5EC-4FED57117731"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Helpers/EmotionalStateManagerBO.swift"
@@ -1355,7 +1399,70 @@
                   endingLineNumber = "32"
                   offsetFromSymbolStart = "451">
                </Location>
+               <Location
+                  uuid = "44C100B4-0EF3-4B53-B5EC-4FED57117731 - 3616070c7d43a3c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.EmotionalStateManagerBO.getAllMoodByCheck(Swift.Optional&lt;MyDogState.MoodCheckInfo&gt;) throws -&gt; Swift.Optional&lt;Swift.Array&lt;MyDogState.MoodDetail&gt;&gt;"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Helpers/EmotionalStateManagerBO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "639">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7717416C-7BAD-4DE0-9DE7-1107D5FD81D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/DogCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36160D07-B6C1-44CE-B459-E8EE58D33B53"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/ItemCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB4E78F6-1529-47A6-BFFC-79243E060A6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/ItemCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "ItemCellDescriptionView"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

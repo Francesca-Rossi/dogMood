@@ -21,7 +21,7 @@ struct DogListView: View {
                         //Controlla questo if..
                         if let imageData = dog.image
                         {
-                            DogCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()), firstLabel: dog.microchip, secondLabel: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
+                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()), subtitle: dog.microchip, description: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
                                 .listRowInsets(EdgeInsets()).onTapGesture {
                                     self.selectedItem = dog
                                 }

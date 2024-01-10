@@ -16,14 +16,16 @@ struct DogDetailView: View {
             VStack
             {
                 DogProfileView(dog: dog)
-  
+                let list = dog.getBestMoodList()
                 
-                List(dog.getBestMoodList())
-                {
-                    //Text(MoodResult.toString(mood: $0.mood))
-                    DogDetailCard(bestMood: $0)
-                }.frame(minHeight: CGFloat(300.0))
-                    .listStyle(PlainListStyle())
+                ScrollView (.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        ForEach(0...(list.count-1), id: \.self) { index in
+                            DogDetailCard(bestMood: list[index])
+                        }
+                    }
+                }.frame(height: 300)
+               
                     // 2
                     //LazyHStack {
                     

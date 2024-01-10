@@ -57,7 +57,7 @@
 		3FED3AC12B4E5DF6005F6BF5 /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED3AC02B4E5DF6005F6BF5 /* CheckListView.swift */; };
 		3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */; };
 		3FF236222A56F2AF00C0AAD3 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */; };
-		3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* DogCellView.swift */; };
+		3FF236242A56F71400C0AAD3 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236232A56F71400C0AAD3 /* ItemCellView.swift */; };
 		3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236252A56F90B00C0AAD3 /* ChipView.swift */; };
 		3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236422A5708A300C0AAD3 /* CircleImage.swift */; };
 		3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */; };
@@ -117,7 +117,7 @@
 		3FED3AC02B4E5DF6005F6BF5 /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		3FF2361F2A56EE5D00C0AAD3 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		3FF236212A56F2AF00C0AAD3 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
-		3FF236232A56F71400C0AAD3 /* DogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCellView.swift; sourceTree = "<group>"; };
+		3FF236232A56F71400C0AAD3 /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
 		3FF236252A56F90B00C0AAD3 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		3FF236422A5708A300C0AAD3 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectagleImage.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				3FAE41D62A54388A002E541C /* DogsListContentView.swift */,
 				3F2F84C42A5FF98F00227024 /* DogDetailView.swift */,
 				3FAE41EE2A544C76002E541C /* AddDogView.swift */,
-				3FF236232A56F71400C0AAD3 /* DogCellView.swift */,
+				3FF236232A56F71400C0AAD3 /* ItemCellView.swift */,
 				3F74BBE42A5D60BE00A8BB42 /* DogListView.swift */,
 				3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */,
 				3F2F84C22A5FF29F00227024 /* DogProfileView.swift */,
@@ -439,7 +439,7 @@
 				3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */,
 				3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */,
 				3FED3AC12B4E5DF6005F6BF5 /* CheckListView.swift in Sources */,
-				3FF236242A56F71400C0AAD3 /* DogCellView.swift in Sources */,
+				3FF236242A56F71400C0AAD3 /* ItemCellView.swift in Sources */,
 				3FC099172B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift in Sources */,
 				3F7286DF2B3575B50013AE4D /* EmotionalStateManagerBO.swift in Sources */,
 				3F7286E22B35A4F80013AE4D /* RunBloking.swift in Sources */,

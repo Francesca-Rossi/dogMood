@@ -11,17 +11,22 @@ struct DogProfileView: View
 {
     var dog: Dog 
     var body: some View {
-        HStack
+        VStack
         {
             if let data = dog.image, let image = UIImage(data: data)
             {
-                CircleImage(image: image)
+                CircleImage(image: image, width: CGFloat(200), height: CGFloat(200))
             }
-            VStack(alignment: .leading)
+            VStack(alignment: .center)
             {
-                
-                titleInfo //name, sex
-                bodyInfo  //birthday, microchip, breed, hair color
+                Divider()
+                VStack(alignment: .leading)
+                {
+                    
+                    titleInfo //name, sex
+                    bodyInfo  //birthday, microchip, breed, hair color
+                }
+                Divider()
             }
             
         }
@@ -40,9 +45,11 @@ struct DogProfileView: View
             Text(dog.name ?? StringUtilities.emptyString)
                 .font(.system(size: 36))
                 .bold()
+                .frame(alignment: .trailing)
             if let sexChip = sexChip
             {
                 ChipView(chip: sexChip)
+                    .frame(width: 100, alignment: .trailing)
             }
         }
     }
