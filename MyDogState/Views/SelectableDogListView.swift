@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SelectableDogListView: View {
     @StateObject var viewModel: DogViewModel
-    @Binding var image: UIImage?
     @State var selectedItem: Dog?
+    @Environment(\.dismiss) var dismiss
     @State private var showActionSheet: Bool = false
 
-    var isSelectable: Bool?
+    //TODO: remove this
+    //var isSelectable: Bool?
     var body: some View {
         NavigationView {
             VStack{
@@ -47,7 +48,17 @@ struct SelectableDogListView: View {
                 }
                 .disabled(buttonIsDisabled())
             }
-        }
+            .navigationTitle("Select a dog")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button
+                        {
+                            dismiss()
+                        } label: {
+                            Label("Go back", systemImage: "chevron.left")
+                        }
+                    }}
+        }.navigationViewStyle(.stack)
     }
     
     func buttonIsDisabled()-> Bool

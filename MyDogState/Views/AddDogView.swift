@@ -20,16 +20,31 @@ struct AddDogView: View {
     @State private var breed = ""
     
     var body: some View {
-        Form{
-            profileImageSection
-            mainInfoSection
-            otherInfoSection
+        NavigationView {
+            VStack
+            {
+                Form{
+                    profileImageSection
+                    mainInfoSection
+                    otherInfoSection
+                }
+                Button(action: saveDogAction)
+                {
+                    buttonTitle
+                }.disabled(buttonIsDisabled())
+                    .buttonStyle(AnimatedCapsuleBlueButtonStyle())
             }
-        Button(action: saveDogAction)
-        {
-            buttonTitle
-        }.disabled(buttonIsDisabled())
-        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+            .navigationTitle("Add New Dog")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button
+                    {
+                        dismiss()
+                    } label: {
+                        Label("Go back", systemImage: "chevron.left")
+                    }
+                }}
+        }.navigationViewStyle(.stack)
     }
     
     var buttonTitle: some View

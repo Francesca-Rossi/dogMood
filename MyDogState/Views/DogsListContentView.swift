@@ -28,7 +28,7 @@ struct DogsListContentView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showingAddView)
+            .fullScreenCover(isPresented: $showingAddView)
             {
                 AddDogView(viewModel: self.viewModel)
             }

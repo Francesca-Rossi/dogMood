@@ -28,7 +28,7 @@ struct CustomBottomMenuView: View {
                     .sheet(isPresented: $tapMooCheckStatus )
                     {
                         //TODO: check image here
-                        SelectableDogListView(viewModel: DogViewModel(), image: .constant(UIImage()))
+                        SelectableDogListView(viewModel: DogViewModel())
                     }
                     .disabled(!viewModel.checkDogStatus)
                 }

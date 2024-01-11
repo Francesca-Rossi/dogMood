@@ -25,20 +25,51 @@ struct ResultDogMoodContentView: View {
     @State private var date = Date()
     @State private var note: String = StringUtilities.emptyString
     public var resultList: [PredictionResult]
+    @State private var isAllOk = false
+    @State private var showError = false
+    @State var showLoading = false
     
     var body: some View {
-        Form
+        var dogName = dog.name ?? StringUtilities.emptyString
+    
+        NavigationView
         {
-            dogImageSection
-            dogInfoSection
-            mainInfoSection
-            otherInfoSection
-        }
-        Button(action: saveDogAction)
-        {
-            saveButtonTitle
-        }.disabled(buttonIsDisabled())
-            .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+            VStack
+            {
+                Form
+                {
+                    dogImageSection
+                    dogInfoSection
+                    mainInfoSection
+                    otherInfoSection
+                }
+                Button(action: saveCheckAction)
+                {
+                    saveButtonTitle
+                }.disabled(buttonIsDisabled())
+                .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                .alert("Error to register the check", isPresented: $showError) {
+                    Button("OK") { dismiss() }
+                }
+                .alert("Saving...", isPresented: $showLoading) {
+                    Button("OK") { dismiss() }
+                }
+                .fullScreenCover(isPresented: $isAllOk)
+                {
+                    CheckListContentView().environmentObject(self.viewModel)
+                }
+            }
+            .navigationTitle("Save new \(dogName) mood")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button
+                    {
+                        dismiss()
+                    } label: {
+                        Label("Go back", systemImage: "chevron.left")
+                    }
+                }}
+        }.navigationViewStyle(.stack)
     }
     
     var saveButtonTitle: some View
@@ -46,7 +77,7 @@ struct ResultDogMoodContentView: View {
         HStack
         {
             Image(systemName: "square.and.arrow.down")
-            Text("Save new dog")
+            Text("Save new mood")
         }
     }
     var dogImageSection: some View
@@ -104,22 +135,25 @@ struct ResultDogMoodContentView: View {
         }
     }
     
-    func saveDogAction()
+    func saveCheckAction()
     {
         Task
         {
-                let info =  await viewModel.addNewEmotionalCheck(note: note, dog: dog, image: image, predictionList: resultList)
-                if info.hasErrorInfo()
-                {
-                    //TODO controllare che funzioni
-                    Alert(
-                        title: Text("Error"),
-                        message: Text(info.getErrorMessage()),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
+            showLoading = true
+            var info =  await viewModel.addNewEmotionalCheck(note: note, dog: dog, image: image, predictionList: resultList)
             let _ = print("Sto salvando")
-            dismiss()
+            if info.isAllOK()
+            {
+                showError = false
+                isAllOk = true
+                showLoading = false
+            }
+            else
+            {
+                showError = true
+                isAllOk = false
+                showLoading = false
+            }
         }
     }
     

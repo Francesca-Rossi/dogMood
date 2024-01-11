@@ -10,6 +10,7 @@ import CoreData
 
 struct CheckListContentView: View {
     @EnvironmentObject var viewModel: CheckMoodViewModel
+    @State private var showingAddView = false
     //@State private var showingAddView = false
     var body: some View {
         NavigationView {
@@ -18,21 +19,21 @@ struct CheckListContentView: View {
                 CheckListView(viewModel: self.viewModel)
             }
             .navigationTitle("All Check")
-            /*.toolbar{
+            .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button
                     {
                         showingAddView.toggle()
                     } label: {
-                        Label("Add new dog", systemImage: "plus.circle")
+                        Label("Add new check", systemImage: "plus.circle")
                     }
                 }
-            }*/
-            /*.sheet(isPresented: $showingAddView)
+            }
+            .fullScreenCover(isPresented: $showingAddView)
             {
-                let _ = Logger.shared.log("Open add new dog view", level: LogLevel.Trace , saveToFile: true)
-                AddDogView(viewModel: self.viewModel)
-            }*/
+                let _ = Logger.shared.log("Open add new check view", level: LogLevel.Trace , saveToFile: true)
+                SelectableDogListView(viewModel: DogViewModel())
+            }
         }
         .navigationViewStyle(.stack)
     }

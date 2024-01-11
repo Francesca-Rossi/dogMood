@@ -10,7 +10,6 @@ import SwiftUI
 struct DogDetailView: View {
     var dog: Dog
     @Environment(\.dismiss) var dismiss
-    var list = ["First Row", "First Row", "First Row"]
     var body: some View {
         NavigationView {
             VStack
@@ -28,14 +27,6 @@ struct DogDetailView: View {
                     }.frame(height: 300)
                 }
             }
-                    // 2
-                    //LazyHStack {
-                    
-                    //}
-                    //}
-
-                
-                
                 .navigationTitle("Dog details")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarLeading){
