@@ -14,8 +14,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
             <Locations>
@@ -93,13 +93,13 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - e8905d2d4e59b672"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - e8905d2d4e59b2d8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -109,12 +109,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1611">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "1557">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 263f9ce47ce6198a"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 263f9ce47ce61d20"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -124,12 +124,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "49">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 1bd74b5ed8de7970"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 1bd74b5ed8de7dda"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -139,12 +139,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "143">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "187">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 7dbb327692109bf1"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 7dbb327692109f5b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -154,12 +154,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "167">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "210">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - e8905d2d4e59b672"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - e8905d2d4e59b2b9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -169,42 +169,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1564">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1557">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 7dbb327692109bf1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for MyDogState.DogViewModel.addNewDog(microchip: Swift.String, name: Swift.String, dateOfBirth: Foundation.Date, image: __C.UIImage, sex: Swift.String, breed: Swift.Optional&lt;Swift.String&gt;, hairColor: Swift.Optional&lt;Swift.String&gt;) async -&gt; MyDogState.ErrorInfo"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "159">
-               </Location>
-               <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - e8905d2d4e59b734"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for MyDogState.DogViewModel.addNewDog(microchip: Swift.String, name: Swift.String, dateOfBirth: Foundation.Date, image: __C.UIImage, sex: Swift.String, breed: Swift.Optional&lt;Swift.String&gt;, hairColor: Swift.Optional&lt;Swift.String&gt;) async -&gt; MyDogState.ErrorInfo"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1564">
-               </Location>
-               <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 263f9ce47ce618cc"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 263f9ce47ce61d41"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -214,12 +184,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "49">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 1bd74b5ed8de7836"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 1bd74b5ed8de7dbb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -229,12 +199,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "143">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "187">
                </Location>
                <Location
-                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 7dbb327692109ab7"
+                  uuid = "FE4DAADD-E504-49D3-8BD0-3F3D45D89BDF - 7dbb327692109f3a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -244,9 +214,9 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "159">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "210">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -309,13 +279,13 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - a51bdf8ddfe428a3"
+                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - a51bdf8ddfe42d2e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -325,12 +295,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "154">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "161">
                </Location>
                <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - 8c7264d385d2eca5"
+                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - 8c7264d385d2e928"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -340,12 +310,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "957">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "581">
                </Location>
                <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - a51bdf8ddfe428a3"
+                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - a51bdf8ddfe42d4d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -355,12 +325,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "128">
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "161">
                </Location>
                <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - 8c7264d385d2eca5"
+                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - 8c7264d385d2e94b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -370,39 +340,9 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "707">
-               </Location>
-               <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - a51bdf8ddfe42ff9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "0C80DFFD-8FA2-452F-A855-FB91E2CCB734 - 8c7264d385d2ebff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "707">
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "581">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -417,13 +357,13 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - a51bdf8ddfe42884"
+                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - a51bdf8ddfe42d2e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -433,12 +373,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "403">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "161">
                </Location>
                <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - 8c7264d385d2ec82"
+                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - 8c7264d385d2e928"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -448,12 +388,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "321">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "581">
                </Location>
                <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - a51bdf8ddfe42884"
+                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - a51bdf8ddfe42d2e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -463,12 +403,12 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "285">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "318">
                </Location>
                <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - 8c7264d385d2ec82"
+                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - 8c7264d385d2e928"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -478,39 +418,9 @@
                   urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "267">
-               </Location>
-               <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - a51bdf8ddfe42fda"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "285">
-               </Location>
-               <Location
-                  uuid = "17676592-F223-4898-AAD7-E9A64B34EE01 - 8c7264d385d2ebdc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
-                  moduleName = "MyDogState"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "267">
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "225">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -525,10 +435,42 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "057AE46B-DCEF-43FB-840C-9583E4D847A9 - f8ddb6726eba29bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "057AE46B-DCEF-43FB-840C-9583E4D847A9 - f8ddb6726eba29dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MyDogState.DogViewModel.deleteDog(offset: Foundation.IndexSet) async -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -669,10 +611,42 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "320CEED2-0F4D-420D-AFD5-787EBF5F645B - e8905d2d4e59b582"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MyDogState.DogViewModel.addNewDog(microchip: Swift.String, name: Swift.String, dateOfBirth: Foundation.Date, image: __C.UIImage, sex: Swift.String, breed: Swift.Optional&lt;Swift.String&gt;, hairColor: Swift.Optional&lt;Swift.String&gt;) async -&gt; MyDogState.ErrorInfo"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "1118">
+               </Location>
+               <Location
+                  uuid = "320CEED2-0F4D-420D-AFD5-787EBF5F645B - e8905d2d4e59b463"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for MyDogState.DogViewModel.addNewDog(microchip: Swift.String, name: Swift.String, dateOfBirth: Foundation.Date, image: __C.UIImage, sex: Swift.String, breed: Swift.Optional&lt;Swift.String&gt;, hairColor: Swift.Optional&lt;Swift.String&gt;) async -&gt; MyDogState.ErrorInfo"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1118">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -695,14 +669,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "86EA3D44-056E-4A4F-97BD-44C22C3A3EC3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Views/DogListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1463,6 +1437,227 @@
             endingLineNumber = "129"
             landmarkName = "ItemCellDescriptionView"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/DogDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB - da2a7d950e3b1bdc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationViewStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.NavigationViewStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "567">
+               </Location>
+               <Location
+                  uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB - f7ba41cc8e5ae3c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB - 5d17f656028151ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.LazyHStack&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, MyDogState.DogDetailCard&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB - 3b16292b61c3fb1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, MyDogState.DogDetailCard&gt; in closure #1 () -&gt; SwiftUI.LazyHStack&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, MyDogState.DogDetailCard&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "145">
+               </Location>
+               <Location
+                  uuid = "556C8787-E479-4050-8AB2-5DF5D70662FB - f647f2606c43b205"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; MyDogState.DogDetailCard in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, MyDogState.DogDetailCard&gt; in closure #1 () -&gt; SwiftUI.LazyHStack&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, MyDogState.DogDetailCard&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(MyDogState.DogProfileView, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in MyDogState.DogDetailView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/DogDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50248F74-78E7-4C48-BFB5-09C944E81482"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/ViewModels/DogViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "getAllDogs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50248F74-78E7-4C48-BFB5-09C944E81482 - bba08d7bf023f03d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.DogViewModel.getAllDogs() -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "926">
+               </Location>
+               <Location
+                  uuid = "50248F74-78E7-4C48-BFB5-09C944E81482 - bba08d7bf023f0de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.DogViewModel.getAllDogs() -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "883">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76D9B852-4EEF-46B3-9CF8-BB13DC76270D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/ViewModels/DogViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getAllDogs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "76D9B852-4EEF-46B3-9CF8-BB13DC76270D - bba08d7bf023f098"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.DogViewModel.getAllDogs() -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "189">
+               </Location>
+               <Location
+                  uuid = "76D9B852-4EEF-46B3-9CF8-BB13DC76270D - bba08d7bf023f0b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.DogViewModel.getAllDogs() -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/ViewModels/DogViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "158">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B2B7E50-0A7E-4A50-97C6-501A6713E406"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/ViewModels/DogViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "subscribe()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BA97432-9350-4088-A0B0-D631C5D9AE39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/DogDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -27,7 +27,7 @@ struct SelectableDogListView: View {
                             }
                     }
                 }.listStyle(PlainListStyle())
-                    .refreshable { viewModel.getAllDogs()
+                    .refreshable { Task {await viewModel.getAllDogs()}
                     }
                 //aggiungi il bottone
                 Button(action: {self.showActionSheet.toggle()})
@@ -61,21 +61,21 @@ struct SelectableDogListView: View {
     
 }
 
-struct SelectableDogListViewExample: View {
+/*struct SelectableDogListViewExample: View {
     let errorInfo = ErrorInfo()
     var viewModel = DogViewModel()
     var body: some View {
         DogListView(viewModel: viewModel)
     }
-}
+}*/
 
-#if DEBUG
+/*#if DEBUG
 struct SelectableDogListViewExample_Previews: PreviewProvider {
     static var previews: some View {
         DogListViewExample()
     }
 }
-#endif
+#endif*/
 
 /*struct ListView_Previews: PreviewProvider {
  static var previews: some View {

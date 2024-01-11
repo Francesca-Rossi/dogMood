@@ -16,16 +16,18 @@ struct DogDetailView: View {
             VStack
             {
                 DogProfileView(dog: dog)
-                let list = dog.getBestMoodList()
-                
-                ScrollView (.horizontal, showsIndicators: false) {
-                    LazyHStack {
-                        ForEach(0...(list.count-1), id: \.self) { index in
-                            DogDetailCard(bestMood: list[index])
+                var list = dog.getBestMoodList()
+                if !list.isEmpty
+                {
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        LazyHStack {
+                            ForEach(0...(list.count-1), id: \.self) { index in
+                                DogDetailCard(bestMood: list[index])
+                            }
                         }
-                    }
-                }.frame(height: 300)
-               
+                    }.frame(height: 300)
+                }
+            }
                     // 2
                     //LazyHStack {
                     
@@ -49,7 +51,7 @@ struct DogDetailView: View {
             .navigationViewStyle(.stack)
         }
     }
-}
+
 
 /*struct DogPageView_Previews: PreviewProvider {
     static var previews: some View {

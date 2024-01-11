@@ -36,7 +36,9 @@ struct DogListView: View {
                         }
                     }
                 }.listStyle(PlainListStyle())
-                    .refreshable { viewModel.getAllDogs()
+                    .refreshable {
+                        Task
+                        {await viewModel.getAllDogs()}
                     }
                 //MARK: - Main bottom menu
                 CustomBottomMenuView(viewModel: viewModel, checkViewModel: CheckMoodViewModel())
@@ -50,21 +52,21 @@ struct DogListView: View {
     }
 }
 
-struct DogListViewExample: View {
+/*struct DogListViewExample: View {
     let errorInfo = ErrorInfo()
     var viewModel = DogViewModel()
     var body: some View {
         DogListView(viewModel: viewModel)
     }
-}
+}*/
 
-#if DEBUG
+/*#if DEBUG
 struct DogListViewExample_Previews: PreviewProvider {
     static var previews: some View {
         DogListViewExample()
     }
 }
-#endif
+#endif*/
 
 /*struct ListView_Previews: PreviewProvider {
     static var previews: some View {

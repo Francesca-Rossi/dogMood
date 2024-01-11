@@ -7,39 +7,55 @@
 
 import Foundation
 import SwiftUI
+import Combine
 import CoreData
 
+@MainActor
 class DogViewModel: ObservableObject {
     
     @Published var dogsList: [Dog] = []
-    {
-        willSet{
-            objectWillChange.send()
-        }
-    }
     
     @Published var checkDogStatus: Bool = false
     
     
+    @Published private var dogs: [Dog] = [Dog]()
+    
+    var dogsResultList: Published<[Dog]>.Publisher { $dogs }
+    
+    private var subscribers: [AnyCancellable] = []
+    
     var dao = DogDao()
     var emotionalManager = EmotionalStateManagerBO()
-    var errorInfo = ErrorInfo()
+    
     
     init()
     {
-        getAllDogs()
+        Task
+        {
+            await getAllDogs()
+        }
+        self.subscribe()
     }
     
+    func subscribe() {
+        self.dogsResultList
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newDogs in
+                self?.dogsList = newDogs
+            }
+            .store(in: &subscribers)
+    }
     
-   func getAllDogs()
+   func getAllDogs() async
     {
+        var errorInfo = ErrorInfo()
             do {
-                dogsList = try  dao.getAll(info: &errorInfo)
-                for i in dogsList.indices
+                dogs = try  dao.getAll(info: &errorInfo)
+                for i in dogs.indices
                 {
-                    dogsList[i].emotionalCheckList = try emotionalManager.getAllMoodCheckByDogComplete(dog:dogsList[i], info: &errorInfo)
+                    dogs[i].emotionalCheckList = try emotionalManager.getAllMoodCheckByDogComplete(dog:dogs[i], info: &errorInfo)
                 }
-                checkDogStatus = !dogsList.isEmpty
+                checkDogStatus = !dogs.isEmpty
             }
             catch
             {
@@ -51,6 +67,7 @@ class DogViewModel: ObservableObject {
     func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: UIImage, sex: String, breed: String?, hairColor: String?) async -> ErrorInfo
     {
         //TODO: fai tutti i controlli
+        var errorInfo = ErrorInfo()
         do
         {
             if let data =  try? ImageUtilities(image: image).convertImageToData(error: &errorInfo)
@@ -66,7 +83,7 @@ class DogViewModel: ObservableObject {
                                date: Date(), emotionalCheckList: nil) //all'inizio il cane non ha stati.
                 
                 try await dao.create(obj: dog, info: &errorInfo)
-                self.getAllDogs()
+                await self.getAllDogs()
             }
         }
         catch
@@ -81,6 +98,7 @@ class DogViewModel: ObservableObject {
     {
          //offset.map{dogsList[$0]}.forEach(viewContext.delete)
          //save()
+        var errorInfo = ErrorInfo()
         do
         {
             for i in offset.makeIterator() {
@@ -90,7 +108,7 @@ class DogViewModel: ObservableObject {
                     try await dao.delete(id, info: &errorInfo)
                 }
             }
-            getAllDogs()
+            await getAllDogs()
         }
         catch
         {
