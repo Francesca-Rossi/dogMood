@@ -27,7 +27,6 @@ class DogViewModel: ObservableObject {
     var dao = DogDao()
     var emotionalManager = EmotionalStateManagerBO()
     
-    
     init()
     {
         Task
@@ -105,7 +104,11 @@ class DogViewModel: ObservableObject {
                 let dog = dogsList[i]
                 if let id = dog.id
                 {
-                    try await dao.delete(id, info: &errorInfo)
+                    try await emotionalManager.deleteCheckAndMoodsByDog(dog: dog, info: &errorInfo)
+                    if errorInfo.isAllOK()
+                    {
+                        try await dao.delete(id, info: &errorInfo)
+                    }
                 }
             }
             await getAllDogs()

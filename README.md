@@ -12,3 +12,4 @@
 - Controllare tutta la navigazione dell'APP
 - Controllare menu dark mode
 - Cambiare le costanti nel file UI
+- Controllare se la cancellazione di un cane cancella anche i suoi controlli e gli stati associati

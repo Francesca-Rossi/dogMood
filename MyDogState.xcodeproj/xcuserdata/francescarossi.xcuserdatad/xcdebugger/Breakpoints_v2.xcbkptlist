@@ -14,8 +14,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
             <Locations>
@@ -93,8 +93,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
             <Locations>
@@ -234,7 +234,7 @@
             startingLineNumber = "119"
             endingLineNumber = "119"
             landmarkName = "create(obj:info:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,7 +250,7 @@
             startingLineNumber = "130"
             endingLineNumber = "130"
             landmarkName = "create(obj:info:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -266,7 +266,7 @@
             startingLineNumber = "134"
             endingLineNumber = "134"
             landmarkName = "create(obj:info:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -279,8 +279,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
             <Locations>
@@ -357,8 +357,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
             <Locations>
@@ -435,8 +435,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "deleteDog(offset:)"
             landmarkType = "7">
             <Locations>
@@ -598,7 +598,7 @@
             startingLineNumber = "124"
             endingLineNumber = "124"
             landmarkName = "create(obj:info:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -611,8 +611,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "addNewDog(microchip:name:dateOfBirth:image:sex:breed:hairColor:)"
             landmarkType = "7">
             <Locations>
@@ -1542,8 +1542,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "getAllDogs()"
             landmarkType = "7">
             <Locations>
@@ -1590,8 +1590,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "getAllDogs()"
             landmarkType = "7">
             <Locations>
@@ -1638,8 +1638,8 @@
             filePath = "MyDogState/ViewModels/DogViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "subscribe()"
             landmarkType = "7">
          </BreakpointContent>

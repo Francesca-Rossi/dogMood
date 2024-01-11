@@ -91,15 +91,15 @@ public class MoodCheckDao: Dao
     {
         do
         {
-            
             let request = MoodCheckEntity.fetchRequest()
+           
             return try persistent.viewContext.fetch(request).map({ infoEntity in
                 
                 return MoodCheckInfo(
                     id: infoEntity.id,
                     date: infoEntity.date,
                     note: infoEntity.note,
-                    dog: try dogDao?.fromEntityToObject(entity: infoEntity.dog),
+                    dog: try dogDao?.fromEntityToObject(entity: infoEntity.dog) ,
                     moodDetailList:  nil,
                     image: infoEntity.image
                 )

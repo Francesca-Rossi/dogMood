@@ -28,16 +28,16 @@ struct CheckListView: View {
                         }
                         
                     }
-                    //TODO: abilita onDelete
-                    /*.onDelete{
+                    .onDelete{
                         indexSet in
                         Task
                         {
-                            await viewModel.deleteDog(offset: indexSet)
+                            await viewModel.deleteCheck(offset: indexSet)
                         }
-                    }*/
+                    }
                 }.listStyle(PlainListStyle())
-                    .refreshable { viewModel.getAllCheckMood()
+                    .refreshable {
+                       Task { await  viewModel.getAllCheckMood()}
                     }
                 //MARK: - Main bottom menu
                 

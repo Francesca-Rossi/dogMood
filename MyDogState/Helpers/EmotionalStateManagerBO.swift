@@ -176,7 +176,56 @@ public class EmotionalStateManagerBO
                 throw errorInfo
             }
             return [MoodCheckInfo]() //se non ci sono stati a database
-
+    }
+    
+    /**
+            Call this method when dog is deleting
+     */
+    func deleteCheckAndMoodsByDog(dog: Dog, info: inout ErrorInfo) async throws
+    {
+        do
+        {
+            var checkList = try getAllMoodCheckByDogComplete(dog: dog, info: &info)
+            for check in checkList
+            {
+                try await deleteCheckInfo(check: check, info: &info)
+            }
+        }
+        catch
+        {
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw info
+        }
+    }
+    
+    func deleteCheckInfo(check: MoodCheckInfo, info: inout ErrorInfo) async throws
+    {
+        do
+        {
+            //delete associated mood
+            if let moodAssociatedList = check.moodDetailList
+            {
+                for mood in moodAssociatedList
+                {
+                    if let moodID = mood.id
+                    {
+                        try await moodDetailDao?.delete(moodID, info: &info)
+                        
+                    }
+                }
+            }
+            if let checkID = check.id
+            {
+                try await moodCheckDao?.delete(checkID, info: &info)
+            }
+        }
+        catch
+        {
+            info.setErrorMessage(value:  "\(error.localizedDescription)")
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
+            throw info
+        }
     }
     
     
