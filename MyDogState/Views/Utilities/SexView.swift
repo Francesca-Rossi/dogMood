@@ -12,8 +12,8 @@ struct SexView: View {
     var body: some View {
         HStack
         {
-            Text("Sex")
-            Picker(selection: $sex, label: Text("Sex:")) {
+            Label("Sex", systemImage: "smiley")
+            Picker(selection: $sex, label: Text("")) {
                 Text(sexType.Girl).tag(sexType.Girl)
                 Text(sexType.Boy).tag(sexType.Boy)
             }.pickerStyle(.segmented)

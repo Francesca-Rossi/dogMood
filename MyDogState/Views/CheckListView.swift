@@ -41,7 +41,7 @@ struct CheckListView: View {
                     }
                 //MARK: - Main bottom menu
                 
-                CustomBottomMenuView()
+                //CustomBottomMenuView()
             }
         }
         .fullScreenCover(item: $selectedItem)

@@ -41,7 +41,7 @@ struct DogListView: View {
                         {await viewModel.getAllDogs()}
                     }
                 //MARK: - Main bottom menu
-                CustomBottomMenuView(viewModel: viewModel, checkViewModel: CheckMoodViewModel())
+                //CustomBottomMenuView(viewModel: viewModel, checkViewModel: CheckMoodViewModel())
             }
         }
         .fullScreenCover(item: $selectedItem)

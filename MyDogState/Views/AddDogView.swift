@@ -68,9 +68,21 @@ struct AddDogView: View {
     {
         Section (header: Text("Main info").textCase(nil))
         {
-            TextField("Microchip number", text: $microchip).disableAutocorrection(true)
-            TextField("name", text: $name).disableAutocorrection(true)
-            DatePicker("Date of birth", selection: $dateOfBirth).pickerStyle(.inline)
+            HStack
+            {
+                Label("Microchip", systemImage: "cpu")
+                TextField("Microchip number", text: $microchip).disableAutocorrection(true)
+            }
+            HStack
+            {
+                Label("Dog name", systemImage: "person.crop.square.filled.and.at.rectangle")
+                TextField("Name", text: $name).disableAutocorrection(true)
+            }
+            HStack
+            {
+                Label("Birthday", systemImage: "birthday.cake.fill")
+                DatePicker("", selection: $dateOfBirth).pickerStyle(.inline)
+            }
             SexView(sex: $sex)
         }
     }
@@ -79,8 +91,16 @@ struct AddDogView: View {
     {
         Section (header: Text("Other info").textCase(nil))
         {
-            TextField("Breed", text: $breed).disableAutocorrection(true)
-            TextField("Hair Color", text: $hairColor).disableAutocorrection(true)
+            HStack
+            {
+                Label("Breed", systemImage: "pawprint.fill")
+                TextField("Breed", text: $breed).disableAutocorrection(true)
+            }
+            HStack
+            {
+                Label("Hair color", systemImage: "eyedropper")
+                TextField("Hair color", text: $hairColor).disableAutocorrection(true)
+            }
         }
     }
     

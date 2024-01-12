@@ -40,7 +40,7 @@
 		3FAE41F32A54507F002E541C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F22A54507F002E541C /* ImagePicker.swift */; };
 		3FAE41F52A5450B2002E541C /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F42A5450B2002E541C /* AddImageView.swift */; };
 		3FAE41F72A5453C3002E541C /* SexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41F62A5453C3002E541C /* SexView.swift */; };
-		3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */; };
+		3FB2E6C92ADED2FF00C4D0FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2E6C82ADED2FF00C4D0FD /* ContentView.swift */; };
 		3FC099152B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099112B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift */; };
 		3FC099162B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099122B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift */; };
 		3FC099172B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC099132B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift */; };
@@ -100,7 +100,7 @@
 		3FAE41F22A54507F002E541C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3FAE41F42A5450B2002E541C /* AddImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		3FAE41F62A5453C3002E541C /* SexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexView.swift; sourceTree = "<group>"; };
-		3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomMenuView.swift; sourceTree = "<group>"; };
+		3FB2E6C82ADED2FF00C4D0FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FC099112B4AA5E400A577BF /* MoodDetailEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodDetailEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3FC099122B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodDetailEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3FC099132B4AA5E400A577BF /* MoodCheckEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodCheckEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -251,6 +251,7 @@
 		3FAE41EC2A544AAA002E541C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FB2E6C82ADED2FF00C4D0FD /* ContentView.swift */,
 				3FED3ABD2B4E5CF5005F6BF5 /* MoodList */,
 				3F79B9EF2B495E4500EB8542 /* CheckEmotionalStateViews */,
 				3FB2E6CE2ADED6E100C4D0FD /* Style */,
@@ -289,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				3FAE41F22A54507F002E541C /* ImagePicker.swift */,
-				3FB2E6C82ADED2FF00C4D0FD /* CustomBottomMenuView.swift */,
 				3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */,
 				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
 				3FAE41F62A5453C3002E541C /* SexView.swift */,
@@ -411,7 +411,7 @@
 				3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */,
 				3F74BBEF2A5D8B1600A8BB42 /* DogDao.swift in Sources */,
 				3FDAF1642B4C41C900B0AFDB /* ResultDogMoodContentView.swift in Sources */,
-				3FB2E6C92ADED2FF00C4D0FD /* CustomBottomMenuView.swift in Sources */,
+				3FB2E6C92ADED2FF00C4D0FD /* ContentView.swift in Sources */,
 				3F778E352A5BFC5400D37229 /* DogViewModel.swift in Sources */,
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,
 				3FC332202B47E56300349AC5 /* ClassificationsViewModel.swift in Sources */,
