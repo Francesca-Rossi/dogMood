@@ -10,20 +10,22 @@ import SwiftUI
 struct DogDetailView: View {
     var dog: Dog
     @State var openCheckMoodView = false
+    @State var selectedItem: MoodCheckInfo?
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationView {
             VStack
             {
                 DogProfileView(dog: dog)
-                //TODO: qui basta semplicemente la lista dei check.
-                var list = dog.getBestMoodList()
-                if !list.isEmpty
+                if let list = dog.emotionalCheckList, !list.isEmpty
                 {
                     ScrollView (.horizontal, showsIndicators: false) {
                         LazyHStack {
                             ForEach(0...(list.count-1), id: \.self) { index in
-                                DogDetailCard(bestMood: list[index])
+                                DogDetailCard(check: list[index])
+                                .onTapGesture {
+                                    selectedItem = list[index]
+                                }
                             }
                         }
                     }.frame(height: 300)
@@ -49,8 +51,13 @@ struct DogDetailView: View {
                         }
                     }
                 }
-            }
-            .navigationViewStyle(.stack)
+        }
+        .fullScreenCover(item: $selectedItem)
+        {
+            item in
+            CheckDetailView(checkDetail: item)
+        }.navigationViewStyle(.stack)
+        
         }
     
     var buttonTitle: some View

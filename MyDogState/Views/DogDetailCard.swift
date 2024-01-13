@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogDetailCard: View {
-    var bestMood: MoodDetail //TODO: calcolalo con il viewModel
+    var check: MoodCheckInfo
     var body: some View {
         VStack
         {
@@ -22,10 +22,13 @@ struct DogDetailCard: View {
     {
         HStack
         {
-            ChipView(chip: bestMood.getMoodChip())
-            if let confidence = bestMood.confidence
+            if let mood = check.getTheBestConfidenceMood()
             {
-                Text(StringUtilities.convertToPercentual(float: confidence))
+                ChipView(chip: mood.getMoodChip())
+                if let confidence = mood.confidence
+                {
+                    Text(StringUtilities.convertToPercentual(float: confidence))
+                }
             }
         }
     }
@@ -34,11 +37,12 @@ struct DogDetailCard: View {
     {
         VStack
         {
-            if let data = bestMood.statusInfo?.image
+            if let data = check.image
             {
                 if let image = UIImage(data: data)
                 {
-                    RoundedRectagleImage(image: image).padding(.leading)
+                    RoundedRectagleImage(image: image)
+                        .padding(.leading)
                 }
             }
         }
@@ -48,7 +52,7 @@ struct DogDetailCard: View {
     {
         VStack
         {
-            if let date = bestMood.statusInfo?.date
+            if let date = check.date
             {
                 Text(date.formatted(date: .long, time: .omitted))
                 Text(date.formatted(date: .omitted, time: .standard))
