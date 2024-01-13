@@ -16,7 +16,6 @@ struct EmotionalResultDialogView: View {
     var predictionResult: [PredictionResult]
     
     var body: some View {
-    
             List(predictionResult)
             { result in
                 HStack
@@ -27,8 +26,6 @@ struct EmotionalResultDialogView: View {
                     //MAX_FONT_SIZE-(index * 10)
                 }
             }.frame(minHeight: CGFloat(300.0))
-        
-        
     }
     
     //TODO: remove this and create a factory in chip class

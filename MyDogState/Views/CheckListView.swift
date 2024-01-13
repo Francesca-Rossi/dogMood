@@ -53,8 +53,7 @@ struct CheckListView: View {
         .fullScreenCover(item: $selectedItem)
         {
             item in
-            //TODO: qui apriremo il check
-            //DogDetailView( dog: item)
+            CheckDetailView(checkDetail: item)
         }
     }
     func formatedDate(check: MoodCheckInfo) -> String?
@@ -63,7 +62,7 @@ struct CheckListView: View {
     }
     func createChip(check: MoodCheckInfo) -> Chip?
     {
-        if let moodDetail = check.dog?.getTheBestConfidenceMood(check: check)
+        if let moodDetail = check.getTheBestConfidenceMood()
         {
             return moodDetail.getMoodChip()
         }

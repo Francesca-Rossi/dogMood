@@ -22,6 +22,38 @@ struct MoodCheckInfo: Codable, Equatable, Identifiable, Hashable
         "{id: \(self.id), date: \(self.date), note: \(self.note), dogID: \(self.dog?.id), dogName: \(self.dog?.name), statusList: \(self.moodDetailList?.count)}"
     }
     
+    func getTheBestConfidenceMood() -> MoodDetail?
+    {
+        if let moodList = self.moodDetailList
+        {
+            return moodList.max {
+                ($0.confidence) ?? 0 < ($1.confidence) ?? 0
+            }
+        }
+        return  nil
+    }
+    
+    func convertToPredictions() -> [PredictionResult]
+    {
+        var predictions = [PredictionResult]()
+        if let details = self.moodDetailList
+        {
+            for detail in details
+            {
+                if let confidence = detail.confidence
+                {
+                    predictions.append(PredictionResult(confidence: confidence, identifier: MoodResult.toString(mood: detail.mood)))
+                }
+            }
+        }
+        return predictions
+    }
+    
+    func dateToString() -> String?
+    {
+        self.date?.formatted(date: .long, time: .shortened)
+    }
+    
 }
 
 struct MoodDetail: Codable, Equatable, Identifiable, Hashable

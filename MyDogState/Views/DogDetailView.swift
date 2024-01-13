@@ -16,6 +16,7 @@ struct DogDetailView: View {
             VStack
             {
                 DogProfileView(dog: dog)
+                //TODO: qui basta semplicemente la lista dei check.
                 var list = dog.getBestMoodList()
                 if !list.isEmpty
                 {
