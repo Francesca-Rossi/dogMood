@@ -16,7 +16,6 @@ struct RoundedRectagleImage: View {
             .resizable()
             .frame(width: width, height: height)
             .background(Color.black.opacity(0.2))
-            .aspectRatio(contentMode: .fill)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 30.0, height: 30.0)))
     }
 }

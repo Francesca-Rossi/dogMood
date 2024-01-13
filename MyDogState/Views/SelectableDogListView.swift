@@ -39,7 +39,7 @@ struct SelectableDogListView: View {
                         Text("Check emotional state")
                     }
                 }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                    .fullScreenCover(isPresented: $showActionSheet)
+                .fullScreenCover(isPresented: $showActionSheet)
                 {
                     if let dog = selectedItem
                     {

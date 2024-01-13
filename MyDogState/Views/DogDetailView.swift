@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DogDetailView: View {
     var dog: Dog
+    @State var openCheckMoodView = false
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationView {
@@ -26,6 +27,15 @@ struct DogDetailView: View {
                         }
                     }.frame(height: 300)
                 }
+                Button(action: {self.openCheckMoodView.toggle()})
+                {
+                    buttonTitle
+                }
+                .fullScreenCover(isPresented: $openCheckMoodView)
+                {
+                    CheckEmotionalDogStateContentView(selectedDog: dog)
+                }
+                .buttonStyle(AnimatedCapsuleBlueButtonStyle())
             }
                 .navigationTitle("Dog details")
                 .toolbar{
@@ -41,7 +51,16 @@ struct DogDetailView: View {
             }
             .navigationViewStyle(.stack)
         }
+    
+    var buttonTitle: some View
+    {
+        HStack
+        {
+            Image(systemName: "camera")
+            Text("Check emotional state")
+        }
     }
+}
 
 
 /*struct DogPageView_Previews: PreviewProvider {

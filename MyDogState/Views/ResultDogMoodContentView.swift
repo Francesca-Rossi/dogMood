@@ -56,7 +56,7 @@ struct ResultDogMoodContentView: View {
                 }
                 .fullScreenCover(isPresented: $isAllOk)
                 {
-                    CheckListContentView().environmentObject(self.viewModel)
+                    ContentView()
                 }
             }
             .navigationTitle("Save new \(dogName) mood")
