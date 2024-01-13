@@ -49,7 +49,13 @@ class CheckMoodViewModel: ObservableObject {
     {
         do
         {
-            checks = try self.emotionalManager.getAllEmotionalCheck()
+            checks = try self.emotionalManager.getAllEmotionalCheck().sorted(by: {
+                if let date1 = $0.date, let date2 = $1.date
+                {
+                   return date1.compare(date2) == .orderedDescending
+                }
+                return false
+            })
 
         }
         catch
