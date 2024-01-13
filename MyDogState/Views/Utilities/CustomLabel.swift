@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextWithIcon: View {
+struct CustomLabel: View {
     var icon: String
     var caption: String
     var body: some View {
@@ -15,6 +15,8 @@ struct TextWithIcon: View {
         {
             Image(systemName: icon)
             Text(caption)
+                .font(.body)
+                .fontWeight(.light)
         }
     }
 }

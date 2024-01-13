@@ -11,8 +11,8 @@ struct ItemCellView: View {
     var image: UIImage?
     var title: String?
     var chipFields: Chip?
-    var subtitle: String?
-    var description: String?
+    var firstLabel: String?
+    var secondLabel: String?
     var parentViewType: ViewParentType
     var body: some View {
         HStack(spacing: 10)
@@ -26,17 +26,19 @@ struct ItemCellView: View {
                 HStack(spacing: 0)
                 {
                     Text(title ?? "unknown")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                     if let chipFields = chipFields
                     {
                         ChipView(chip: chipFields)
                     }
                 }
-                if let firstLabel = subtitle, let secondLabel = description
+                if let firstLabel = firstLabel, let secondLabel = secondLabel
                 {
                     switch parentViewType
                     {
                     case .dogs:
-                        ItemCellDescriptionViewWithIcon(firstLabel: firstLabel , firstIcon:  "trash.circle", secondLabel:  secondLabel , secondIcon: "trash.circle")
+                        ItemCellDescriptionViewWithIcon(firstLabel: firstLabel , firstIcon:  "cpu", secondLabel:  secondLabel , secondIcon: "birthday.cake.fill")
                     case .states:
                         ItemCellDescriptionView(firstLabel: firstLabel, secondLabel: secondLabel)
                     }
@@ -57,7 +59,7 @@ struct ItemCellViewExample : View {
     private var parentViewType = ViewParentType.dogs
     
     var body: some View {
-        ItemCellView(image: image, title: title, chipFields: chipFields , subtitle: firstLabel, description: secondLabel, parentViewType: parentViewType)
+        ItemCellView(image: image, title: title, chipFields: chipFields , firstLabel: firstLabel, secondLabel: secondLabel, parentViewType: parentViewType)
     }
 }
 
@@ -81,10 +83,10 @@ struct ItemCellDescriptionViewWithIcon: View
     var secondIcon: String
     var body: some View
     {
-        VStack(alignment: .leading, spacing: 0)
+        VStack(alignment: .leading, spacing: 5)
         {
-            TextWithIcon(icon: firstIcon, caption: firstLabel)
-            TextWithIcon(icon: secondIcon, caption: secondLabel)
+            CustomLabel(icon: firstIcon, caption: firstLabel)
+            CustomLabel(icon: secondIcon, caption: secondLabel)
         }
         
     }
@@ -100,8 +102,8 @@ struct ItemCellDescriptionViewWithIconExample: View
     {
         VStack(alignment: .leading)
         {
-            TextWithIcon(icon: firstIcon, caption: firstLabel)
-            TextWithIcon(icon: secondIcon, caption: secondLabel)
+            CustomLabel(icon: firstIcon, caption: firstLabel)
+            CustomLabel(icon: secondIcon, caption: secondLabel)
         }
     }
 }
@@ -126,7 +128,11 @@ struct ItemCellDescriptionView: View
         VStack(alignment: .leading)
         {
             Text(firstLabel)
-            Text(secondLabel).font(.footnote)
+                .font(.body)
+                .fontWeight(.regular)
+            Text(secondLabel)
+                .font(.footnote)
+                .fontWeight(.light)
         }
     }
 }

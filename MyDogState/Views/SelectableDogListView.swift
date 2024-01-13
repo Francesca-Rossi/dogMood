@@ -23,7 +23,7 @@ struct SelectableDogListView: View {
                     {
                         dog in
                         SelectableRowDogCellView(dog: dog, selectedItem: $selectedItem)
-                            .listRowInsets(EdgeInsets()).onTapGesture {
+                           .onTapGesture {
                                 self.selectedItem = dog
                             }
                     }

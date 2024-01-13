@@ -22,7 +22,7 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     var emotionalCheckList: [MoodCheckInfo]?
     var isSelected = false
 
-    func getSexBackgroundColor()-> Color
+    private func getSexBackgroundColor()-> Color
     {
         switch sex
         {
@@ -33,7 +33,7 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         }
     }
     
-    func getSexForegroundColor()-> Color
+    private func getSexForegroundColor()-> Color
     {
         switch sex
         {
@@ -77,5 +77,21 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
                 }
             }
             return bestMoodList
+    }
+    
+    func getSexChip() -> Chip?
+    {
+        if let sex = self.sex
+        {
+            return Chip(title: sex,
+                        titleColor: self.getSexForegroundColor(),
+                        bgColor: self.getSexBackgroundColor())
+        }
+        return nil
+    }
+    
+    func formatedDateOfBirthday() -> String?
+    {
+        self.dateOfBirth?.formatted(date: .long, time: .omitted)
     }
 }

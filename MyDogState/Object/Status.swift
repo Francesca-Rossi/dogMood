@@ -31,7 +31,7 @@ struct MoodDetail: Codable, Equatable, Identifiable, Hashable
     let confidence: Float? //TODO: rename with confidence
     let statusInfo: MoodCheckInfo?
     
-    func getMoodForegroundColor()-> Color
+    private func getMoodForegroundColor()-> Color
     {
         switch mood
         {
@@ -42,7 +42,7 @@ struct MoodDetail: Codable, Equatable, Identifiable, Hashable
         }
     }
     
-    func getMoodBackgroundColor()-> Color
+    private func getMoodBackgroundColor()-> Color
     {
         switch mood
         {
@@ -53,5 +53,14 @@ struct MoodDetail: Codable, Equatable, Identifiable, Hashable
             default: return .black
         }
     }
+    
+    func getMoodChip() -> Chip
+    {
+        return  Chip(title:  MoodResult.toString(mood: mood),
+                     titleColor: self.getMoodForegroundColor(),
+                     bgColor: self.getMoodBackgroundColor())
+    }
+    
+   
 }
 

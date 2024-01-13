@@ -46,7 +46,7 @@ struct DogProfileView: View
                 .font(.system(size: 36))
                 .bold()
                 .frame(alignment: .trailing)
-            if let sexChip = sexChip
+            if let sexChip = dog.getSexChip()
             {
                 ChipView(chip: sexChip)
                     .frame(width: 100, alignment: .trailing)
@@ -68,35 +68,22 @@ struct DogProfileView: View
         {
             if let microchip = dog.microchip, !microchip.isEmpty
             {
-                TextWithIcon(icon: "cpu", caption: microchip)
+                CustomLabel(icon: "cpu", caption: microchip)
             }
-            if let date = dog.dateOfBirth?.formatted(date: .abbreviated, time: .omitted)
+            if let date = dog.formatedDateOfBirthday()
             {
-                TextWithIcon(icon: "birthday.cake.fill", caption: date)
+                CustomLabel(icon: "birthday.cake.fill", caption: date)
             }
             if let hairColor = dog.hairColor, !hairColor.isEmpty
             {
                 //TODO: sarebbe meglio metterci un pallino con il colore del cane
-                TextWithIcon(icon: "eyedropper", caption: hairColor)
+                CustomLabel(icon: "eyedropper", caption: hairColor)
             }
             if let breed = dog.breed, !breed.isEmpty
             {
-                TextWithIcon(icon: "pawprint.fill", caption: breed)
+                CustomLabel(icon: "pawprint.fill", caption: breed)
             }
         }
-        
-    }
-    
-    var sexChip: Chip?
-    {
-        if let sex = dog.sex
-        {
-            return Chip(title: sex,
-                        titleColor: dog.getSexForegroundColor(),
-                        bgColor: dog.getSexBackgroundColor())
-        }
-        return nil
-        
     }
 }
 

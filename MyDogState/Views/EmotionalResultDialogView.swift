@@ -35,12 +35,12 @@ struct EmotionalResultDialogView: View {
     func createChip(prediction: PredictionResult) -> Chip
     {
         //TODO: remove this, lo dara' la BL
-        let info = MoodDetail(id: UUID(),
-                                 mood: MoodResult.fromString(value: prediction.identifier),
-                              confidence: prediction.confidence,
-                                 statusInfo: nil) //TODO: passare lo statusInfo
-        return Chip(title:  MoodResult.toString(mood: info.mood),                       titleColor: info.getMoodForegroundColor(),
-                    bgColor: info.getMoodBackgroundColor())
+        let info = MoodDetail(
+                            id: UUID(),
+                            mood: MoodResult.fromString(value: prediction.identifier),
+                            confidence: prediction.confidence,
+                            statusInfo: nil) //TODO: passare lo statusInfo
+        return info.getMoodChip()
     }
 }
 

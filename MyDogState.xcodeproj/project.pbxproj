@@ -62,7 +62,7 @@
 		3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236422A5708A300C0AAD3 /* CircleImage.swift */; };
 		3FF236452A570A1700C0AAD3 /* RoundedRectagleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */; };
 		3FF236472A570BC600C0AAD3 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236462A570BC600C0AAD3 /* Enumeration.swift */; };
-		3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */; };
+		3FF236492A570D8700C0AAD3 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF236482A570D8700C0AAD3 /* CustomLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,7 +122,7 @@
 		3FF236422A5708A300C0AAD3 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3FF236442A570A1700C0AAD3 /* RoundedRectagleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectagleImage.swift; sourceTree = "<group>"; };
 		3FF236462A570BC600C0AAD3 /* Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
-		3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIcon.swift; sourceTree = "<group>"; };
+		3FF236482A570D8700C0AAD3 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +293,7 @@
 				3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */,
 				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
 				3FAE41F62A5453C3002E541C /* SexView.swift */,
-				3FF236482A570D8700C0AAD3 /* TextWithIcon.swift */,
+				3FF236482A570D8700C0AAD3 /* CustomLabel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 				3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */,
 				3FDAF1662B4C936A00B0AFDB /* DogDetailCard.swift in Sources */,
 				3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */,
-				3FF236492A570D8700C0AAD3 /* TextWithIcon.swift in Sources */,
+				3FF236492A570D8700C0AAD3 /* CustomLabel.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
 				3F1A17832B3AAB0600044CA9 /* LogLevel.swift in Sources */,

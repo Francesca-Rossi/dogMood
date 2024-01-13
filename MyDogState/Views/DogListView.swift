@@ -18,13 +18,21 @@ struct DogListView: View {
                     ForEach(viewModel.dogsList)
                     {
                         dog in
-                        //Controlla questo if..
+                        //TODO: e' necessario fare vedere l'img?
                         if let imageData = dog.image
                         {
-                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: dog.name, chipFields: Chip(title: dog.sex ?? StringUtilities.emptyString, titleColor: dog.getSexForegroundColor(), bgColor: dog.getSexBackgroundColor()), subtitle: dog.microchip, description: DateFormatter().string(for: dog.dateOfBirth), parentViewType: .dogs)
-                                .listRowInsets(EdgeInsets()).onTapGesture {
-                                    self.selectedItem = dog
-                                }
+                            ItemCellView(
+                                image: UIImage(data: imageData),
+                                title: dog.name,
+                                chipFields: dog.getSexChip(),
+                                firstLabel: dog.microchip,
+                                secondLabel: dog.formatedDateOfBirthday(),
+                                parentViewType: .dogs
+                            )
+                            .onTapGesture
+                            {
+                             self.selectedItem = dog
+                            }
                         }
                         
                     }
@@ -40,8 +48,6 @@ struct DogListView: View {
                         Task
                         {await viewModel.getAllDogs()}
                     }
-                //MARK: - Main bottom menu
-                //CustomBottomMenuView(viewModel: viewModel, checkViewModel: CheckMoodViewModel())
             }
         }
         .fullScreenCover(item: $selectedItem)

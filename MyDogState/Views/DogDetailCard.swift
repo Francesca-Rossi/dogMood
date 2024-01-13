@@ -22,10 +22,7 @@ struct DogDetailCard: View {
     {
         HStack
         {
-            let moodChip = Chip(title:  MoodResult.toString(mood: bestMood.mood),
-                 titleColor: bestMood.getMoodForegroundColor(),
-                 bgColor: bestMood.getMoodBackgroundColor())
-            ChipView(chip: moodChip)
+            ChipView(chip: bestMood.getMoodChip())
             if let confidence = bestMood.confidence
             {
                 Text(StringUtilities.convertToPercentual(float: confidence))

@@ -81,7 +81,8 @@ struct AddDogView: View {
             HStack
             {
                 Label("Birthday", systemImage: "birthday.cake.fill")
-                DatePicker("", selection: $dateOfBirth).pickerStyle(.inline)
+                DatePicker("", selection: $dateOfBirth, displayedComponents: .date)
+                    .pickerStyle(.inline)
             }
             SexView(sex: $sex)
         }

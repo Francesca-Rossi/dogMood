@@ -18,11 +18,17 @@ struct CheckListView: View {
                     ForEach(viewModel.emotionalInfoCheckList)
                     {
                         check in
-                        //Controlla questo if..
                         if let imageData = check.image
                         {
-                            ItemCellView(image: UIImage(data: imageData) ?? UIImage(), title: check.dog?.name, chipFields: createChip(check: check), subtitle: formatedDate(check: check), description: check.note, parentViewType: .states)
-                                .listRowInsets(EdgeInsets()).onTapGesture {
+                            ItemCellView(
+                                image: UIImage(data: imageData), 
+                                title: check.dog?.name,
+                                chipFields: createChip(check: check),
+                                firstLabel: formatedDate(check: check),
+                                secondLabel: check.note,
+                                parentViewType: .states
+                                )
+                                .onTapGesture {
                                     self.selectedItem = check
                                 }
                         }
@@ -51,18 +57,15 @@ struct CheckListView: View {
             //DogDetailView( dog: item)
         }
     }
-    func formatedDate(check: MoodCheckInfo) -> String
+    func formatedDate(check: MoodCheckInfo) -> String?
     {
-        return check.date?.formatted(date: .long, time: .standard) ?? StringUtilities.emptyString
+        return check.date?.formatted(date: .long, time: .standard)
     }
     func createChip(check: MoodCheckInfo) -> Chip?
     {
         if let moodDetail = check.dog?.getTheBestConfidenceMood(check: check)
         {
-            return Chip(
-                title: MoodResult.toString(mood: moodDetail.mood),
-                titleColor: moodDetail.getMoodForegroundColor(),
-                bgColor: moodDetail.getMoodBackgroundColor())
+            return moodDetail.getMoodChip()
         }
         return nil
     }
