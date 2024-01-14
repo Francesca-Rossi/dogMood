@@ -15,17 +15,22 @@ struct DogsListContentView: View {
         NavigationView {
             VStack(alignment: .leading)
             {
-                DogListView(viewModel: self.viewModel)
+                if viewModel.isDogListEmpty
+                {
+                    addNewDogButton(isToolbar: false)
+                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                    //TODO: disabilita' tag menu check dog list
+                }
+                else
+                {
+                    DogListView(viewModel: self.viewModel)
+                }
             }
             .navigationTitle("My Dog List")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button
-                    {
-                        showingAddView.toggle()
-                    } label: {
-                        Label("Add new dog", systemImage: "plus.circle")
-                    }
+                    addNewDogButton(isToolbar: true)
+                        .disabled(viewModel.isDogListEmpty)
                 }
             }
             .fullScreenCover(isPresented: $showingAddView)
@@ -35,6 +40,29 @@ struct DogsListContentView: View {
         }
         .navigationViewStyle(.stack)
     }
+    
+    func addNewDogButton(isToolbar: Bool) -> some View
+    {
+        Button
+        {
+            showingAddView.toggle()
+        }label: {
+            if isToolbar
+            {
+                Label("Add new dog", systemImage: "plus.circle")
+            }
+            else
+            {
+                HStack
+                {
+                    Image(systemName: "plus.circle.fill")
+                    Text("Add your first dog")
+                }
+            }
+        }
+    }
+    
+    
 }
 
 /*struct ContentView_Previews: PreviewProvider {

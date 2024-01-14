@@ -22,6 +22,15 @@ class DogViewModel: ObservableObject {
     
     var dogsResultList: Published<[Dog]>.Publisher { $dogs }
     
+    var isDogListEmpty: Bool
+    {
+        if dogsList.isEmpty
+        {
+            return true
+        }
+        return false
+    }
+    
     private var subscribers: [AnyCancellable] = []
     
     var dao = DogDao()
