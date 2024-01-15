@@ -11,22 +11,26 @@ import CoreData
 struct CheckListContentView: View {
     @EnvironmentObject var viewModel: CheckMoodViewModel
     @State private var showingAddView = false
-    //@State private var showingAddView = false
+
     var body: some View {
         NavigationView {
             VStack(alignment: .leading)
             {
-                CheckListView(viewModel: self.viewModel)
+                if viewModel.isCheckListEmpty
+                {
+                    addNewCheckButton(isToolbar: false)
+                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                }
+                else
+                {
+                    CheckListView(viewModel: self.viewModel)
+                }
             }
             .navigationTitle("All Check")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button
-                    {
-                        showingAddView.toggle()
-                    } label: {
-                        Label("Add new check", systemImage: "plus.circle")
-                    }
+                    addNewCheckButton(isToolbar: true)
+                        .disabled(viewModel.isCheckListEmpty)
                 }
             }
             .fullScreenCover(isPresented: $showingAddView)
@@ -36,6 +40,27 @@ struct CheckListContentView: View {
             }
         }
         .navigationViewStyle(.stack)
+    }
+    
+    func addNewCheckButton(isToolbar: Bool) -> some View
+    {
+        Button
+        {
+            showingAddView.toggle()
+        }label: {
+            if isToolbar
+            {
+                Label("Add new check", systemImage: "plus.circle")
+            }
+            else
+            {
+                HStack
+                {
+                    Image(systemName: "plus.circle.fill")
+                    Text("Check mood now")
+                }
+            }
+        }
     }
 }
 

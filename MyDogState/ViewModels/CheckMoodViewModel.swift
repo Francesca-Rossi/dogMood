@@ -12,11 +12,6 @@ import UIKit
 class CheckMoodViewModel: ObservableObject {
     
     @Published var emotionalInfoCheckList: [MoodCheckInfo] = []
-//    {
-//        willSet{
-//            objectWillChange.send()
-//        }
-//    }
     
     @Published private var checks: [MoodCheckInfo] = [MoodCheckInfo]()
     
@@ -26,6 +21,14 @@ class CheckMoodViewModel: ObservableObject {
     
     var emotionalManager = EmotionalStateManagerBO()
     
+    var isCheckListEmpty: Bool
+    {
+        if emotionalInfoCheckList.isEmpty
+        {
+            return true
+        }
+        return false
+    }
     
     init()
     {
