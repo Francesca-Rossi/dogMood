@@ -14,6 +14,7 @@ struct CheckEmotionalDogStateContentView: View {
     @State private var shouldPresentCamera = false
     @State private var showErrorMessage = false
     @State private var onContinueTap = false
+    @State private var goBackHome = false
     
     
     var body: some View {
@@ -54,15 +55,18 @@ struct CheckEmotionalDogStateContentView: View {
                                 Text("Check again")
                             }
                         }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                        Button(action: {print("home")})
+                        Button(action: {goBackHome.toggle()})
                         {
-                            //TODO: 07/01
                             HStack
                             {
                                 Image(systemName: "home")
                                 Text("Back home")
                             }
-                        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                        }.fullScreenCover(isPresented: $goBackHome)
+                        {
+                            ContentView()
+                        }
+                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
                         
                     }
                 } else {
