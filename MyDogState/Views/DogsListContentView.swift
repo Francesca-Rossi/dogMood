@@ -19,7 +19,6 @@ struct DogsListContentView: View {
                 {
                     addNewDogButton(isToolbar: false)
                         .buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                    //TODO: disabilita' tag menu check dog list
                 }
                 else
                 {
