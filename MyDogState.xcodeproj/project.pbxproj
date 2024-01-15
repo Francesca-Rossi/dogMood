@@ -30,6 +30,7 @@
 		3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */; };
 		3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */; };
 		3F79B9F72B49A20F00EB8542 /* CheckMoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F62B49A20F00EB8542 /* CheckMoodViewModel.swift */; };
+		3F9071042B5508D0009294DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9071032B5508D0009294DA /* Extensions.swift */; };
 		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
 		3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D62A54388A002E541C /* DogsListContentView.swift */; };
@@ -90,6 +91,7 @@
 		3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictResult.swift; sourceTree = "<group>"; };
 		3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalResultDialogView.swift; sourceTree = "<group>"; };
 		3F79B9F62B49A20F00EB8542 /* CheckMoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMoodViewModel.swift; sourceTree = "<group>"; };
+		3F9071032B5508D0009294DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAE41D42A54388A002E541C /* MyDogStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogStateApp.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				3F1A177E2B3AA45300044CA9 /* Logger.swift */,
 				3F1A17822B3AAB0600044CA9 /* LogLevel.swift */,
 				3F1A17802B3AA53B00044CA9 /* StringUtilities.swift */,
+				3F9071032B5508D0009294DA /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				3FC3321E2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift in Sources */,
 				3F2F84C32A5FF29F00227024 /* DogProfileView.swift in Sources */,
 				3F12AE912B347679009B7300 /* Status.swift in Sources */,
+				3F9071042B5508D0009294DA /* Extensions.swift in Sources */,
 				3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */,
 				3FF236202A56EE5D00C0AAD3 /* ImageUtilities.swift in Sources */,
 				3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */,

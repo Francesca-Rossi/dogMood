@@ -34,6 +34,9 @@ struct AddDogView: View {
                 }.disabled(buttonIsDisabled())
                     .buttonStyle(AnimatedCapsuleBlueButtonStyle())
             }
+            .onTapGesture {
+                hideKeyboard()
+            }
             .navigationTitle("Add New Dog")
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
@@ -71,7 +74,10 @@ struct AddDogView: View {
             HStack
             {
                 Label("Microchip", systemImage: "cpu")
-                TextField("Microchip number", text: $microchip).disableAutocorrection(true)
+                ValidatableTextField("Placeholder", text: $microchip, validation: { $0.contains(/[0-9]+$/)})
+                    .disableAutocorrection(true)
+                    .keyboardType(.numberPad)
+                    
             }
             HStack
             {
