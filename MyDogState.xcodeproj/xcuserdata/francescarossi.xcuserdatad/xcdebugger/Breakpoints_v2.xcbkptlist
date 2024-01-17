@@ -877,8 +877,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
-            landmarkName = "AddDogView"
-            landmarkType = "14">
+            landmarkName = "saveDogAction()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "9E4703E6-9CF5-4672-A4F0-FDF5B31D2659 - f19e97676a0dd4a2"
@@ -1195,8 +1195,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
             endingLineNumber = "146"
-            landmarkName = "AddDogView"
-            landmarkType = "14">
+            landmarkName = "buttonIsDisabled()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "57E4D493-678A-431B-B24C-A00DB4AA159A - d03d86ae72247da8"
@@ -1243,8 +1243,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "AddDogView"
-            landmarkType = "14">
+            landmarkName = "buttonIsDisabled()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "649A31C9-6BCB-4999-A4C0-A5B1546E4786 - d03d86ae72247c6a"
@@ -1371,8 +1371,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "148"
             endingLineNumber = "148"
-            landmarkName = "AddDogView"
-            landmarkType = "14">
+            landmarkName = "buttonIsDisabled()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "8AEE51DB-ABA4-4E73-AE0A-5C2621C952CB - d03d86ae72247d05"
