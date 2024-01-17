@@ -20,9 +20,9 @@ struct CheckDetailView: View {
                 }
                 VStack(alignment: .center)
                 {
+                    dogName //name
                     VStack(alignment: .leading)
                     {
-                        dogName //name
                         headerInfo  //date, mood
                         if let note = checkDetail.note
                         {
@@ -30,6 +30,7 @@ struct CheckDetailView: View {
                         }
                     }
                     EmotionalResultDialogView(predictionResult: checkDetail.convertToPredictions())
+                        .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))     
                 }
             }
             .navigationTitle("Check detail")
@@ -54,16 +55,17 @@ struct CheckDetailView: View {
         Text(checkDetail.dog?.name ?? StringUtilities.emptyString)
             .font(.system(size: 36))
             .bold()
-            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity)
     }
     
     var headerInfo: some View
     {
-        HStack
+        HStack()
         {
             if let date = checkDetail.dateToString()
             {
                 CustomLabel(icon: "calendar.badge.clock", caption: date )
+                    .padding(.leading)
             }
             if let mood = checkDetail.getTheBestConfidenceMood()
             {

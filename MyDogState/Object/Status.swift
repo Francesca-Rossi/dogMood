@@ -88,7 +88,7 @@ struct MoodDetail: Codable, Equatable, Identifiable, Hashable
     
     func getMoodChip() -> Chip
     {
-        return  Chip(title:  MoodResult.toString(mood: mood),
+        return Chip(title:  MoodResult.toString(mood: mood),
                      titleColor: self.getMoodForegroundColor(),
                      bgColor: self.getMoodBackgroundColor())
     }
