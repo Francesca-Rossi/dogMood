@@ -55,6 +55,7 @@
       }
     },
     "Back home" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -133,6 +134,9 @@
           }
         }
       }
+    },
+    "Check emotional status" : {
+
     },
     "Check mood now" : {
       "localizations" : {
@@ -396,6 +400,7 @@
       }
     },
     "Save new %@ mood" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -456,6 +461,7 @@
       }
     },
     "Take an image" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {

@@ -21,77 +21,47 @@ struct CheckEmotionalDogStateContentView: View {
         NavigationView {
             VStack
             {
-                if let image = classificationServiceViewModel.importedImage {
-                    VStack(alignment: .center) {
-                        RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
-                            .onTapGesture {
-                                classificationServiceViewModel.displayImagePicker.toggle()
-                            }
-                        
-                        ScrollView {
-                            EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
-                        }
-                        Button(action: { onContinueTap = true})
+                if let image = classificationServiceViewModel.importedImage 
+                {
+                    VStack(alignment: .center)
+                    {
+                        checkImage(image: image)
+                        ScrollView
                         {
-                            //TODO: 07/01
-                            HStack
-                            {
-                                Image(systemName: "continue")
-                                Text("Continue")
-                            }
-                        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                            EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
+                        }.frame(maxWidth: .infinity, maxHeight: 250.0)
+                        
+                        HStack
+                        {
+                            checkAgainButton
+                            continueButton
                             .fullScreenCover(isPresented: $onContinueTap, content:
-                                                {
+                            {
                                 if let importedImage = classificationServiceViewModel.importedImage
                                 {
-                                    ResultDogMoodContentView(viewModel: CheckMoodViewModel(), dog: selectedDog, image: image, resultList: classificationServiceViewModel.classifications)
+                                    ResultDogMoodContentView(viewModel: CheckMoodViewModel(), dog: selectedDog, image: importedImage, resultList: classificationServiceViewModel.classifications)
                                 }
                             })
-                        Button(action: {classificationServiceViewModel.importedImage = nil })
-                        {
-                            HStack
-                            {
-                                Image(systemName: "camera")
-                                Text("Check again")
-                            }
-                        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                        Button(action: {goBackHome.toggle()})
-                        {
-                            HStack
-                            {
-                                Image(systemName: "home")
-                                Text("Back home")
-                            }
-                        }.fullScreenCover(isPresented: $goBackHome)
-                        {
-                            ContentView()
                         }
-                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
-                        
                     }
-                } else {
+                } 
+                else
+                {
                     VStack {
                         Image(systemName: "photo.fill")
                             .imageScale(.large)
                             .foregroundColor(.accentColor)
-                        
-                        Button {
-                            classificationServiceViewModel.displayImagePicker.toggle()
-                        } label: {
-                            Text("Pick an image")
-                                .bold()
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.accentColor)
-                                .foregroundColor(.white)
-                                .cornerRadius(16)
-                        }
+                        pickAnImageButton
                     }
                     .padding()
                 }
             }
-            .navigationTitle("Take an image")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar{
+                ToolbarItem(placement: .principal){
+                    Text("Check emotional status").font(.headline)
+                        .foregroundColor(Color.blue)
+                }
                 ToolbarItem(placement: .navigationBarLeading){
                 Button
                 {
@@ -113,6 +83,54 @@ struct CheckEmotionalDogStateContentView: View {
         }
         
     }
+    
+    func checkImage(image: UIImage) -> some View
+    {
+        RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
+            .onTapGesture {
+                classificationServiceViewModel.displayImagePicker.toggle()
+            }
+    }
+
+    var continueButton: some View
+    {
+        Button
+        {
+            onContinueTap.toggle()
+        }label: {
+            HStack
+            {
+                Image(systemName: "arrow.right.circle.fill")
+                Text("Continue")
+            }
+        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+    }
+    
+    var checkAgainButton: some View
+    {
+        Button
+        {
+            classificationServiceViewModel.importedImage = nil
+        }label: {
+            HStack
+            {
+                Image(systemName: "camera")
+                Text("Check again")
+            }
+        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+    }
+    
+    var pickAnImageButton: some View
+    {
+        Button {
+            classificationServiceViewModel.displayImagePicker.toggle()
+        } label: {
+            Text("Pick an image")
+        }.frame(width: 500.0)
+        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+        
+    }
+    
     
     func getActionSheet() -> ActionSheet
      {

@@ -31,7 +31,7 @@ struct EmotionalResultDialogView: View {
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color(UIColor.systemGray6))
             }
-            .frame(minHeight: CGFloat(300.0))
+            .frame(minHeight: CGFloat(200.0))
             .listStyle(PlainListStyle())
         }//.background(Color(UIColor.systemGray6))
     }

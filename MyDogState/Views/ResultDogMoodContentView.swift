@@ -30,7 +30,7 @@ struct ResultDogMoodContentView: View {
     @State var showLoading = false
     
     var body: some View {
-        var dogName = dog.name ?? StringUtilities.emptyString
+        //var dogName = dog.name ?? StringUtilities.emptyString
     
         NavigationView
         {
@@ -38,8 +38,8 @@ struct ResultDogMoodContentView: View {
             {
                 Form
                 {
-                    dogImageSection
                     dogInfoSection
+                    dogImageSection
                     mainInfoSection
                     otherInfoSection
                 }
@@ -59,7 +59,10 @@ struct ResultDogMoodContentView: View {
                     ContentView()
                 }
             }
-            .navigationTitle("Save new \(dogName) mood")
+            .onTapGesture {
+                hideKeyboard()
+            }
+            .navigationTitle("Save new mood")
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
                     Button
@@ -97,17 +100,15 @@ struct ResultDogMoodContentView: View {
     {
         Section (header: Text("Dog Info").textCase(nil))
         {
-            HStack
+            VStack
             {
-                VStack
+                if let dogName = dog.name, !dogName.isEmpty
                 {
-                    Text("Name")
-                    Text(dog.name ?? StringUtilities.emptyString)
+                    CustomLabel(icon: "pawprint.fill", caption: dogName)
                 }
-                VStack
+                if let microchip = dog.microchip, !microchip.isEmpty
                 {
-                    Text("Microchip")
-                    Text(dog.microchip ?? StringUtilities.emptyString)
+                    CustomLabel(icon: "cpu", caption: microchip)
                 }
             }
         }
