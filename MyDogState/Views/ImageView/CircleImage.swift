@@ -14,6 +14,7 @@ struct CircleImage: View {
     var body: some View {
         Image(uiImage: self.image ?? UIImage())
             .resizable()
+            .scaledToFill()
             .cornerRadius(50)
             .frame(width: self.width, height: self.height)
             .background(Color.black.opacity(0.2))

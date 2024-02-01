@@ -14,6 +14,7 @@ struct RoundedRectagleImage: View {
     var body: some View {
         Image(uiImage: self.image)
             .resizable()
+            .scaledToFill()
             .frame(width: width, height: height)
             .background(Color.black.opacity(0.2))
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 30.0, height: 30.0)))
