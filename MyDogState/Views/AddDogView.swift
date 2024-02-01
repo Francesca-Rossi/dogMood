@@ -37,8 +37,13 @@ struct AddDogView: View {
             .onTapGesture {
                 hideKeyboard()
             }
-            .navigationTitle("Add New Dog")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar{
+                ToolbarItem(placement: .principal){
+                    Text("Add New Dog")
+                        .font(.title)
+                        .bold()
+                }
                 ToolbarItem(placement: .navigationBarLeading){
                     Button
                     {

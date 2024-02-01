@@ -875,8 +875,8 @@
             filePath = "MyDogState/Views/AddDogView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "saveDogAction()"
             landmarkType = "7">
             <Locations>
@@ -910,6 +910,21 @@
                   endingLineNumber = "125"
                   offsetFromSymbolStart = "1541">
                </Location>
+               <Location
+                  uuid = "9E4703E6-9CF5-4672-A4F0-FDF5B31D2659 - f19e97676a0dd464"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MyDogState.AddDogView.saveDogAction() -&gt; ()"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/AddDogView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "1541">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -923,8 +938,8 @@
             filePath = "MyDogState/Views/AddDogView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "AddDogView"
             landmarkType = "14">
          </BreakpointContent>
@@ -1193,8 +1208,8 @@
             filePath = "MyDogState/Views/AddDogView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "buttonIsDisabled()"
             landmarkType = "7">
             <Locations>
@@ -1241,8 +1256,8 @@
             filePath = "MyDogState/Views/AddDogView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "buttonIsDisabled()"
             landmarkType = "7">
             <Locations>
@@ -1369,8 +1384,8 @@
             filePath = "MyDogState/Views/AddDogView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "buttonIsDisabled()"
             landmarkType = "7">
             <Locations>
@@ -2218,8 +2233,8 @@
             filePath = "MyDogState/Views/DogDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -2286,6 +2301,22 @@
             endingLineNumber = "31"
             landmarkName = "ContentView"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87AE9815-83C6-470B-805A-537B910382FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/CheckDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

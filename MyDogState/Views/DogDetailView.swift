@@ -40,8 +40,13 @@ struct DogDetailView: View {
                 }
                 .buttonStyle(AnimatedCapsuleBlueButtonStyle())
             }
-                .navigationTitle("Dog details")
+            .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
+                    ToolbarItem(placement: .principal){
+                        Text("Dog details")
+                            .font(.title)
+                            .bold()
+                    }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button
                         {

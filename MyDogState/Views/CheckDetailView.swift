@@ -33,8 +33,13 @@ struct CheckDetailView: View {
                         .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))     
                 }
             }
-            .navigationTitle("Check detail")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar{
+                    ToolbarItem(placement: .principal){
+                        Text("Check detail")
+                            .font(.title)
+                            .bold()
+                    }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button
                         {

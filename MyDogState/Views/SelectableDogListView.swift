@@ -48,8 +48,13 @@ struct SelectableDogListView: View {
                 }
                 .disabled(buttonIsDisabled())
             }
-            .navigationTitle("Select a dog")
+            .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
+                    ToolbarItem(placement: .principal){
+                        Text("Select a dog")
+                            .font(.title)
+                            .bold()
+                    }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button
                         {
