@@ -36,7 +36,7 @@ struct DogDetailView: View {
                 }
                 .fullScreenCover(isPresented: $openCheckMoodView)
                 {
-                    CheckEmotionalDogStateContentView(selectedDog: dog)
+                    CheckEmotionalDogStateContentView(selectedDog: dog, viewModel: CheckMoodViewModel(readMode:  false))
                 }
                 .buttonStyle(AnimatedCapsuleBlueButtonStyle())
             }

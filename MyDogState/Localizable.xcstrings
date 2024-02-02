@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "Add a note" : {
+
+    },
     "Add new check" : {
       "localizations" : {
         "it" : {
@@ -104,6 +107,9 @@
           }
         }
       }
+    },
+    "Cancel" : {
+
     },
     "Check again" : {
       "localizations" : {

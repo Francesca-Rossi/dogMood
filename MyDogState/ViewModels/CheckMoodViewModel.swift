@@ -30,13 +30,16 @@ class CheckMoodViewModel: ObservableObject {
         return false
     }
     
-    init()
+    init(readMode: Bool = true)
     {
-        Task
+        if readMode
         {
-            await getAllCheckMood()
+            Task
+            {
+                await getAllCheckMood()
+            }
+            self.subscribe()
         }
-        self.subscribe()
     }
     
     func subscribe() {

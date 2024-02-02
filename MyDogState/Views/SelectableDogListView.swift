@@ -43,7 +43,7 @@ struct SelectableDogListView: View {
                 {
                     if let dog = selectedItem
                     {
-                        CheckEmotionalDogStateContentView(selectedDog: dog)
+                        CheckEmotionalDogStateContentView(selectedDog: dog, viewModel: CheckMoodViewModel(readMode: false))
                     }
                 }
                 .disabled(buttonIsDisabled())

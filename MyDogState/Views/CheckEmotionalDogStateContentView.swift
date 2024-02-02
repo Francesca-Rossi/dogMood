@@ -8,13 +8,18 @@
 import SwiftUI
 struct CheckEmotionalDogStateContentView: View {
     @State var selectedDog: Dog
+    @StateObject var viewModel: CheckMoodViewModel
     @StateObject var classificationServiceViewModel = ClassificationsViewModel()
     @Environment(\.dismiss) var dismiss
+    @State private var note = ""
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentCamera = false
     @State private var showErrorMessage = false
     @State private var onContinueTap = false
     @State private var goBackHome = false
+    @State private var isAllOk = false
+    @State private var showError = false
+    @State var showLoading = false
     
     
     var body: some View {
@@ -35,13 +40,28 @@ struct CheckEmotionalDogStateContentView: View {
                         {
                             checkAgainButton
                             continueButton
-                            .fullScreenCover(isPresented: $onContinueTap, content:
+                                .alert("Save new mood", isPresented: $onContinueTap) {
+                                    TextField("Add a note", text: $note)
+                                    Button("Cancel") {onContinueTap.toggle()}
+                                    Button("OK", action: saveCheckAction)
+                                }
+                                .alert("Error to register the check", isPresented: $showError) {
+                                    Button("OK") { dismiss() }
+                                }
+                                .alert("Saving...", isPresented: $showLoading) {
+                                    Button("OK") { showLoading.toggle() }
+                                }
+                                .fullScreenCover(isPresented: $isAllOk)
+                                {
+                                    ContentView()
+                                }
+                            /*.fullScreenCover(isPresented: $onContinueTap, content:
                             {
                                 if let importedImage = classificationServiceViewModel.importedImage
                                 {
                                     ResultDogMoodContentView(viewModel: CheckMoodViewModel(), dog: selectedDog, image: importedImage, resultList: classificationServiceViewModel.classifications)
                                 }
-                            })
+                            })*/
                         }
                     }
                 } 
@@ -129,6 +149,37 @@ struct CheckEmotionalDogStateContentView: View {
         }.frame(width: 500.0)
         .buttonStyle(AnimatedCapsuleBlueButtonStyle())
         
+    }
+    
+    func saveCheckAction()
+    {
+        Task
+        {
+            var info = ErrorInfo()
+            showLoading = true
+            if let image = classificationServiceViewModel.importedImage
+            {
+                info =  await viewModel.addNewEmotionalCheck(note: note, dog: selectedDog, image: image, predictionList: classificationServiceViewModel.classifications)
+            }
+            else
+            {
+                info.setErrorMessage(value: "Not check image setted")
+                //TODO: registra nel file di log
+            }
+            let _ = print("Sto salvando")
+            if info.isAllOK()
+            {
+                showError = false
+                isAllOk = true
+                showLoading = false
+            }
+            else
+            {
+                showError = true
+                isAllOk = false
+                showLoading = false
+            }
+        }
     }
     
     
