@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// Class for dog info
 struct Dog: Codable, Equatable, Identifiable, Hashable
 {
     let id: UUID? //unique
@@ -22,6 +23,10 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
     var emotionalCheckList: [MoodCheckInfo]?
     var isSelected = false
 
+    //MARK: - sex methods
+    /**
+     - Returns: Background color for UI Chip
+     */
     private func getSexBackgroundColor()-> Color
     {
         switch sex
@@ -33,6 +38,9 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         }
     }
     
+    /**
+     - Returns: Foreground color for UI Chip
+     */
     private func getSexForegroundColor()-> Color
     {
         switch sex
@@ -43,10 +51,21 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         }
     }
     
-    func toString() -> String
+    /**
+     Method for UI
+     - Returns: Return a Chip struct that rappresent sex whit title and color
+     */
+    func getSexChip() -> Chip?
     {
-        "{id: \(self.id), name: \(self.name), microchip: \(self.microchip), sex: \(self.sex) dateOfBirth: \(self.dateOfBirth), date: \(self.date), breed: \(self.breed), hairColor: \(self.hairColor), imageSize: \(self.image?.count), emotionalCheckListSize: \(self.emotionalCheckList?.count)}"
+        if let sex = self.sex
+        {
+            return Chip(title: sex,
+                        titleColor: self.getSexForegroundColor(),
+                        bgColor: self.getSexBackgroundColor())
+        }
+        return nil
     }
+    
     
     //TODO: remove this function
     public func getBestMoodList() -> [MoodDetail]
@@ -69,19 +88,20 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
             return bestMoodList
     }
     
-    func getSexChip() -> Chip?
-    {
-        if let sex = self.sex
-        {
-            return Chip(title: sex,
-                        titleColor: self.getSexForegroundColor(),
-                        bgColor: self.getSexBackgroundColor())
-        }
-        return nil
-    }
-    
+    //MARK: formated methods
+    /**
+     - Returns: formated only date of birthday without time, like this " October 21, 2015"
+     */
     func formatedDateOfBirthday() -> String?
     {
         self.dateOfBirth?.formatted(date: .long, time: .omitted)
+    }
+    
+    /**
+     - Returns: All the attributes contains in the class,  formatted by key: value
+     */
+    func toString() -> String
+    {
+        "{id: \(self.id), name: \(self.name), microchip: \(self.microchip), sex: \(self.sex) dateOfBirth: \(self.dateOfBirth), date: \(self.date), breed: \(self.breed), hairColor: \(self.hairColor), imageSize: \(self.image?.count), emotionalCheckListSize: \(self.emotionalCheckList?.count)}"
     }
 }
