@@ -19,6 +19,7 @@
 		3F2971522B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */; };
 		3F2F84C32A5FF29F00227024 /* DogProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C22A5FF29F00227024 /* DogProfileView.swift */; };
 		3F2F84C52A5FF98F00227024 /* DogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F84C42A5FF98F00227024 /* DogDetailView.swift */; };
+		3F3854422B6E5AA600B3BABA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3854412B6E5AA600B3BABA /* CustomProgressView.swift */; };
 		3F50A2082AE6BC8C00393DC4 /* SelectableRowDogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */; };
 		3F7286DF2B3575B50013AE4D /* EmotionalStateManagerBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7286DE2B3575B50013AE4D /* EmotionalStateManagerBO.swift */; };
 		3F7286E22B35A4F80013AE4D /* RunBloking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7286E12B35A4F80013AE4D /* RunBloking.swift */; };
@@ -81,6 +82,7 @@
 		3F2971512B28BF1A00F3954D /* ChoicePhotosSourceActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePhotosSourceActionSheet.swift; sourceTree = "<group>"; };
 		3F2F84C22A5FF29F00227024 /* DogProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileView.swift; sourceTree = "<group>"; };
 		3F2F84C42A5FF98F00227024 /* DogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailView.swift; sourceTree = "<group>"; };
+		3F3854412B6E5AA600B3BABA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		3F50A2072AE6BC8C00393DC4 /* SelectableRowDogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableRowDogCellView.swift; sourceTree = "<group>"; };
 		3F7286DE2B3575B50013AE4D /* EmotionalStateManagerBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalStateManagerBO.swift; sourceTree = "<group>"; };
 		3F7286E12B35A4F80013AE4D /* RunBloking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunBloking.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				3FF236252A56F90B00C0AAD3 /* ChipView.swift */,
 				3FAE41F62A5453C3002E541C /* SexView.swift */,
 				3FF236482A570D8700C0AAD3 /* CustomLabel.swift */,
+				3F3854412B6E5AA600B3BABA /* CustomProgressView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				3FDAF1662B4C936A00B0AFDB /* DogDetailCard.swift in Sources */,
 				3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */,
 				3FF236492A570D8700C0AAD3 /* CustomLabel.swift in Sources */,
+				3F3854422B6E5AA600B3BABA /* CustomProgressView.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
 				3F1A17832B3AAB0600044CA9 /* LogLevel.swift in Sources */,

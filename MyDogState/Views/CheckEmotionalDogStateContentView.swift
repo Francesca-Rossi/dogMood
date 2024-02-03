@@ -28,43 +28,40 @@ struct CheckEmotionalDogStateContentView: View {
             {
                 if let image = classificationServiceViewModel.importedImage 
                 {
-                    VStack(alignment: .center)
+                    ZStack
                     {
-                        checkImage(image: image)
-                        ScrollView
+                        VStack(alignment: .center)
                         {
-                            EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
-                        }.frame(maxWidth: .infinity, maxHeight: 250.0)
-                        
-                        HStack
-                        {
-                            checkAgainButton
-                            continueButton
-                                .alert("Save new mood", isPresented: $onContinueTap) {
-                                    TextField("Add a note", text: $note)
-                                    Button("Cancel") {onContinueTap.toggle()}
-                                    Button("OK", action: saveCheckAction)
-                                }
-                                .alert("Error to register the check", isPresented: $showError) {
-                                    Button("OK") { dismiss() }
-                                }
-                                .alert("Saving...", isPresented: $showLoading) {
-                                    Button("OK") { showLoading.toggle() }
-                                }
-                                .fullScreenCover(isPresented: $isAllOk)
+                            checkImage(image: image)
+                            ScrollView
+                            {
+                                EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
+                            }.frame(maxWidth: .infinity, maxHeight: 250.0)
+                            
+                            HStack
+                            {
+                                checkAgainButton
+                                continueButton
+                                    .alert("Save new mood", isPresented: $onContinueTap) {
+                                        TextField("Add a note", text: $note)
+                                        Button("Cancel") {onContinueTap.toggle()}
+                                        Button("OK", action: saveCheckAction)
+                                    }
+                                    .alert("Error to register the check", isPresented: $showError) {
+                                        Button("OK") { dismiss() }
+                                    }
+                                    .fullScreenCover(isPresented: $isAllOk)
                                 {
                                     ContentView()
                                 }
-                            /*.fullScreenCover(isPresented: $onContinueTap, content:
-                            {
-                                if let importedImage = classificationServiceViewModel.importedImage
-                                {
-                                    ResultDogMoodContentView(viewModel: CheckMoodViewModel(), dog: selectedDog, image: importedImage, resultList: classificationServiceViewModel.classifications)
-                                }
-                            })*/
+                            }
+                        }.blur(radius: showLoading ? 5 : 0)
+                        if showLoading
+                        {
+                            CustomProgressView(title: "Saving")
                         }
                     }
-                } 
+                }
                 else
                 {
                     VStack {
