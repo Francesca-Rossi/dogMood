@@ -46,7 +46,9 @@ struct DogListView: View {
                 }.listStyle(PlainListStyle())
                     .refreshable {
                         Task
-                        {await viewModel.getAllDogs()}
+                        {
+                            var info = ErrorInfo()
+                            await viewModel.getAllDogs(info: &info)}
                     }
             }
         }

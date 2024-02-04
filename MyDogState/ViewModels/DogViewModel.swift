@@ -38,9 +38,10 @@ class DogViewModel: ObservableObject {
     
     init()
     {
+        var info = ErrorInfo()
         Task
         {
-            await getAllDogs()
+            await getAllDogs(info: &info)
         }
         self.subscribe()
     }
@@ -54,31 +55,29 @@ class DogViewModel: ObservableObject {
             .store(in: &subscribers)
     }
     
-   func getAllDogs() async
+    func getAllDogs(info: inout ErrorInfo) async
     {
-        var errorInfo = ErrorInfo()
             do {
-                dogs = try  dao.getAll(info: &errorInfo)
+                dogs = try  dao.getAll(info: &info)
                 for i in dogs.indices
                 {
-                    dogs[i].emotionalCheckList = try emotionalManager.getAllMoodCheckByDogComplete(dog:dogs[i], info: &errorInfo)
+                    dogs[i].emotionalCheckList = try emotionalManager.getAllMoodCheckByDogComplete(dog:dogs[i], info: &info)
                 }
                 checkDogStatus = !dogs.isEmpty
             }
             catch
             {
                 //TODO: scrivi sul file di log
-                print(errorInfo.getErrorMessage())
+                print(info.getErrorMessage())
             }
     }
     
-    func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: UIImage, sex: String, breed: String?, hairColor: String?) async -> ErrorInfo
+    func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: UIImage, sex: String, breed: String?, hairColor: String?, info: inout ErrorInfo) async
     {
         //TODO: fai tutti i controlli
-        var errorInfo = ErrorInfo()
         do
         {
-            if let data =  try? ImageUtilities(image: image).convertImageToData(error: &errorInfo)
+            if let data =  try? ImageUtilities(image: image).convertImageToData(error: &info)
             {
                 let dog =  Dog(id: UUID(),
                                name: name,
@@ -90,16 +89,15 @@ class DogViewModel: ObservableObject {
                                hairColor: hairColor,
                                date: Date(), emotionalCheckList: nil) //all'inizio il cane non ha stati.
                 
-                try await dao.create(obj: dog, info: &errorInfo)
-                await self.getAllDogs()
+                try await dao.create(obj: dog, info: &info)
+                await self.getAllDogs(info: &info)
             }
         }
         catch
         {
             //TODO: scrivi sul file di log
-            print(errorInfo.getErrorMessage())
+            print(info.getErrorMessage())
         }
-        return errorInfo
     }
     
     public func deleteDog(offset: IndexSet) async
@@ -120,7 +118,7 @@ class DogViewModel: ObservableObject {
                     }
                 }
             }
-            await getAllDogs()
+            await getAllDogs(info: &errorInfo)
         }
         catch
         {

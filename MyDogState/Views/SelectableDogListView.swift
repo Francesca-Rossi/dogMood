@@ -28,7 +28,9 @@ struct SelectableDogListView: View {
                             }
                     }
                 }.listStyle(PlainListStyle())
-                    .refreshable { Task {await viewModel.getAllDogs()}
+                    .refreshable { Task {
+                        var info = ErrorInfo()
+                        await viewModel.getAllDogs(info: &info)}
                     }
                 //aggiungi il bottone
                 Button(action: {self.showActionSheet.toggle()})

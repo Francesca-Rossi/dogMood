@@ -122,14 +122,15 @@ struct AddDogView: View {
         {
             if let image = image
             {
-                let info =  await viewModel.addNewDog(
+                var info = ErrorInfo()
+                await viewModel.addNewDog(
                     microchip: microchip,
                     name: name,
                     dateOfBirth: dateOfBirth,
                     image: image,
                     sex: sex,
                     breed: breed,
-                    hairColor: hairColor)
+                    hairColor: hairColor, info: &info)
                 if info.hasErrorInfo()
                 {
                     //TODO controllare che funzioni
