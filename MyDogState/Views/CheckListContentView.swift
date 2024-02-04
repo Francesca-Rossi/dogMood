@@ -1,5 +1,5 @@
 //
-//  MoodListContentView.swift
+//  CheckListContentView.swift
 //  MyDogState
 //
 //  Created by Francesca Rossi on 10/01/24.
@@ -9,34 +9,35 @@ import SwiftUI
 import CoreData
 
 struct CheckListContentView: View {
-    @EnvironmentObject var viewModel: CheckMoodViewModel
+    @EnvironmentObject var checkVM: CheckMoodViewModel
+    @State var dogVM: DogViewModel
     @State private var showingAddView = false
 
     var body: some View {
         NavigationView {
             VStack(alignment: .leading)
             {
-                if viewModel.isCheckListEmpty
+                if checkVM.isCheckListEmpty
                 {
                     addNewCheckButton(isToolbar: false)
                         .buttonStyle(AnimatedCapsuleBlueButtonStyle())
                 }
                 else
                 {
-                    CheckListView(viewModel: self.viewModel)
+                    CheckListView(viewModel: self.checkVM)
                 }
             }
             .navigationTitle("All Check")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
                     addNewCheckButton(isToolbar: true)
-                        .disabled(viewModel.isCheckListEmpty)
+                        .disabled(checkVM.isCheckListEmpty)
                 }
             }
             .fullScreenCover(isPresented: $showingAddView)
             {
                 let _ = Logger.shared.log("Open add new check view", level: LogLevel.Trace , saveToFile: true)
-                SelectableDogListView(viewModel: DogViewModel())
+                SelectableDogListView(viewModel: dogVM)
             }
         }
         .navigationViewStyle(.stack)
@@ -71,6 +72,6 @@ struct CheckListContentView: View {
  }*/
 
 
-#Preview {
+/*#Preview {
     CheckListContentView()
-}
+}*/

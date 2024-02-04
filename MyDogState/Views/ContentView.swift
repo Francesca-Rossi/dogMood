@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
             if !dogVM.isDogListEmpty
             {
-                CheckListContentView().environmentObject(checkVM)
+                CheckListContentView(dogVM: dogVM).environmentObject(checkVM)
                     .tabItem {
                         Image(systemName: "list.bullet")
                         Text("History check")
@@ -32,7 +32,6 @@ struct ContentView: View {
             }
         }.toolbarBackground(.red, for: .tabBar)
     }
-
 }
 
 
