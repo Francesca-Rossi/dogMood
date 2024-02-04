@@ -163,7 +163,6 @@ struct CheckEmotionalDogStateContentView: View {
                 info.setErrorMessage(value: "Not check image setted")
                 //TODO: registra nel file di log
             }
-            let _ = print("Sto salvando")
             if info.isAllOK()
             {
                 showError = false

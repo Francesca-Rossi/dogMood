@@ -19,44 +19,67 @@ struct AddDogView: View {
     @State private var dateOfBirth = Date()
     @State private var hairColor = ""
     @State private var breed = ""
+    @State var showLoading = false
+    @State private var isAllOk = false
+    @State private var showError = false
     
     var body: some View {
         NavigationView {
-            VStack
+            ZStack
             {
-                Form{
-                    profileImageSection
-                    mainInfoSection
-                    otherInfoSection
-                }
-                Button(action: saveDogAction)
+                mainContent
+                if showLoading
                 {
-                    buttonTitle
-                }.disabled(buttonIsDisabled())
-                    .buttonStyle(AnimatedCapsuleBlueButtonStyle())
-            }
-            .onTapGesture {
-                hideKeyboard()
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .principal){
-                    Text("Add New Dog")
-                        .font(.title)
-                        .bold()
+                    CustomProgressView(title: "Saving")
                 }
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button
-                    {
-                        dismiss()
-                    } label: {
-                        Label("Go back", systemImage: "chevron.left")
-                    }
-                }}
+            }
         }.navigationViewStyle(.stack)
     }
     
-    var buttonTitle: some View
+    var mainContent: some View
+    {
+        VStack
+        {
+            Form{
+                profileImageSection
+                mainInfoSection
+                otherInfoSection
+            }
+            Button(action: saveDogAction)
+            {
+                saveDogButtoTitle
+            }.disabled(buttonIsDisabled())
+            .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+            .alert("Error to save new dog", isPresented: $showError) {
+                Button("OK") { dismiss() }
+            }
+            .fullScreenCover(isPresented: $isAllOk)
+            {
+                ContentView()
+            }
+        }
+        .blur(radius: showLoading ? 5 : 0)
+        .onTapGesture {
+            hideKeyboard()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar{
+            ToolbarItem(placement: .principal){
+                Text("Add New Dog")
+                    .font(.title)
+                    .bold()
+            }
+            ToolbarItem(placement: .navigationBarLeading){
+                Button
+                {
+                    dismiss()
+                } label: {
+                    Label("Go back", systemImage: "chevron.left")
+                }
+            }}
+    }
+    
+    var saveDogButtoTitle: some View
     {
         HStack
         {
@@ -121,9 +144,11 @@ struct AddDogView: View {
     {
         Task
         {
+            var info = ErrorInfo()
             if let image = image
             {
-                var info = ErrorInfo()
+                
+                showLoading = true
                 await viewModel.addNewDog(
                     microchip: microchip,
                     name: name,
@@ -132,17 +157,25 @@ struct AddDogView: View {
                     sex: sex,
                     breed: breed,
                     hairColor: hairColor, info: &info)
-                if info.hasErrorInfo()
-                {
-                    //TODO controllare che funzioni
-                    Alert(
-                        title: Text("Error"),
-                        message: Text(info.getErrorMessage()),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
             }
-            dismiss()
+            else
+            {
+                info.setErrorMessage(value: "Not check image setted")
+                //TODO: registra nel file di log
+            }
+            if info.isAllOK()
+            {
+                showError = false
+                isAllOk = true
+                showLoading = false
+            }
+            else
+            {
+                showError = true
+                isAllOk = false
+                showLoading = false
+                //TODO: registra nel file di log
+            }
         }
     }
     

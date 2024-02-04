@@ -215,6 +215,7 @@
       }
     },
     "Error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -233,6 +234,9 @@
           }
         }
       }
+    },
+    "Error to save new dog" : {
+
     },
     "Go back" : {
       "localizations" : {
