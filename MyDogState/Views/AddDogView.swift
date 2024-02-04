@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+//TODO: controlla che la data di nascita non sia domani..
+//TODO: aggiungi saving progressView
 struct AddDogView: View {
     @StateObject var viewModel: DogViewModel
     @Environment(\.dismiss) var dismiss
