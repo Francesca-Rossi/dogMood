@@ -11,6 +11,7 @@ import CoreData
 struct DogsListContentView: View {
     @EnvironmentObject var viewModel: DogViewModel
     @State private var showingAddView = false
+    @State var selectedItem: Dog?
     var body: some View {
         NavigationView {
             VStack(alignment: .leading)
@@ -22,7 +23,7 @@ struct DogsListContentView: View {
                 }
                 else
                 {
-                    DogListView(viewModel: self.viewModel)
+                    dogList
                 }
             }
             .navigationTitle("My Dog List")
@@ -36,8 +37,52 @@ struct DogsListContentView: View {
             {
                 AddDogView(viewModel: self.viewModel)
             }
+            .fullScreenCover(item: $selectedItem)
+            {
+                item in
+                DogDetailView( dog: item)
+            }
         }
         .navigationViewStyle(.stack)
+    }
+    
+    var dogList: some View
+    {
+        List{
+            ForEach(viewModel.dogsList)
+            {
+                dog in
+                //TODO: e' necessario fare vedere l'img?
+                if let imageData = dog.image
+                {
+                    ItemCellView(
+                        image: UIImage(data: imageData),
+                        title: dog.name,
+                        chipFields: dog.getSexChip(),
+                        firstLabel: dog.microchip,
+                        secondLabel: dog.formatedDateOfBirthday(),
+                        parentViewType: .dogs
+                    )
+                    .onTapGesture
+                    {
+                        self.selectedItem = dog
+                    }
+                }
+            }
+            .onDelete{
+                indexSet in
+                Task
+                {
+                    await viewModel.deleteDog(offset: indexSet)
+                }
+            }
+        }.listStyle(PlainListStyle())
+            .refreshable {
+                Task
+                {
+                    var info = ErrorInfo()
+                    await viewModel.getAllDogs(info: &info)}
+            }
     }
     
     func addNewDogButton(isToolbar: Bool) -> some View

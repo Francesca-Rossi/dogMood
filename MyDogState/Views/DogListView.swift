@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//TODO: check if someone use it and remove
 struct DogListView: View {
     @StateObject var viewModel: DogViewModel
     @State var selectedItem: Dog?
@@ -51,7 +52,7 @@ struct DogListView: View {
                             await viewModel.getAllDogs(info: &info)}
                     }
             }
-        }
+        }.frame(maxHeight: .infinity)
         .fullScreenCover(item: $selectedItem)
         {
             item in
