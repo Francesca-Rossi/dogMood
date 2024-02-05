@@ -28,22 +28,24 @@ struct ContentView: View {
     }
     var tabBar: some View
     {
-        TabView {
-            DogsListContentView().environmentObject(dogVM)
-                .tabItem {
-                    Image(systemName: "pawprint.fill")
-                    Text("My dogs")
-                }
-            if !dogVM.isDogListEmpty
-            {
-                let checkVM = CheckMoodViewModel()
-                CheckListContentView(dogVM: dogVM).environmentObject(checkVM)
+        NavigationView {
+            TabView {
+                DogsListContentView().environmentObject(dogVM)
                     .tabItem {
-                        Image(systemName: "list.bullet")
-                        Text("History check")
+                        Image(systemName: "pawprint.fill")
+                        Text("My dogs")
                     }
-            }
-        }.toolbarBackground(.red, for: .tabBar)
+                if !dogVM.isDogListEmpty
+                {
+                    let checkVM = CheckMoodViewModel()
+                    CheckListContentView(dogVM: dogVM).environmentObject(checkVM)
+                        .tabItem {
+                            Image(systemName: "list.bullet")
+                            Text("History check")
+                        }
+                }
+            }.toolbarBackground(.red, for: .tabBar)
+        }
     }
 }
 
