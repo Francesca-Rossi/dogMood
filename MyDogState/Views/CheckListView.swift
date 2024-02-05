@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//TODO: check if it used or remove
 struct CheckListView: View {
     @StateObject var viewModel: CheckMoodViewModel
     @State var selectedItem: MoodCheckInfo?
