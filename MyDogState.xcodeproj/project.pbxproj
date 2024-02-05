@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0A01FA2B70A0FE008646D8 /* CheckMoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A01F92B70A0FE008646D8 /* CheckMoodViewModel.swift */; };
 		3F12AE912B347679009B7300 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE902B347679009B7300 /* Status.swift */; };
 		3F12AE952B34773F009B7300 /* MoodCheckDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE942B34773F009B7300 /* MoodCheckDao.swift */; };
 		3F12AE972B347846009B7300 /* MoodDetailDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F12AE962B347846009B7300 /* MoodDetailDao.swift */; };
@@ -31,7 +32,6 @@
 		3F778E372A5BFC9300D37229 /* PersistenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F778E362A5BFC9300D37229 /* PersistenController.swift */; };
 		3F79B9ED2B493D6C00EB8542 /* PredictResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */; };
 		3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */; };
-		3F79B9F72B49A20F00EB8542 /* CheckMoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F62B49A20F00EB8542 /* CheckMoodViewModel.swift */; };
 		3F9071042B5508D0009294DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9071032B5508D0009294DA /* Extensions.swift */; };
 		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
@@ -70,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0A01F92B70A0FE008646D8 /* CheckMoodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMoodViewModel.swift; sourceTree = "<group>"; };
 		3F12AE902B347679009B7300 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		3F12AE942B34773F009B7300 /* MoodCheckDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCheckDao.swift; sourceTree = "<group>"; };
 		3F12AE962B347846009B7300 /* MoodDetailDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDetailDao.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		3F778E362A5BFC9300D37229 /* PersistenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenController.swift; sourceTree = "<group>"; };
 		3F79B9EC2B493D6C00EB8542 /* PredictResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictResult.swift; sourceTree = "<group>"; };
 		3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalResultDialogView.swift; sourceTree = "<group>"; };
-		3F79B9F62B49A20F00EB8542 /* CheckMoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMoodViewModel.swift; sourceTree = "<group>"; };
 		3F9071032B5508D0009294DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				3F778E342A5BFC5400D37229 /* DogViewModel.swift */,
+				3F0A01F92B70A0FE008646D8 /* CheckMoodViewModel.swift */,
 				3FC3321F2B47E56300349AC5 /* ClassificationsViewModel.swift */,
-				3F79B9F62B49A20F00EB8542 /* CheckMoodViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -430,7 +430,6 @@
 				3FF236432A5708A300C0AAD3 /* CircleImage.swift in Sources */,
 				3FC332202B47E56300349AC5 /* ClassificationsViewModel.swift in Sources */,
 				3FED3ABF2B4E5D12005F6BF5 /* CheckListContentView.swift in Sources */,
-				3F79B9F72B49A20F00EB8542 /* CheckMoodViewModel.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,
 				3FC099162B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift in Sources */,
 				3F1A17812B3AA53B00044CA9 /* StringUtilities.swift in Sources */,
@@ -449,6 +448,7 @@
 				3F3854422B6E5AA600B3BABA /* CustomProgressView.swift in Sources */,
 				3FAE41EF2A544C76002E541C /* AddDogView.swift in Sources */,
 				3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */,
+				3F0A01FA2B70A0FE008646D8 /* CheckMoodViewModel.swift in Sources */,
 				3F1A17832B3AAB0600044CA9 /* LogLevel.swift in Sources */,
 				3FC332232B47E62300349AC5 /* ClassificationServiceProviding.swift in Sources */,
 				3F1A177F2B3AA45300044CA9 /* Logger.swift in Sources */,

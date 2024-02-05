@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-//TODO: controlla che la data di nascita non sia domani..
-//TODO: aggiungi saving progressView
+
 struct AddDogView: View {
     @StateObject var viewModel: DogViewModel
     @Environment(\.dismiss) var dismiss
@@ -116,7 +115,10 @@ struct AddDogView: View {
             HStack
             {
                 Label("Birthday", systemImage: "birthday.cake.fill")
-                DatePicker("", selection: $dateOfBirth, displayedComponents: .date)
+                DatePicker("", 
+                           selection: $dateOfBirth,
+                           in: ...Date(),
+                           displayedComponents: .date)
                     .pickerStyle(.inline)
             }
             SexView(sex: $sex)
