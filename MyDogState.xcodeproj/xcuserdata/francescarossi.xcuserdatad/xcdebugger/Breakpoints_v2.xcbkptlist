@@ -112,6 +112,21 @@
                   endingLineNumber = "36"
                   offsetFromSymbolStart = "929">
                </Location>
+               <Location
+                  uuid = "5440498B-D1C2-4079-832B-4AEE3465E14D - 691db82b3d055660"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TabView&lt;Swift.Int, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.tabItem&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(() -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt;)&gt;&gt; in MyDogState.ContentView.tabBar.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1052">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,7 +207,147 @@
                   endingLineNumber = "17"
                   offsetFromSymbolStart = "228">
                </Location>
+               <Location
+                  uuid = "5987EEF0-D8FA-44B9-B0B8-5DEC97F6DD52 - fa36adffe2502fdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDogState.ContentView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "5987EEF0-D8FA-44B9-B0B8-5DEC97F6DD52 - b460d102aa91e596"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MyDogState.ContentView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "228">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15F2908B-8458-4FEE-B24B-641BF930BEAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/ItemCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62AB1321-F9CC-4610-A818-2E99EDB2270E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/ItemCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "62AB1321-F9CC-4610-A818-2E99EDB2270E - 5a8b848899debaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.minimumScaleFactor(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MyDogState.ChipView&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;MyDogState.ItemCellDescriptionViewWithIcon, MyDogState.ItemCellDescriptionView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in MyDogState.ItemCellView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ItemCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "927">
+               </Location>
+               <Location
+                  uuid = "62AB1321-F9CC-4610-A818-2E99EDB2270E - 5a8b848899debaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.minimumScaleFactor(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MyDogState.ChipView&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;MyDogState.ItemCellDescriptionViewWithIcon, MyDogState.ItemCellDescriptionView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in MyDogState.ItemCellView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ItemCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "981">
+               </Location>
+               <Location
+                  uuid = "62AB1321-F9CC-4610-A818-2E99EDB2270E - 5a8b848899debaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.minimumScaleFactor(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MyDogState.ChipView&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;MyDogState.ItemCellDescriptionViewWithIcon, MyDogState.ItemCellDescriptionView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in MyDogState.ItemCellView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ItemCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1083">
+               </Location>
+               <Location
+                  uuid = "62AB1321-F9CC-4610-A818-2E99EDB2270E - 5a8b848899debaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.minimumScaleFactor(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, Swift.Optional&lt;MyDogState.ChipView&gt;)&gt;&gt;, Swift.Optional&lt;SwiftUI._ConditionalContent&lt;MyDogState.ItemCellDescriptionViewWithIcon, MyDogState.ItemCellDescriptionView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in MyDogState.ItemCellView.body.getter : some"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Views/ItemCellView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1206">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACAD2BA9-98E9-4F88-A9B5-5B847C4BF310"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Views/ItemCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

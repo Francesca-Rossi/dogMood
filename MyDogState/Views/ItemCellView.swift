@@ -13,6 +13,7 @@ struct ItemCellView: View {
     var chipFields: Chip?
     var firstLabel: String?
     var secondLabel: String?
+    var thirdLabel: String?
     var parentViewType: ViewParentType
     var body: some View {
         HStack(spacing: 10)
@@ -42,7 +43,7 @@ struct ItemCellView: View {
                     case .dogs:
                         ItemCellDescriptionViewWithIcon(firstLabel: firstLabel , firstIcon:  "cpu", secondLabel:  secondLabel , secondIcon: "birthday.cake.fill")
                     case .states:
-                        ItemCellDescriptionView(firstLabel: firstLabel, secondLabel: secondLabel)
+                        ItemCellDescriptionViewWithIcon(firstLabel: firstLabel, firstIcon:  "calendar", secondLabel:  secondLabel , secondIcon: "clock", thirdLabel:thirdLabel, thirdIcon: "list.clipboard")
                     }
                 }
             }
@@ -80,15 +81,29 @@ struct ItemCellDescriptionViewWithIcon: View
 {
     var firstLabel: String
     var firstIcon: String
-    
     var secondLabel: String
     var secondIcon: String
+    var thirdLabel: String?
+    var thirdIcon: String?
     var body: some View
     {
         VStack(alignment: .leading, spacing: 5)
         {
-            CustomLabel(icon: firstIcon, caption: firstLabel)
-            CustomLabel(icon: secondIcon, caption: secondLabel)
+            if firstLabel != StringUtilities.emptyString
+            {
+                CustomLabel(icon: firstIcon, caption: firstLabel)
+            }
+            if secondLabel != StringUtilities.emptyString
+            {
+                CustomLabel(icon: secondIcon, caption: secondLabel)
+            }
+            if let thirdLabel = thirdLabel, let thirdIcon = thirdIcon
+            {
+                if thirdLabel != StringUtilities.emptyString
+                {
+                    CustomLabel(icon: thirdIcon, caption: thirdLabel)
+                }
+            }
         }
         
     }

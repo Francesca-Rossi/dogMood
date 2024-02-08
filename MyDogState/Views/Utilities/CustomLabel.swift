@@ -14,6 +14,7 @@ struct CustomLabel: View {
        HStack
         {
             Image(systemName: icon)
+                .foregroundColor(Color.darkPurple)
             Text(caption)
                 .font(.body)
                 .fontWeight(.light)

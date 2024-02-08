@@ -62,7 +62,8 @@ struct CheckListContentView: View {
                         title: check.dog?.name,
                         chipFields: createChip(check: check),
                         firstLabel: formatedDate(check: check),
-                        secondLabel: check.note,
+                        secondLabel: formatedTime(check: check),
+                        thirdLabel: check.note,
                         parentViewType: .states
                     )
                     .onTapGesture {
@@ -106,7 +107,12 @@ struct CheckListContentView: View {
     
     func formatedDate(check: MoodCheckInfo) -> String?
     {
-        return check.date?.formatted(date: .long, time: .standard)
+        return check.date?.formatted(date: .long, time: .omitted)
+    }
+    
+    func formatedTime(check: MoodCheckInfo) -> String?
+    {
+        return check.date?.formatted(date: .omitted, time: .shortened)
     }
     
     func createChip(check: MoodCheckInfo) -> Chip?

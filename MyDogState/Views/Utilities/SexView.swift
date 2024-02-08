@@ -23,7 +23,7 @@ struct SexView: View {
 
 struct SexViewExample : View {
     @State
-    private var value = "Boy"
+    private var value = "Male"
     
     var body: some View {
         SexView(sex: $value)
