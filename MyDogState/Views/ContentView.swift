@@ -34,6 +34,7 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "pawprint.fill")
                         Text("My dogs")
+                            .minimumScaleFactor(0.5)
                     }
                 if !dogVM.isDogListEmpty
                 {
@@ -42,6 +43,7 @@ struct ContentView: View {
                         .tabItem {
                             Image(systemName: "list.bullet")
                             Text("History check")
+                                .minimumScaleFactor(0.5)
                         }
                 }
             }

@@ -79,6 +79,7 @@ struct CheckEmotionalDogStateContentView: View {
                 ToolbarItem(placement: .principal){
                     Text("Check emotional status")
                         .font(.title2)
+                        .minimumScaleFactor(0.5)
                         .bold()
                         .foregroundColor(Color.darkPurple)
                 }
@@ -105,6 +106,7 @@ struct CheckEmotionalDogStateContentView: View {
             {
                 Image(systemName: "arrow.right.circle.fill")
                 Text("Continue")
+                    .minimumScaleFactor(0.5)
             }
         }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
     }
@@ -119,6 +121,7 @@ struct CheckEmotionalDogStateContentView: View {
             {
                 Image(systemName: "camera")
                 Text("Check again")
+                    .minimumScaleFactor(0.5)
             }
         }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
     }

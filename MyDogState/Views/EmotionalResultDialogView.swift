@@ -18,6 +18,7 @@ struct EmotionalResultDialogView: View {
         {
             Text("Mood results")
                 .font(.system(size: CGFloat(30.0), weight: .bold))
+                .minimumScaleFactor(0.5)
             List(predictionResult)
             { result in
                 HStack

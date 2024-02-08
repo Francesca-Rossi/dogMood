@@ -99,7 +99,7 @@ struct CheckListContentView: View {
                 HStack
                 {
                     Image(systemName: "plus.circle.fill")
-                    Text("Check mood now")
+                    Text("Check mood now").minimumScaleFactor(0.5)
                 }
             }
         }

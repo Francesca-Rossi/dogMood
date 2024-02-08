@@ -101,6 +101,7 @@ struct DogsListContentView: View {
                 {
                     Image(systemName: "plus.circle.fill")
                     Text("Add your first dog")
+                        .minimumScaleFactor(0.5)
                 }
             }
         }

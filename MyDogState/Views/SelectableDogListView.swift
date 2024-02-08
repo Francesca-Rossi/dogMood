@@ -38,7 +38,7 @@ struct SelectableDogListView: View {
                     HStack
                     {
                         Image(systemName: "camera")
-                        Text("Check emotional state")
+                        Text("Check emotional state").minimumScaleFactor(0.5)
                     }
                 }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
                 .fullScreenCover(isPresented: $showActionSheet)
@@ -55,6 +55,7 @@ struct SelectableDogListView: View {
                     ToolbarItem(placement: .principal){
                         Text("Select a dog")
                             .font(.title2)
+                            .minimumScaleFactor(0.5)
                             .bold()
                             .foregroundColor(Color.darkPurple)
                     }

@@ -67,6 +67,7 @@ struct AddDogView: View {
                 Text("Add New Dog")
                     .font(.title2)
                     .bold()
+                    .minimumScaleFactor(0.5)
                     .foregroundColor(Color.darkPurple)
             }
             ToolbarItem(placement: .navigationBarLeading){
@@ -85,12 +86,13 @@ struct AddDogView: View {
         {
             Image(systemName: "square.and.arrow.down")
             Text("Save new dog")
+                .minimumScaleFactor(0.5)
         }
     }
     
     var profileImageSection: some View
     {
-        Section (header: Text("Profile image").textCase(nil))
+        Section (header: Text("Profile image").textCase(nil).minimumScaleFactor(0.5))
         {
             AddImageView(image: $image, parentView: .dogs)
         }
@@ -98,7 +100,7 @@ struct AddDogView: View {
     
     var mainInfoSection: some View
     {
-        Section (header: Text("Main info").textCase(nil))
+        Section (header: Text("Main info").textCase(nil).minimumScaleFactor(0.5))
         {
             HStack
             {
@@ -128,7 +130,7 @@ struct AddDogView: View {
     
     var otherInfoSection: some View
     {
-        Section (header: Text("Other info").textCase(nil))
+        Section (header: Text("Other info").textCase(nil).minimumScaleFactor(0.5))
         {
             HStack
             {

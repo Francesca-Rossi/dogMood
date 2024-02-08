@@ -46,6 +46,7 @@ struct DogDetailView: View {
                         Text("Dog details")
                             .font(.title2)
                             .bold()
+                            .minimumScaleFactor(0.5)
                             .foregroundColor(Color.darkPurple)
                     }
                     ToolbarItem(placement: .navigationBarLeading){
@@ -72,6 +73,7 @@ struct DogDetailView: View {
         {
             Image(systemName: "camera")
             Text("Check emotional state")
+                .minimumScaleFactor(0.5)
         }
     }
 }

@@ -81,13 +81,14 @@ struct ResultDogMoodContentView: View {
         {
             Image(systemName: "square.and.arrow.down")
             Text("Save new mood")
+                .minimumScaleFactor(0.5)
         }
     }
     var dogImageSection: some View
     {
         VStack(alignment: .center)
         {
-            Section (header: Text("Check photo").textCase(nil))
+            Section (header: Text("Check photo").textCase(nil).minimumScaleFactor(0.5))
             {
                 
                 RoundedRectagleImage(image: image, width: CGFloat(100.0), height: CGFloat(100.0))
@@ -98,7 +99,7 @@ struct ResultDogMoodContentView: View {
     
     var dogInfoSection: some View
     {
-        Section (header: Text("Dog Info").textCase(nil))
+        Section (header: Text("Dog Info").textCase(nil).minimumScaleFactor(0.5))
         {
             VStack
             {
@@ -116,7 +117,7 @@ struct ResultDogMoodContentView: View {
     
     var mainInfoSection: some View
     {
-        Section (header: Text("Mood Result").textCase(nil))
+        Section (header: Text("Mood Result").textCase(nil).minimumScaleFactor(0.5))
         {
                     ScrollView {
                         EmotionalResultDialogView(predictionResult: resultList)
@@ -126,7 +127,7 @@ struct ResultDogMoodContentView: View {
     
     var otherInfoSection: some View
     {
-        Section (header: Text("Other info").textCase(nil))
+        Section (header: Text("Other info").textCase(nil).minimumScaleFactor(0.5))
         {
             TextEditor(text: $note)
                 .foregroundStyle(.secondary)

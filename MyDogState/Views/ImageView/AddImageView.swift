@@ -60,6 +60,7 @@ struct AddImageView: View
             self.shouldPresentActionSheet = true
         } label: {
             Text("Pick an image")
+                .minimumScaleFactor(0.5)
         }.frame(width: 500.0)
             .buttonStyle(AnimatedCapsulePurpleButtonStyle())
     }

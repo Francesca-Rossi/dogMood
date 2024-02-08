@@ -41,6 +41,7 @@ struct CheckDetailView: View {
                     ToolbarItem(placement: .principal){
                         Text("Check details")
                             .font(.title2)
+                            .minimumScaleFactor(0.5)
                             .bold()
                             .foregroundColor(Color.darkPurple)
                     }
