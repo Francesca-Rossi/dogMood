@@ -38,7 +38,7 @@ struct DogDetailView: View {
                 {
                     CheckEmotionalDogStateContentView(selectedDog: dog, viewModel: CheckMoodViewModel(readMode:  false))
                 }
-                .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                .buttonStyle(AnimatedCapsulePurpleButtonStyle())
             }
             .navigationBarTitleDisplayMode(.inline)
                 .toolbar{

@@ -34,6 +34,7 @@
 		3F79B9F12B495EF400EB8542 /* EmotionalResultDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */; };
 		3F9071042B5508D0009294DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9071032B5508D0009294DA /* Extensions.swift */; };
 		3FAD7A492ACC0B7D0039FD3F /* SelectableDogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */; };
+		3FAE11422B74B09500D8B685 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE11412B74B09500D8B685 /* ColorExtensions.swift */; };
 		3FAE41D52A54388A002E541C /* MyDogStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D42A54388A002E541C /* MyDogStateApp.swift */; };
 		3FAE41D72A54388A002E541C /* DogsListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE41D62A54388A002E541C /* DogsListContentView.swift */; };
 		3FAE41D92A54388C002E541C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAE41D82A54388C002E541C /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		3F79B9F02B495EF400EB8542 /* EmotionalResultDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalResultDialogView.swift; sourceTree = "<group>"; };
 		3F9071032B5508D0009294DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3FAD7A482ACC0B7D0039FD3F /* SelectableDogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableDogListView.swift; sourceTree = "<group>"; };
+		3FAE11412B74B09500D8B685 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		3FAE41D12A54388A002E541C /* MyDogState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDogState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAE41D42A54388A002E541C /* MyDogStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogStateApp.swift; sourceTree = "<group>"; };
 		3FAE41D62A54388A002E541C /* DogsListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsListContentView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD9C8DC2ACF0A9600162DFA /* Button.swift */,
+				3FAE11412B74B09500D8B685 /* ColorExtensions.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				3FED3ABF2B4E5D12005F6BF5 /* CheckListContentView.swift in Sources */,
 				3FF236262A56F90B00C0AAD3 /* ChipView.swift in Sources */,
 				3FC099162B4AA5E400A577BF /* MoodDetailEntity+CoreDataProperties.swift in Sources */,
+				3FAE11422B74B09500D8B685 /* ColorExtensions.swift in Sources */,
 				3F1A17812B3AA53B00044CA9 /* StringUtilities.swift in Sources */,
 				3F74BBE52A5D60BE00A8BB42 /* DogListView.swift in Sources */,
 				3FC3321E2B47E4DD00349AC5 /* CheckEmotionalDogStateContentView.swift in Sources */,

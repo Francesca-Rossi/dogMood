@@ -21,7 +21,7 @@ struct CheckListContentView: View {
                 if checkVM.isCheckListEmpty
                 {
                     addNewCheckButton(isToolbar: false)
-                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                        .buttonStyle(AnimatedCapsulePurpleButtonStyle())
                 }
                 else
                 {

@@ -19,7 +19,7 @@ struct DogsListContentView: View {
                 if viewModel.isDogListEmpty
                 {
                     addNewDogButton(isToolbar: false)
-                        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                        .buttonStyle(AnimatedCapsulePurpleButtonStyle())
                 }
                 else
                 {

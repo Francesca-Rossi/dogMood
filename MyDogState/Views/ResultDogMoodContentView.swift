@@ -47,7 +47,7 @@ struct ResultDogMoodContentView: View {
                 {
                     saveButtonTitle
                 }.disabled(buttonIsDisabled())
-                .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+                .buttonStyle(AnimatedCapsulePurpleButtonStyle())
                 .alert("Error to register the check", isPresented: $showError) {
                     Button("OK") { dismiss() }
                 }

@@ -48,7 +48,7 @@ struct AddDogView: View {
             {
                 saveDogButtoTitle
             }.disabled(buttonIsDisabled())
-            .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+            .buttonStyle(AnimatedCapsulePurpleButtonStyle())
             .alert("Error to save new dog", isPresented: $showError) {
                 Button("OK") { dismiss() }
             }

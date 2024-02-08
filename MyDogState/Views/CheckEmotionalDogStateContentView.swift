@@ -120,7 +120,7 @@ struct CheckEmotionalDogStateContentView: View {
                 Image(systemName: "arrow.right.circle.fill")
                 Text("Continue")
             }
-        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+        }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
     }
     
     var checkAgainButton: some View
@@ -134,7 +134,7 @@ struct CheckEmotionalDogStateContentView: View {
                 Image(systemName: "camera")
                 Text("Check again")
             }
-        }.buttonStyle(AnimatedCapsuleBlueButtonStyle())
+        }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
     }
     
     var pickAnImageButton: some View
@@ -144,7 +144,7 @@ struct CheckEmotionalDogStateContentView: View {
         } label: {
             Text("Pick an image")
         }.frame(width: 500.0)
-        .buttonStyle(AnimatedCapsuleBlueButtonStyle())
+        .buttonStyle(AnimatedCapsulePurpleButtonStyle())
         
     }
     

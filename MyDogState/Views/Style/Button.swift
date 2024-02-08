@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct AnimatedCapsuleBlueButtonStyle: ButtonStyle {
+struct AnimatedCapsulePurpleButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        AnimatedCapsuleBlueButton(configuration: configuration)
+        AnimatedCapsulePurpleButton(configuration: configuration)
     }
     
-    struct AnimatedCapsuleBlueButton: View {
+    struct AnimatedCapsulePurpleButton: View {
         let configuration: ButtonStyle.Configuration
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
                 .padding()
-                .background(isEnabled ? .blue : .gray)
+                .background(isEnabled ? Color.customPurple : .gray)
                 .foregroundStyle(.white)
                 .clipShape(Capsule())
                 .scaleEffect(configuration.isPressed ? 1.2 : 1)
