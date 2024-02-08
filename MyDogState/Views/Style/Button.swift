@@ -28,18 +28,18 @@ struct AnimatedCapsulePurpleButtonStyle: ButtonStyle {
 }
 
 
-struct AnimatedCircleBlueButtonStyle: ButtonStyle {
+struct AnimatedCirclePurpleButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        AnimatedCircleBlueButton(configuration: configuration)
+        AnimatedCirclePurpleButton(configuration: configuration)
     }
     
-    struct AnimatedCircleBlueButton: View {
+    struct AnimatedCirclePurpleButton: View {
         let configuration: ButtonStyle.Configuration
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
                 .padding()
-                .background(isEnabled ? .blue : .gray)
+                .background(isEnabled ? Color.customPurple : .gray)
                 .foregroundStyle(.white)
                 .clipShape(Circle())
                 .scaleEffect(configuration.isPressed ? 1.2 : 1)
