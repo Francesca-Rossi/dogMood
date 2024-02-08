@@ -92,7 +92,7 @@ struct AddDogView: View {
     {
         Section (header: Text("Profile image").textCase(nil))
         {
-         AddImageView(image: $image)
+            AddImageView(image: $image, parentView: .dogs)
         }
     }
     

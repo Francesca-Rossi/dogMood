@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct RoundedRectagleImage: View {
-    var image: UIImage
+    var image: UIImage?
     var width = CGFloat(125.0)
     var height = CGFloat(125.0)
     var body: some View {
-        Image(uiImage: self.image)
+        Image(uiImage: self.image ?? UIImage())
             .resizable()
             .scaledToFill()
             .frame(width: width, height: height)

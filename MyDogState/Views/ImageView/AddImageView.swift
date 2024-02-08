@@ -10,6 +10,7 @@ import SwiftUI
 struct AddImageView: View
 {
     @Binding var image: UIImage?
+    var parentView: ViewParentType
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentActionSheet = false
     @State private var shouldPresentCamera = false
@@ -20,10 +21,19 @@ struct AddImageView: View
         {
             if image != nil
             {
-                CircleImage(image: image)
-                    .onTapGesture {
-                        self.shouldPresentActionSheet = true
-                    }
+                switch parentView
+                {
+                case .dogs:
+                    CircleImage(image: image)
+                        .onTapGesture {
+                            self.shouldPresentActionSheet = true
+                        }
+                case .states:
+                    RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
+                        .onTapGesture {
+                            self.shouldPresentActionSheet = true
+                        }
+                }
             }
             else
             {

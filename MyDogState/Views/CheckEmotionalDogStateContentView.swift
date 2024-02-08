@@ -38,7 +38,8 @@ struct CheckEmotionalDogStateContentView: View {
                                     .font(.title)
                                     .bold()
                             }
-                            checkImage(image: image)
+                            AddImageView(image: $classificationServiceViewModel.importedImage, parentView: .states)
+                            //checkImage(image: image)
                             ScrollView
                             {
                                 EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
@@ -72,10 +73,11 @@ struct CheckEmotionalDogStateContentView: View {
                 else
                 {
                     VStack {
-                        Image(systemName: "photo.fill")
-                            .imageScale(.large)
-                            .foregroundColor(.accentColor)
-                        pickAnImageButton
+                        AddImageView(image: $classificationServiceViewModel.importedImage, parentView: .states)
+//                        Image(systemName: "photo.fill")
+//                            .imageScale(.large)
+//                            .foregroundColor(.accentColor)
+//                        pickAnImageButton
                     }
                     .padding()
                 }
