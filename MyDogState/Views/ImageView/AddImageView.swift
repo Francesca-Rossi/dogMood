@@ -21,7 +21,7 @@ struct AddImageView: View
         HStack {
            
             CircleImage(image: image)
-            ChipView(chip: Chip(title: CHANGE_PHOTO_LABEL, titleColor: .white, bgColor: .customPurple)) 
+            ChipView(chip: Chip(title: CHANGE_PHOTO_LABEL, titleColor: .white, bgColor: .darkPurple)) 
                 .onTapGesture {
                     self.shouldPresentActionSheet = true
                 }

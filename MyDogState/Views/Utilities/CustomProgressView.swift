@@ -11,10 +11,10 @@ struct CustomProgressView: View {
     var title: String
     var body: some View {
         ProgressView(title)
-            .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
+            .progressViewStyle(CircularProgressViewStyle())
             .padding()
             .frame(width: 120, height: 120, alignment: .center)
-            .background(.white)
+            .background(Color.lightPurple)
             .cornerRadius(15)
     }
 }

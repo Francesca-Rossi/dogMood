@@ -8,5 +8,6 @@
 import SwiftUI
 
 extension Color {
-    static let customPurple = Color("customPurple")
+    static let darkPurple = Color("darkPurple")
+    static let lightPurple = Color("lightPurple")
 }

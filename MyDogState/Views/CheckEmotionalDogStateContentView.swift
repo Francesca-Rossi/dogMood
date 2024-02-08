@@ -77,7 +77,7 @@ struct CheckEmotionalDogStateContentView: View {
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("Check emotional status").font(.headline)
-                        .foregroundColor(Color.customPurple)
+                        .foregroundColor(Color.darkPurple)
                 }
                 ToolbarItem(placement: .navigationBarLeading){
                 Button

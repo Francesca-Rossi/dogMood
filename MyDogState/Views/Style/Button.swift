@@ -18,7 +18,7 @@ struct AnimatedCapsulePurpleButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .padding()
-                .background(isEnabled ? Color.customPurple : .gray)
+                .background(isEnabled ? Color.darkPurple : .gray)
                 .foregroundStyle(.white)
                 .clipShape(Capsule())
                 .scaleEffect(configuration.isPressed ? 1.2 : 1)
@@ -39,7 +39,7 @@ struct AnimatedCirclePurpleButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .padding()
-                .background(isEnabled ? Color.customPurple : .gray)
+                .background(isEnabled ? Color.darkPurple : .gray)
                 .foregroundStyle(.white)
                 .clipShape(Circle())
                 .scaleEffect(configuration.isPressed ? 1.2 : 1)
