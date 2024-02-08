@@ -54,8 +54,9 @@ struct SelectableDogListView: View {
                 .toolbar{
                     ToolbarItem(placement: .principal){
                         Text("Select a dog")
-                            .font(.title)
+                            .font(.title2)
                             .bold()
+                            .foregroundColor(Color.darkPurple)
                     }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button

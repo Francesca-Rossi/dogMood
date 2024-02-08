@@ -65,8 +65,9 @@ struct AddDogView: View {
         .toolbar{
             ToolbarItem(placement: .principal){
                 Text("Add New Dog")
-                    .font(.title)
+                    .font(.title2)
                     .bold()
+                    .foregroundColor(Color.darkPurple)
             }
             ToolbarItem(placement: .navigationBarLeading){
                 Button

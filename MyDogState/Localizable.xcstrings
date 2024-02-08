@@ -122,6 +122,7 @@
       }
     },
     "Check detail" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -130,6 +131,9 @@
           }
         }
       }
+    },
+    "Check details" : {
+
     },
     "Check emotional state" : {
       "localizations" : {

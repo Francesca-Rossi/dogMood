@@ -16,7 +16,7 @@ struct CheckDetailView: View {
             {
                 if let data = checkDetail.image, let image = UIImage(data: data)
                 {
-                    CircleImage(image: image, width: CGFloat(200), height: CGFloat(200))
+                    CircleImage(image: image, width: CGFloat(150), height: CGFloat(150))
                 }
                 VStack(alignment: .center)
                 {
@@ -27,6 +27,9 @@ struct CheckDetailView: View {
                         if let note = checkDetail.note
                         {
                             Text(note)
+                            .font(.footnote)
+                            .padding(.leading)
+                            .padding(.trailing)
                         }
                     }
                     EmotionalResultDialogView(predictionResult: checkDetail.convertToPredictions())
@@ -36,9 +39,10 @@ struct CheckDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                     ToolbarItem(placement: .principal){
-                        Text("Check detail")
-                            .font(.title)
+                        Text("Check details")
+                            .font(.title2)
                             .bold()
+                            .foregroundColor(Color.darkPurple)
                     }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button
@@ -52,9 +56,7 @@ struct CheckDetailView: View {
         }.navigationViewStyle(.stack)
     }
     
-    /***
-     - dog's name
-     ***/
+    
     var dogName: some View
     {
         Text(checkDetail.dog?.name ?? StringUtilities.emptyString)

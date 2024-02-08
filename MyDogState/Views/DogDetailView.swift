@@ -44,8 +44,9 @@ struct DogDetailView: View {
                 .toolbar{
                     ToolbarItem(placement: .principal){
                         Text("Dog details")
-                            .font(.title)
+                            .font(.title2)
                             .bold()
+                            .foregroundColor(Color.darkPurple)
                     }
                     ToolbarItem(placement: .navigationBarLeading){
                         Button

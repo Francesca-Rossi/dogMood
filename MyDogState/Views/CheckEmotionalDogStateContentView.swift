@@ -30,8 +30,14 @@ struct CheckEmotionalDogStateContentView: View {
                 {
                     ZStack
                     {
-                        VStack(alignment: .center)
+                        VStack(alignment: .center, spacing: 5)
                         {
+                            if let dogName = selectedDog.name
+                            {
+                                Text(dogName)
+                                    .font(.title)
+                                    .bold()
+                            }
                             checkImage(image: image)
                             ScrollView
                             {
@@ -43,7 +49,8 @@ struct CheckEmotionalDogStateContentView: View {
                                 checkAgainButton
                                 continueButton
                                     .alert("Save new mood", isPresented: $onContinueTap) {
-                                        TextField("Add a note", text: $note)
+                                        TextField("Add a note", text: $note, axis: .vertical)
+                                            .disableAutocorrection(true)
                                         Button("Cancel") {onContinueTap.toggle()}
                                         Button("OK", action: saveCheckAction)
                                     }
@@ -76,7 +83,9 @@ struct CheckEmotionalDogStateContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .principal){
-                    Text("Check emotional status").font(.headline)
+                    Text("Check emotional status")
+                        .font(.title2)
+                        .bold()
                         .foregroundColor(Color.darkPurple)
                 }
                 ToolbarItem(placement: .navigationBarLeading){

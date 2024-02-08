@@ -11,6 +11,11 @@ import SwiftUI
 struct MyDogStateApp: App {
     
     @StateObject var viewModel = DogViewModel()
+    
+    init() {
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color.lightPurple)
+    }
+    
     var body: some Scene {
         WindowGroup {
             let _ = Logger.shared.printDocumentsDirectory()

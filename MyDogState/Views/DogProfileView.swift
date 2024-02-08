@@ -15,7 +15,7 @@ struct DogProfileView: View
         {
             if let data = dog.image, let image = UIImage(data: data)
             {
-                CircleImage(image: image, width: CGFloat(200), height: CGFloat(200))
+                CircleImage(image: image, width: CGFloat(150), height: CGFloat(150))
             }
             VStack(alignment: .center)
             {
