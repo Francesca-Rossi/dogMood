@@ -169,6 +169,7 @@
       }
     },
     "Choose mode" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -393,7 +394,11 @@
         }
       }
     },
+    "Please choose your preferred mode to set your image" : {
+
+    },
     "Please choose your preferred mode to set your profile image" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -484,6 +489,9 @@
           }
         }
       }
+    },
+    "Upload an image" : {
+
     }
   },
   "version" : "1.0"

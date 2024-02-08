@@ -12,9 +12,6 @@ struct CheckEmotionalDogStateContentView: View {
     @StateObject var classificationServiceViewModel = ClassificationsViewModel()
     @Environment(\.dismiss) var dismiss
     @State private var note = ""
-    @State private var shouldPresentImagePicker = false
-    @State private var shouldPresentCamera = false
-    @State private var showErrorMessage = false
     @State private var onContinueTap = false
     @State private var goBackHome = false
     @State private var isAllOk = false
@@ -39,7 +36,6 @@ struct CheckEmotionalDogStateContentView: View {
                                     .bold()
                             }
                             AddImageView(image: $classificationServiceViewModel.importedImage, parentView: .states)
-                            //checkImage(image: image)
                             ScrollView
                             {
                                 EmotionalResultDialogView(predictionResult: classificationServiceViewModel.classifications)
@@ -74,10 +70,6 @@ struct CheckEmotionalDogStateContentView: View {
                 {
                     VStack {
                         AddImageView(image: $classificationServiceViewModel.importedImage, parentView: .states)
-//                        Image(systemName: "photo.fill")
-//                            .imageScale(.large)
-//                            .foregroundColor(.accentColor)
-//                        pickAnImageButton
                     }
                     .padding()
                 }
@@ -101,23 +93,6 @@ struct CheckEmotionalDogStateContentView: View {
         }
         .navigationViewStyle(.stack)
         .onChange(of: classificationServiceViewModel.importedImage) { _ in classificationServiceViewModel.onChangeImage() }
-        .actionSheet(isPresented: $classificationServiceViewModel.displayImagePicker, content: getActionSheet)
-        .alert("Camera is not accessible", isPresented: $showErrorMessage) {
-            Button("OK", role: .cancel) { }
-        }
-        .sheet(isPresented: $shouldPresentImagePicker)
-        {
-            ImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, selectedImage: $classificationServiceViewModel.importedImage)
-        }
-        
-    }
-    
-    func checkImage(image: UIImage) -> some View
-    {
-        RoundedRectagleImage(image: image, width: CGFloat(200.0), height: CGFloat(200.0))
-            .onTapGesture {
-                classificationServiceViewModel.displayImagePicker.toggle()
-            }
     }
 
     var continueButton: some View
@@ -146,17 +121,6 @@ struct CheckEmotionalDogStateContentView: View {
                 Text("Check again")
             }
         }.buttonStyle(AnimatedCapsulePurpleButtonStyle())
-    }
-    
-    var pickAnImageButton: some View
-    {
-        Button {
-            classificationServiceViewModel.displayImagePicker.toggle()
-        } label: {
-            Text("Pick an image")
-        }.frame(width: 500.0)
-        .buttonStyle(AnimatedCapsulePurpleButtonStyle())
-        
     }
     
     func saveCheckAction()
@@ -188,12 +152,6 @@ struct CheckEmotionalDogStateContentView: View {
             }
         }
     }
-    
-    
-    func getActionSheet() -> ActionSheet
-     {
-     ChoicePhotosSourceActionSheet(showActionSheet: $classificationServiceViewModel.displayImagePicker,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
-     }
 }
 
 #if DEBUG

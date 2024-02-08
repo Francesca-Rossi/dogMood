@@ -10,7 +10,6 @@ import UIKit
 
 @MainActor
 final class ClassificationsViewModel: ObservableObject {
-    @Published var displayImagePicker: Bool = false
     
     @Published var importedImage: UIImage? = nil
     
