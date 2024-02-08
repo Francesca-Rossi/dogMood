@@ -44,7 +44,7 @@ struct ContentView: View {
                             Text("History check")
                         }
                 }
-            }.toolbarBackground(.red, for: .tabBar)
+            }
         }
     }
 }
