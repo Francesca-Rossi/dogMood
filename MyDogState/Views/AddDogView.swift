@@ -92,7 +92,7 @@ struct AddDogView: View {
     {
         Section (header: Text("Profile image").textCase(nil))
         {
-            AddImageView(image: $image)
+         AddImageView(image: $image)
         }
     }
     
@@ -103,7 +103,7 @@ struct AddDogView: View {
             HStack
             {
                 Label("Microchip", systemImage: "cpu")
-                ValidatableTextField("Placeholder", text: $microchip, validation: { $0.contains(/[0-9]+$/)})
+                ValidatableTextField("Inser a number", text: $microchip, validation: { $0.contains(/[0-9]+$/)})
                     .disableAutocorrection(true)
                     .keyboardType(.numberPad)
                     

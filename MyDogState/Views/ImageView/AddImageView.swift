@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AddImageView: View
 {
-    private let CHANGE_PHOTO_LABEL = "Change photo"
-    
     @Binding var image: UIImage?
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentActionSheet = false
@@ -18,14 +16,22 @@ struct AddImageView: View
     @State private var showErrorMessage = false
     
     var body: some View {
-        HStack {
-           
-            CircleImage(image: image)
-            ChipView(chip: Chip(title: CHANGE_PHOTO_LABEL, titleColor: .white, bgColor: .darkPurple)) 
-                .onTapGesture {
-                    self.shouldPresentActionSheet = true
-                }
-    
+        VStack (spacing: 5)
+        {
+            if image != nil
+            {
+                CircleImage(image: image)
+                    .onTapGesture {
+                        self.shouldPresentActionSheet = true
+                    }
+            }
+            else
+            {
+                Image(systemName: "photo.fill")
+                    .imageScale(.large)
+                    .foregroundColor(Color.darkPurple)
+                pickAnImageButton
+            }
         }
         .padding(.horizontal, 20)
         .actionSheet(isPresented: $shouldPresentActionSheet, content: getActionSheet )
@@ -38,9 +44,19 @@ struct AddImageView: View
         }
     }
     
+    var pickAnImageButton: some View
+    {
+        Button {
+            self.shouldPresentActionSheet = true
+        } label: {
+            Text("Pick an image")
+        }.frame(width: 500.0)
+            .buttonStyle(AnimatedCapsulePurpleButtonStyle())
+    }
+    
     func getActionSheet() -> ActionSheet
     {
-        ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
+        return ChoicePhotosSourceActionSheet(showActionSheet: $shouldPresentActionSheet,shouldPresentImagePicker: $shouldPresentImagePicker, shouldPresentCamera: $shouldPresentCamera, showErrorMessage: $showErrorMessage).getActionSheet()
     }
 }
 
