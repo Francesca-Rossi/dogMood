@@ -11,9 +11,8 @@ import SwiftUI
 
 enum sexType
 {
-    //TODO: fix like MoodResult
-    static let Boy = "Boy"
-    static let Girl = "Girl"
+    static let Boy = "Male"
+    static let Girl = "Female"
 }
 
 struct Chip

@@ -599,7 +599,7 @@
 				DEVELOPMENT_TEAM = 5V7QS9WXZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "My dog mood";
+				INFOPLIST_KEY_CFBundleDisplayName = dogMood;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -631,7 +631,7 @@
 				DEVELOPMENT_TEAM = 5V7QS9WXZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "My dog mood";
+				INFOPLIST_KEY_CFBundleDisplayName = dogMood;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
