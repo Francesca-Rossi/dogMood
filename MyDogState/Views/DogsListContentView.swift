@@ -9,9 +9,12 @@ import SwiftUI
 import CoreData
 
 struct DogsListContentView: View {
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: DogViewModel
     @State private var showingAddView = false
     @State var selectedItem: Dog?
+    @State var showError = false
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading)
@@ -42,12 +45,16 @@ struct DogsListContentView: View {
                 item in
                 DogDetailView( dog: item)
             }
+            .alert("Error to delete a dog", isPresented: $showError) {
+                Button("OK") { dismiss() }
+            }
         }
         .navigationViewStyle(.stack)
     }
     
     var dogList: some View
     {
+
         List{
             ForEach(viewModel.dogsList)
             {
@@ -71,9 +78,18 @@ struct DogsListContentView: View {
             }
             .onDelete{
                 indexSet in
+                var info = ErrorInfo()
                 Task
                 {
-                    await viewModel.deleteDog(offset: indexSet)
+                    await viewModel.deleteDog(offset: indexSet, info: &info)
+                }
+                if info.isAllOK()
+                {
+                    showError = false
+                }
+                else
+                {
+                    showError = true
                 }
             }
         }.listStyle(PlainListStyle())

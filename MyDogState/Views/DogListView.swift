@@ -39,9 +39,10 @@ struct DogListView: View {
                     }
                     .onDelete{
                         indexSet in
+                        var info = ErrorInfo()
                         Task
                         {
-                            await viewModel.deleteDog(offset: indexSet)
+                            await viewModel.deleteDog(offset: indexSet, info: &info)
                         }
                     }
                 }.listStyle(PlainListStyle())

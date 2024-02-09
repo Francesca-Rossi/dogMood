@@ -30,7 +30,8 @@ struct ItemCellView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.5) //Automatic resize font
+                        .minimumScaleFactor(0.5)
+                    //Automatic resize font
                     if let chipFields = chipFields
                     {
                         ChipView(chip: chipFields)

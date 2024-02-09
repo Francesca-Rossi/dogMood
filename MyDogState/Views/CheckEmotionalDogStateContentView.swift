@@ -45,13 +45,13 @@ struct CheckEmotionalDogStateContentView: View {
                             {
                                 checkAgainButton
                                 continueButton
-                                    .alert("Save new mood", isPresented: $onContinueTap) {
-                                        TextField("Add a note", text: $note, axis: .vertical)
+                                    .alert(String(localized: "Save new mood"), isPresented: $onContinueTap) {
+                                        TextField(String(localized: "Add a note"), text: $note, axis: .vertical)
                                             .disableAutocorrection(true)
-                                        Button("Cancel") {onContinueTap.toggle()}
+                                        Button(String(localized: "Cancel")) {onContinueTap.toggle()}
                                         Button("OK", action: saveCheckAction)
                                     }
-                                    .alert("Error to register the check", isPresented: $showError) {
+                                    .alert(String(localized: "Error to register the check"), isPresented: $showError) {
                                         Button("OK") { dismiss() }
                                     }
                                     .fullScreenCover(isPresented: $isAllOk)
@@ -62,7 +62,7 @@ struct CheckEmotionalDogStateContentView: View {
                         }.blur(radius: showLoading ? 5 : 0)
                         if showLoading
                         {
-                            CustomProgressView(title: "Saving")
+                            CustomProgressView(title: String(localized: "Saving"))
                         }
                     }
                 }

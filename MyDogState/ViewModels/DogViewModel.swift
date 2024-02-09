@@ -100,30 +100,27 @@ class DogViewModel: ObservableObject {
         }
     }
     
-    public func deleteDog(offset: IndexSet) async
+    public func deleteDog(offset: IndexSet, info: inout ErrorInfo) async
     {
-         //offset.map{dogsList[$0]}.forEach(viewContext.delete)
-         //save()
-        var errorInfo = ErrorInfo()
         do
         {
             for i in offset.makeIterator() {
                 let dog = dogsList[i]
                 if let id = dog.id
                 {
-                    try await emotionalManager.deleteCheckAndMoodsByDog(dog: dog, info: &errorInfo)
-                    if errorInfo.isAllOK()
+                    try await emotionalManager.deleteCheckAndMoodsByDog(dog: dog, info: &info)
+                    if info.isAllOK()
                     {
-                        try await dao.delete(id, info: &errorInfo)
+                        try await dao.delete(id, info: &info)
                     }
                 }
             }
-            await getAllDogs(info: &errorInfo)
+            await getAllDogs(info: &info)
         }
         catch
         {
             //TODO: scrivi sul file di log
-            print(errorInfo.getErrorMessage())
+            print(info.getErrorMessage())
         }
         
     }

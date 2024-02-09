@@ -204,6 +204,16 @@
         }
       }
     },
+    "Error to delete a dog" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C'è stato un errore nell'eliminare il cane"
+          }
+        }
+      }
+    },
     "Error to register the check" : {
       "localizations" : {
         "it" : {
@@ -280,6 +290,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lista dei controlli"
+          }
+        }
+      }
+    },
+    "Insert a number" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci un numero"
+          }
+        }
+      }
+    },
+    "Loading" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento"
           }
         }
       }
@@ -470,6 +500,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva nuovo stato"
+          }
+        }
+      }
+    },
+    "Saving" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvataggio"
           }
         }
       }

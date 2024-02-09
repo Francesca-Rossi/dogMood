@@ -29,7 +29,7 @@ struct AddDogView: View {
                 mainContent
                 if showLoading
                 {
-                    CustomProgressView(title: "Saving")
+                    CustomProgressView(title: String(localized: "Saving"))
                 }
             }
         }.navigationViewStyle(.stack)
@@ -105,7 +105,7 @@ struct AddDogView: View {
             HStack
             {
                 Label("Microchip", systemImage: "cpu")
-                ValidatableTextField("Inser a number", text: $microchip, validation: { $0.contains(/[0-9]+$/)})
+                ValidatableTextField( String(localized: "Insert a number"), text: $microchip, validation: { $0.contains(/[0-9]+$/)})
                     .disableAutocorrection(true)
                     .keyboardType(.numberPad)
                     
@@ -113,7 +113,7 @@ struct AddDogView: View {
             HStack
             {
                 Label("Dog name", systemImage: "person.crop.square.filled.and.at.rectangle")
-                TextField("Name", text: $name).disableAutocorrection(true)
+                TextField(String(localized: "Name"), text: $name).disableAutocorrection(true)
             }
             HStack
             {
@@ -135,12 +135,12 @@ struct AddDogView: View {
             HStack
             {
                 Label("Breed", systemImage: "pawprint.fill")
-                TextField("Breed", text: $breed).disableAutocorrection(true)
+                TextField(String(localized: "Breed"), text: $breed).disableAutocorrection(true)
             }
             HStack
             {
                 Label("Hair color", systemImage: "eyedropper")
-                TextField("Hair color", text: $hairColor).disableAutocorrection(true)
+                TextField(String(localized: "Hair color"), text: $hairColor).disableAutocorrection(true)
             }
         }
     }

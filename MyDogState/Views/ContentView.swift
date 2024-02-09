@@ -14,7 +14,8 @@ struct ContentView: View {
    var body: some View {
         if loadingDelayOk == false
         {
-            CustomProgressView(title: "Loading").onAppear{
+            CustomProgressView(title: String(localized: "Loading"))
+            .onAppear{
                //TODO: aggiungi un commento
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     loadingDelayOk = true
