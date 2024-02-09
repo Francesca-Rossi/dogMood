@@ -77,7 +77,7 @@ struct CheckEmotionalDogStateContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .principal){
-                    Text("Check emotional status")
+                    Text("Check mood")
                         .font(.title2)
                         .minimumScaleFactor(0.5)
                         .bold()

@@ -64,7 +64,7 @@ struct AddDogView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar{
             ToolbarItem(placement: .principal){
-                Text("Add New Dog")
+                Text("Add new dog")
                     .font(.title2)
                     .bold()
                     .minimumScaleFactor(0.5)

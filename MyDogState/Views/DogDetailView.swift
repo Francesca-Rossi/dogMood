@@ -72,7 +72,7 @@ struct DogDetailView: View {
         HStack
         {
             Image(systemName: "camera")
-            Text("Check emotional state")
+            Text("Check mood")
                 .minimumScaleFactor(0.5)
         }
     }

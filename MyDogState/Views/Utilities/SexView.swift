@@ -12,7 +12,7 @@ struct SexView: View {
     var body: some View {
         HStack
         {
-            Label("Sex", systemImage: "smiley")
+            Label("Gender", systemImage: "smiley")
             Picker(selection: $sex, label: Text("")) {
                 Text(sexType.Girl).tag(sexType.Girl)
                 Text(sexType.Boy).tag(sexType.Boy)

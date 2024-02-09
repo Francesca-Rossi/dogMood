@@ -5,21 +5,14 @@
 
     },
     "Add a note" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inserisci nota"
-          }
-        }
-      }
+
     },
     "Add new check" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inserisci nuovo controllo"
+            "value" : "Nuovo controllo"
           }
         }
       }
@@ -29,7 +22,17 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inserisci nuovo cane"
+            "value" : "Aggiungi cane"
+          }
+        }
+      }
+    },
+    "Add New Dog" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi cane"
           }
         }
       }
@@ -39,7 +42,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inserisci almeno un cane"
+            "value" : "Aggiungi il tuo primo cane"
           }
         }
       }
@@ -54,12 +57,13 @@
         }
       }
     },
-    "Angry" : {
+    "Back home" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Arrabbiato"
+            "value" : "Torna alla home"
           }
         }
       }
@@ -99,42 +103,39 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La fotocamera non è accessibile"
+            "value" : "Non è stato possibile aprire la fotocamera"
           }
         }
       }
     },
     "Cancel" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annulla"
-          }
-        }
-      }
+
     },
     "Check again" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Controlla di nuovo"
+            "value" : "Ricontrolla"
+          }
+        }
+      }
+    },
+    "Check detail" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dettaglio del controllo"
           }
         }
       }
     },
     "Check details" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dettagli del controllo"
-          }
-        }
-      }
+
     },
-    "Check mood" : {
+    "Check emotional state" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
@@ -144,12 +145,15 @@
         }
       }
     },
+    "Check emotional status" : {
+
+    },
     "Check mood now" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Controlla lo stato emotivo ora"
+            "value" : "Controlla lo stato emotivo"
           }
         }
       }
@@ -164,12 +168,23 @@
         }
       }
     },
+    "Choose mode" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli la modalità"
+          }
+        }
+      }
+    },
     "Continue" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Continua"
+            "value" : "Prosegui"
           }
         }
       }
@@ -189,7 +204,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Informazioni sul cane"
+            "value" : "Informazioni"
           }
         }
       }
@@ -204,52 +219,36 @@
         }
       }
     },
+    "Error" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Errore"
+          }
+        }
+      }
+    },
     "Error to register the check" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "C'è stato un errore nel salvataggio del controllo"
+            "value" : "C' è stato un problema con la registrazione del check"
           }
         }
       }
     },
     "Error to save new dog" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "C'è stato un errore nel salvataggio del nuovo cane"
-          }
-        }
-      }
-    },
-    "Female" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Femmina"
-          }
-        }
-      }
-    },
-    "Gender" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genere"
-          }
-        }
-      }
+
     },
     "Go back" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indietro"
+            "value" : "Torna indietro"
           }
         }
       }
@@ -259,47 +258,31 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Colore del pelo"
+            "value" : "Colore del mantello"
           }
         }
       }
     },
     "Happy" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felice"
-          }
-        }
-      }
+
     },
     "History check" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lista dei controlli"
+            "value" : "Storico dei controlli"
           }
         }
       }
     },
     "Main info" : {
+      "extractionState" : "manual",
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Informazioni principali"
-          }
-        }
-      }
-    },
-    "Male" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maschio"
           }
         }
       }
@@ -319,7 +302,18 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Risultati stato emotivo"
+            "value" : "Risultato stato emotivo"
+          }
+        }
+      }
+    },
+    "Mood results" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Risultati stati emotivi"
           }
         }
       }
@@ -345,14 +339,7 @@
       }
     },
     "My mood" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stato emotivo"
-          }
-        }
-      }
+
     },
     "Name" : {
       "localizations" : {
@@ -379,7 +366,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ok"
+            "value" : "OK"
           }
         }
       }
@@ -409,17 +396,21 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Scegli un immagine"
+            "value" : "Seleziona un immagine"
           }
         }
       }
     },
-    "Please remember to choose your dog image" : {
+    "Please choose your preferred mode to set your image" : {
+
+    },
+    "Please choose your preferred mode to set your profile image" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ricordati di scegliere un immagine del tuo cane"
+            "value" : "Scegli con quale modalità preferisci selezionare l'immagine di profilo"
           }
         }
       }
@@ -429,27 +420,18 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Immagine di profilo"
+            "value" : "Immagine di Profilo"
           }
         }
       }
     },
-    "Relaxed" : {
+    "Save new %@ mood" : {
+      "extractionState" : "stale",
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rilassato"
-          }
-        }
-      }
-    },
-    "Sad" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Triste"
+            "value" : "Inserisci  lo stato di  %@"
           }
         }
       }
@@ -459,7 +441,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salva nuovo cane"
+            "value" : "Inserisci nuovo cane"
           }
         }
       }
@@ -469,7 +451,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salva nuovo stato"
+            "value" : "Inserisci il nuovo stato"
           }
         }
       }
@@ -479,7 +461,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Salvataggio..."
+            "value" : "Sto salvando...."
           }
         }
       }
@@ -489,30 +471,34 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Scegli un cane"
+            "value" : "Seleziona un cane"
           }
         }
       }
     },
-    "Unknown" : {
+    "Sex" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sconosciuto"
+            "value" : "Genere"
+          }
+        }
+      }
+    },
+    "Take an image" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleziona un immagine"
           }
         }
       }
     },
     "Upload an image" : {
-      "localizations" : {
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carica un immagine"
-          }
-        }
-      }
+
     }
   },
   "version" : "1.0"

@@ -11,8 +11,8 @@ import SwiftUI
 
 enum sexType
 {
-    static let Boy = "Male"
-    static let Girl = "Female"
+    static let Boy = String(localized: "Male")
+    static let Girl = String(localized: "Female")
 }
 
 struct Chip
@@ -35,11 +35,11 @@ enum ViewParentType
  ***/
 public class MoodResult
 {
-    private static var HAPPY_MOOD = "happy"
-    private static var RELAXED_MOOD = "relaxed"
-    private static var SAD_MOOD = "sad"
-    private static var ANGRY_MOOD = "angry"
-    private static var UNKNOWN_MOOD = "unknown"
+    private static var HAPPY_MOOD = String(localized: "Happy")
+    private static var RELAXED_MOOD = String(localized: "Relaxed")
+    private static var SAD_MOOD = String(localized: "Sad")
+    private static var ANGRY_MOOD = String(localized: "Angry")
+    private static var UNKNOWN_MOOD = String(localized: "Unknown")
     
     public enum Mood: Codable
     {
@@ -54,19 +54,19 @@ public class MoodResult
     {
         if let lowerValue = value?.lowercased()
         {
-            if lowerValue.isEqual(other: "happy")
+            if lowerValue.isEqual(other: "happy") || lowerValue.isEqual(other: String(localized: "Happy").lowercased())
             {
                 return .happy
             }
-            else if lowerValue.isEqual(other: "relaxed")
+            else if lowerValue.isEqual(other: "relaxed") || lowerValue.isEqual(other: String(localized: "Relaxed").lowercased())
             {
                 return .relaxed
             }
-            else if lowerValue.isEqual(other: "sad")
+            else if lowerValue.isEqual(other: "sad") || lowerValue.isEqual(other: String(localized: "Sad").lowercased())
             {
                 return .sad
             }
-            else if lowerValue.isEqual(other: "angry")
+            else if lowerValue.isEqual(other: "angry") || lowerValue.isEqual(other: String(localized: "Angry").lowercased())
             {
                 return .angry
             }

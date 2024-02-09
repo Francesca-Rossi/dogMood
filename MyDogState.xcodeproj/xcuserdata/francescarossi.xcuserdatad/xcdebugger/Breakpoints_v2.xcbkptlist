@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4095DDB7-EE95-4CDD-B76F-AC82920690CA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Views/CheckEmotionalDogStateContentView.swift"
@@ -102,7 +102,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F0550E6-18A0-48E6-A3A9-11AB7F60F92C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Views/CheckEmotionalDogStateContentView.swift"
@@ -166,7 +166,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C2F196C-4BCB-4B76-9341-C41C0517E201"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDogState/Views/CheckEmotionalDogStateContentView.swift"
@@ -176,6 +176,196 @@
             endingLineNumber = "41"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6A4A9ED-63F7-464C-A098-A2D2107174D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Object/Status.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getMoodBackgroundColor()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57A2A434-E9DA-448B-9A41-860B649E505D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Utilities/Enumeration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fromString(value:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57A2A434-E9DA-448B-9A41-860B649E505D - ef5c17e861b0600a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "165">
+               </Location>
+               <Location
+                  uuid = "57A2A434-E9DA-448B-9A41-860B649E505D - ef5c17e861b0600a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37B46792-FC91-4C4A-BD3A-7C81315C8AB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Utilities/Enumeration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fromString(value:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37B46792-FC91-4C4A-BD3A-7C81315C8AB4 - ef5c17e861b066d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1063">
+               </Location>
+               <Location
+                  uuid = "37B46792-FC91-4C4A-BD3A-7C81315C8AB4 - ef5c17e861b066d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "586">
+               </Location>
+               <Location
+                  uuid = "37B46792-FC91-4C4A-BD3A-7C81315C8AB4 - ef5c17e861b066d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1633">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "331C4A69-6850-42FE-A463-5DFB4A54B29E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDogState/Utilities/Enumeration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fromString(value:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "331C4A69-6850-42FE-A463-5DFB4A54B29E - ef5c17e861b0661a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1278">
+               </Location>
+               <Location
+                  uuid = "331C4A69-6850-42FE-A463-5DFB4A54B29E - ef5c17e861b0661a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "677">
+               </Location>
+               <Location
+                  uuid = "331C4A69-6850-42FE-A463-5DFB4A54B29E - ef5c17e861b0661a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MyDogState.MoodResult.fromString(value: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDogState.MoodResult.Mood"
+                  moduleName = "MyDogState"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/francescarossi/proj/MyDogState/MyDogState/Utilities/Enumeration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "2038">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

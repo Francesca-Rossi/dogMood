@@ -9,14 +9,12 @@ import SwiftUI
 
 struct EmotionalResultDialogView: View {
     
-    let MOOD_RESULT_LABEL = "Dog mood"
-    
     var predictionResult: [PredictionResult]
     
     var body: some View {
         VStack(alignment: .center, spacing: 5)
         {
-            Text("Mood results")
+            Text("My mood")
                 .font(.system(size: CGFloat(30.0), weight: .bold))
                 .minimumScaleFactor(0.5)
             List(predictionResult)

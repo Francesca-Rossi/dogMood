@@ -19,7 +19,7 @@ struct ChoicePhotosSourceActionSheet
         let cameraButton: ActionSheet.Button = .default(Text("Camera"), action: {openCamera()})
         let libraryButton: ActionSheet.Button = .default(Text("Photo Library"), action: {openLibrary()})
         let cancelButton: ActionSheet.Button = .cancel()
-        return ActionSheet(title: Text("Upload an image"), message: Text("Please choose your preferred mode to set your image"), buttons: [cameraButton, libraryButton, cancelButton])
+        return ActionSheet(title: Text("Upload an image"), message: Text("Please remember to choose your dog image"), buttons: [cameraButton, libraryButton, cancelButton])
     }
     
     private func openCamera()
