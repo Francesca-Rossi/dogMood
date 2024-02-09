@@ -28,7 +28,6 @@ struct DogProfileView: View
                 }
                 Divider()
             }
-            
         }
     }
     
@@ -49,7 +48,7 @@ struct DogProfileView: View
             if let sexChip = dog.getSexChip()
             {
                 ChipView(chip: sexChip)
-                    .frame(width: 100, alignment: .trailing)
+                    .frame(maxWidth: 100, alignment: .trailing)
             }
         }
     }

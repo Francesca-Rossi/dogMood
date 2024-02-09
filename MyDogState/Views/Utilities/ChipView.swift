@@ -10,15 +10,20 @@ import SwiftUI
 struct ChipView: View {
     var chip: Chip
     var body: some View {
-        Text(chip.title)
-            .font(.headline)
-            .frame(maxWidth: 300)
-            .frame(height: 30)
-            .foregroundColor(chip.titleColor)
-            .background(chip.bgColor)
-            .cornerRadius(16)
-            .foregroundColor(.white)
-            .padding(.horizontal, 20)
+        ZStack
+        {
+            RoundedRectangle(cornerRadius: 25)
+                .fill(chip.bgColor)
+                .frame(minWidth: 100)
+                .frame(height: 30)
+            
+            Text(chip.title)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+                .font(.headline)
+                .foregroundColor(chip.titleColor)
+                .padding(.horizontal, 5)
+        }
     }
 }
 

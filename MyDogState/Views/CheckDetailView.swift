@@ -78,7 +78,6 @@ struct CheckDetailView: View {
             if let mood = checkDetail.getTheBestConfidenceMood()
             {
                 ChipView(chip: mood.getMoodChip())
-                    .frame(maxWidth: 120)
             }
         }
     }

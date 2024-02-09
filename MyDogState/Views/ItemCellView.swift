@@ -24,7 +24,7 @@ struct ItemCellView: View {
             }
             VStack(alignment: .leading, spacing: 10)
             {
-                HStack(spacing: 0)
+                HStack(spacing: 10)
                 {
                     Text(title ?? "unknown")
                         .font(.largeTitle)
