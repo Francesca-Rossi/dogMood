@@ -101,17 +101,16 @@ class CheckMoodViewModel: ObservableObject {
         return errorInfo
     }
     
-    public func deleteCheck(offset: IndexSet) async
+    public func deleteCheck(offset: IndexSet, info:  inout ErrorInfo) async
     {
-        var errorInfo = ErrorInfo()
         do
         {
             for i in offset.makeIterator() 
             {
                 let check = emotionalInfoCheckList[i]
-                try await emotionalManager.deleteCheckInfo(check: check, info: &errorInfo)
+                try await emotionalManager.deleteCheckInfo(check: check, info: &info)
             }
-            if errorInfo.isAllOK()
+            if info.isAllOK()
             {
                 await getAllCheckMood()
             }
@@ -119,7 +118,7 @@ class CheckMoodViewModel: ObservableObject {
         catch
         {
             //TODO: scrivi sul file di log
-            print(errorInfo.getErrorMessage())
+            print(info.getErrorMessage())
         }
         
     }

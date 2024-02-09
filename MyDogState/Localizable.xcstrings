@@ -214,6 +214,9 @@
         }
       }
     },
+    "Error to delete the check" : {
+
+    },
     "Error to register the check" : {
       "localizations" : {
         "it" : {

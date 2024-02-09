@@ -9,10 +9,12 @@ import SwiftUI
 import CoreData
 
 struct CheckListContentView: View {
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject var checkVM: CheckMoodViewModel
     @State var dogVM: DogViewModel
     @State private var showingAddView = false
     @State var selectedItem: MoodCheckInfo?
+    @State private var showError = false
 
     var body: some View {
         NavigationView {
@@ -34,6 +36,9 @@ struct CheckListContentView: View {
                     addNewCheckButton(isToolbar: true)
                         .disabled(checkVM.isCheckListEmpty)
                 }
+            }
+            .alert(String(localized: "Error to delete the check"), isPresented: $showError) {
+                Button("OK") { dismiss() }
             }
             .fullScreenCover(isPresented: $showingAddView)
             {
@@ -73,9 +78,14 @@ struct CheckListContentView: View {
             }
             .onDelete{
                 indexSet in
+                var info = ErrorInfo()
                 Task
                 {
-                    await checkVM.deleteCheck(offset: indexSet)
+                    await checkVM.deleteCheck(offset: indexSet, info: &info)
+                }
+                if !info.isAllOK()
+                {
+                    showError = true
                 }
             }
         }.listStyle(PlainListStyle())

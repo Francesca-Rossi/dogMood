@@ -11,6 +11,8 @@ import SwiftUI
 struct CheckListView: View {
     @StateObject var viewModel: CheckMoodViewModel
     @State var selectedItem: MoodCheckInfo?
+    @State private var showError = false
+    
     var body: some View {
         NavigationView {
             VStack
@@ -37,9 +39,14 @@ struct CheckListView: View {
                     }
                     .onDelete{
                         indexSet in
+                        var info = ErrorInfo()
                         Task
                         {
-                            await viewModel.deleteCheck(offset: indexSet)
+                            await viewModel.deleteCheck(offset: indexSet, info: &info)
+                        }
+                        if !info.isAllOK()
+                        {
+                            showError = true
                         }
                     }
                 }.listStyle(PlainListStyle())
