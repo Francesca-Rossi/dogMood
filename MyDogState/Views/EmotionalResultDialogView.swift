@@ -21,8 +21,8 @@ struct EmotionalResultDialogView: View {
             { result in
                 HStack
                 {
-                    Spacer()
-                        .frame(width: 60)
+                    //Spacer()
+                        //.frame(width: 60)
                     ChipView(chip: createChip(prediction: result))
                         .frame(width: 200)
                     Text(StringUtilities.convertToPercentual(float: result.confidence))
