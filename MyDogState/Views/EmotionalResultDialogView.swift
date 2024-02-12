@@ -62,10 +62,8 @@ struct EmotionalResultDialogView: View {
         }
     }
     
-    //TODO: remove this and create a factory in chip class
     func createChip(prediction: PredictionResult) -> Chip
     {
-        //TODO: remove this, lo dara' la BL
         let info = MoodDetail(
                             id: UUID(),
                             mood: MoodResult.fromString(value: prediction.identifier),

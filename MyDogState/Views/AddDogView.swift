@@ -166,7 +166,7 @@ struct AddDogView: View {
             else
             {
                 info.setErrorMessage(value: "Not check image setted")
-                //TODO: registra nel file di log
+                Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             }
             if info.isAllOK()
             {
@@ -179,7 +179,7 @@ struct AddDogView: View {
                 showError = true
                 isAllOk = false
                 showLoading = false
-                //TODO: registra nel file di log
+                Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             }
         }
     }

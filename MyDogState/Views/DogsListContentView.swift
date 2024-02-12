@@ -59,7 +59,6 @@ struct DogsListContentView: View {
             ForEach(viewModel.dogsList)
             {
                 dog in
-                //TODO: e' necessario fare vedere l'img?
                 if let imageData = dog.image
                 {
                     ItemCellView(

@@ -75,7 +75,6 @@ struct DogProfileView: View
             }
             if let hairColor = dog.hairColor, !hairColor.isEmpty
             {
-                //TODO: sarebbe meglio metterci un pallino con il colore del cane
                 CustomLabel(icon: "eyedropper", caption: hairColor)
             }
             if let breed = dog.breed, !breed.isEmpty

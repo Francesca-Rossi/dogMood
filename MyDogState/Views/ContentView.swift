@@ -16,7 +16,7 @@ struct ContentView: View {
         {
             CustomProgressView(title: String(localized: "Loading"))
             .onAppear{
-               //TODO: aggiungi un commento
+               //delay to load all th data
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     loadingDelayOk = true
                 }

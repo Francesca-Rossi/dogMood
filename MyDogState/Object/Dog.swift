@@ -66,28 +66,6 @@ struct Dog: Codable, Equatable, Identifiable, Hashable
         return nil
     }
     
-    
-    //TODO: remove this function
-    public func getBestMoodList() -> [MoodDetail]
-    {
-        var bestMoodList = [MoodDetail]()
-            //getAllCheckBydog
-            //for check get mood list
-            if let allDogCheck = self.emotionalCheckList
-            {
-                //take only the best confidence
-                //put the result in the list
-                for check in allDogCheck
-                {
-                    if let mood = check.getTheBestConfidenceMood()
-                    {
-                        bestMoodList.append(mood)
-                    }
-                }
-            }
-            return bestMoodList
-    }
-    
     //MARK: formated methods
     /**
      - Returns: formated only date of birthday without time, like this " October 21, 2015"

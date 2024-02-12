@@ -139,7 +139,6 @@ public class MoodDetailDao: Dao
     {
         do
         {
-            //TODO: questi controlli vano fatti qui o a BO? (Dubbio)
             if let statusInfo = try checkDAO?.fromObjectToEntity(obj: obj.statusInfo), let confidence =  obj.confidence
             //controllo che esista l'emotional check associato
             {

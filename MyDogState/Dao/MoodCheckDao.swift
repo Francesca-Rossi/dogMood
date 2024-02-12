@@ -174,7 +174,6 @@ public class MoodCheckDao: Dao
                 infoCheckEntity.dog = dog
                 infoCheckEntity.image = obj.image
                 Logger.shared.log(infoCheckEntity.toString(), level: LogLevel.Debug , saveToFile: true)
-                //TODO: Ricordarsi a BO di creare anche i dettagli del mood associati a questo check
                 try persistent.saveContext()
             }
             else
@@ -196,7 +195,6 @@ public class MoodCheckDao: Dao
     {
         do
         {
-            //TODO: questi controlli vano fatti qui o a BO? (Dubbio)
             if let dog = try dogDao?.fromObjectToEntity(obj: obj.dog)
             //controllo che esista l'emotional check associato
             {
@@ -228,7 +226,6 @@ public class MoodCheckDao: Dao
         //ATTENZIONE: quando cancelli uno check emozionale devi controllare che anche tutti i suoi stati sono stati cancellati
         do
         {
-            //TODO: nel bo dobbiamo prima cancellare i suoi stati
             let checkEntity = try  getEntityById(id, errorInfo: &info)!
             Logger.shared.log(checkEntity.toString(), level: LogLevel.Debug , saveToFile: true)
             persistent.viewContext.delete(checkEntity)

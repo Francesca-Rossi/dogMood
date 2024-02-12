@@ -67,14 +67,13 @@ class DogViewModel: ObservableObject {
             }
             catch
             {
-                //TODO: scrivi sul file di log
+                Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
                 print(info.getErrorMessage())
             }
     }
     
     func addNewDog(microchip: String, name: String, dateOfBirth: Date, image: UIImage, sex: String, breed: String?, hairColor: String?, info: inout ErrorInfo) async
     {
-        //TODO: fai tutti i controlli
         do
         {
             if let data =  try? ImageUtilities(image: image).convertImageToData(error: &info)
@@ -95,7 +94,7 @@ class DogViewModel: ObservableObject {
         }
         catch
         {
-            //TODO: scrivi sul file di log
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             print(info.getErrorMessage())
         }
     }
@@ -119,7 +118,7 @@ class DogViewModel: ObservableObject {
         }
         catch
         {
-            //TODO: scrivi sul file di log
+            Logger.shared.log(info.getErrorMessage(), level: LogLevel.Error , saveToFile: true)
             print(info.getErrorMessage())
         }
         

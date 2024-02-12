@@ -18,8 +18,6 @@ import SwiftUI
 struct ResultDogMoodContentView: View {
     @StateObject var viewModel: CheckMoodViewModel
     @Environment(\.dismiss) var dismiss
-    
-    //TODO: per ora gli passo tutto poi decido
     @State public var dog: Dog
     @State public var image: UIImage
     @State private var date = Date()
@@ -161,7 +159,6 @@ struct ResultDogMoodContentView: View {
     
     func buttonIsDisabled()-> Bool
     {
-        //TODO: capire se ha senso
         return false
     }
 }

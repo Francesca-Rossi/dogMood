@@ -12,9 +12,7 @@ struct SelectableDogListView: View {
     @State var selectedItem: Dog?
     @Environment(\.dismiss) var dismiss
     @State private var showActionSheet: Bool = false
-
-    //TODO: remove this
-    //var isSelectable: Bool?
+    
     var body: some View {
         NavigationView {
             VStack{
