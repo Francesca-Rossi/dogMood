@@ -1,2 +1,2 @@
 # dogMood
-##Available only for iOS >= 16.2
+Available only for iOS >= 16.2
